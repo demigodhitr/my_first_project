@@ -1,0 +1,485 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light" data-menu-styles="light" data-toggled="close">
+
+<head>
+          <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EPTL39X1H"></script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'G-3EPTL39X1H');
+      </script>
+      <!-- Google tag (gtag.js) -->
+    <style>
+        .alert {
+              display: none;
+              background-color: #f44336; 
+              border-radius: 20px;
+              border-bottom-left-radius: 1px;
+              color: white;
+              padding: 5px; 
+              margin-bottom: 4px; 
+              animation: fadeInOut 5s ease-in-out;
+          }
+      
+          @keyframes fadeInOut {
+              0%, 100% {
+                  opacity: 0;
+              }
+              10%, 90% {
+                  opacity: 1;
+              }
+          }
+    </style>
+    <!-- font awesome-->
+    <script src="https://kit.fontawesome.com/c7bf746142.js" crossorigin="anonymous"></script>
+    
+
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Frequently asked questions </title>
+    <meta name="Author" content="DevCom">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'img/favicon.ico' %}">
+    
+    <!-- Choices JS -->
+    <script src="{% static 'libs/choices.js/public/assets/scripts/choices.min.js' %}"></script>
+
+    <!-- Main Theme Js -->
+    <script src="{% static 'js/main.js' %}"></script>
+    
+    <!-- Bootstrap Css -->
+    <link id="style" href="{% static 'libs/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" >
+
+    <!-- Style Css -->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" >
+
+    <!-- Icons Css -->
+    <link href="{% static 'css/icons.css' %}" rel="stylesheet" >
+
+    <!-- Node Waves Css -->
+    <link href="{% static 'libs/node-waves/waves.min.css' %}" rel="stylesheet" > 
+
+    <!-- Simplebar Css -->
+    <link href="{% static 'libs/simplebar/simplebar.min.css' %}" rel="stylesheet" >
+    
+    <!-- Color Picker Css -->
+    <link rel="stylesheet" href="{% static 'libs/flatpickr/flatpickr.min.css' %}">
+    <link rel="stylesheet" href="{% static 'libs/@simonwep/pickr/themes/nano.min.css' %}">
+
+    <!-- Choices Css -->
+    <link rel="stylesheet" href="{% static 'libs/choices.js/public/assets/styles/choices.min.css' %}">
+
+
+</head>
+
+<body>
+
+
+    <!-- Loader -->
+<div id="loader" >
+    <img src="{% static 'img/media/loader.svg' %}" alt="">
+</div>
+<!-- Loader -->
+
+    <div class="page">
+         <!-- app-header -->
+ <header class="app-header">
+
+    <!-- Start::main-header-container -->
+    <div class="main-header-container container-fluid">
+
+        <!-- Start::header-content-left -->
+        <div class="header-content-left">
+
+            <!-- Start::header-element -->
+            <div class="header-element">
+                <div class="horizontal-logo">
+                    <a href="{% url 'home' %}" class="header-logo">
+                        <img src="{% static 'img/personal-wealth.png' %}" alt="logo" class="desktop-logo">
+                        <button class="btn btn-primary">Home</button>
+                        
+                    </a>
+                    
+                </div>
+                
+            </div>
+            <!-- End::header-element -->
+
+        </div>
+
+    </div>
+    <!-- End::main-header-container -->
+  
+</header>
+<!-- /app-header -->
+
+
+            <!-- WILL ADD LOGO-->
+            <div class="main-sidebar-header">
+                
+            <a href="{% url 'home' %}" class="header-logo"><img src="{% static 'img/logo-black.png' %}" alt="">
+                </a>
+            </div>
+            <!-- End::main-sidebar-header -->
+
+        </aside>
+        <!-- End::app-sidebar -->
+
+        <!-- Start::app-content -->
+        <div class="main-content app-content">
+            <div class="container-fluid">
+
+                <!-- Page Header -->
+                <div class="my-4 page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2">
+                    <div>
+                        <h1 class="page-title fw-medium fs-18 mb-2">Faqs</h1>
+                        <div class="">
+                            <nav>
+                                <ol class="breadcrumb mb-0">
+                                    <li class="breadcrumb-item"><a href="javascript:void(0);"> Company</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Faqs</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <!-- Page Header Close -->
+                {% for message in messages %}
+                {% if 'error' in message.tags and 'message' in message.tags %}
+                <div class="alert alert-danger">
+                    {{ message }}
+                </div>
+                    {% endif %}
+
+                    {% if 'success' in message.tags and 'message' in message.tags %}
+                    <div class="alert alert-success">
+                        {{ message }}
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                <!-- Start::row-1 -->
+                <div class="row justify-content-center mb-5">
+                    <div class="col-xl-12">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-6">
+                                <div class="text-center p-3 faq-header mb-4">
+                                    <h5 class="mb-1 text-primary op-5 fw-medium">F.A.Q's</h5>
+                                    <h4 class="mb-1 fw-medium">Frequently Asked Questions</h4>
+                                    <p class="fs-15 text-muted op-7">We have shared some of the most frequently asked questions to help you out! </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-10">
+                        <div class="row">
+                            <div class="col-xl-12">
+                                <div class="card custom-card">
+                                    <div class="card-header">
+                                        <div class="card-title">
+                                            General Topics ?
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="accordion accordion-customicon1 accordion-primary" id="accordionFAQ1">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingcustomicon2One">
+                                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapsecustomicon2One" aria-expanded="true"
+                                                        aria-controls="collapsecustomicon2One">
+                                                        *What services does your investment broker offer?
+                                                    </button>
+                                                </h2>
+                                                <div id="collapsecustomicon2One" class="accordion-collapse collapse show"
+                                                    aria-labelledby="headingcustomicon2One"
+                                                    data-bs-parent="#accordionFAQ1">
+                                                    <div class="accordion-body">
+                                                        <strong> Our investment broker specializes in forex trading </strong> -allowing you to invest in the global currency market seamlessly while leaving the trading aspect of it all to our Traders. This implies that whether you have fore-knowledge about trading or not, you can reliably buy a plan with us for awesome returns.
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingcustomicon2Two">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapsecustomicon2Two"
+                                                        aria-expanded="false" aria-controls="collapsecustomicon2Two">
+                                                        How can I open an investment account with your broker?
+                                                    </button>
+                                                </h2>
+                                                <div id="collapsecustomicon2Two" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingcustomicon2Two"
+                                                    data-bs-parent="#accordionFAQ1">
+                                                    <div class="accordion-body">
+                                                        <strong> Getting started is easy!.</strong>  Simply navigate to our registration page, fill in the required information, and follow the steps to open your investment account.
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingcustomicon2Three">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapsecustomicon2Three"
+                                                        aria-expanded="false" aria-controls="collapsecustomicon2Three">
+                                                        What types of investment accounts are available?
+                                                    </button>
+                                                </h2>
+                                                <div id="collapsecustomicon2Three" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingcustomicon2Three"
+                                                    data-bs-parent="#accordionFAQ1">
+                                                    <div class="accordion-body">
+                                                        <strong>We offer various investment accounts! </strong> Such as individual accounts, joint accounts, and corporate accounts. Choose the one that suits your investment goals
+                                                       
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingcustomicon2Four">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapsecustomicon2Four"
+                                                        aria-expanded="false" aria-controls="collapsecustomicon2Four">
+                                                        What is the minimum investment required?
+                                                    </button>
+                                                </h2>
+                                                <div id="collapsecustomicon2Four" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingcustomicon2Four"
+                                                    data-bs-parent="#accordionFAQ1">
+                                                    <div class="accordion-body">
+                                                        <strong> The minimum investment varies depending on the type of account you choose! </strong>For regular accounts, check our investment plan page for specific details on minimum investment requirements.
+                                                        <code class="btn btn-primary-light"><a href="{% url 'plans' %}">See our plans </a></code> 
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>  
+                            <div class="col-xl-12">
+                                <div class="card custom-card">
+                                    <div class="card-header">
+                                        <div class="card-title">
+
+                                            Customer Support ?
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="accordion accordion-customicon1 accordion-primary" id="accordionFAQ3">
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingcustomicon3One">
+                                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                                        data-bs-target="#collapsecustomicon3One" aria-expanded="false"
+                                                        aria-controls="collapsecustomicon3One">
+                                                        Are there any fees associated with investing through your broker?
+                                                    </button>
+                                                </h2>
+                                                <div id="collapsecustomicon3One" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingcustomicon3One"
+                                                    data-bs-parent="#accordionFAQ3">
+                                                    <div class="accordion-body">
+                                                        Our fee structure is transparent. You may encounter spreads and, commissions. Check with your account manager for detailed information on costs associated with investing or contact support for more informations.
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingcustomicon3Two">
+                                                    <button class="accordion-button" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapsecustomicon3Two"
+                                                        aria-expanded="true" aria-controls="collapsecustomicon3Two">
+                                                        How and when do I receive payments.?
+                                                    </button>
+                                                </h2>
+                                                <div id="collapsecustomicon3Two" class="accordion-collapse collapse show"
+                                                    aria-labelledby="headingcustomicon3Two"
+                                                    data-bs-parent="#accordionFAQ3">
+                                                    <div class="accordion-body">
+                                                        <strong>Just when you're eligible!.</strong> Eligibility here refers to account status such as availability of funds, account verification status ( for our users in regulated regions. eg USA.). You may not be able to withdraw when you have an active trade. In this case, you wait for your trade completion or contact your account manager. 
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingcustomicon3Three">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapsecustomicon3Three"
+                                                        aria-expanded="false" aria-controls="collapsecustomicon3Three">
+                                                        Which method of payment is available ?
+                                                    </button>
+                                                </h2>
+                                                <div id="collapsecustomicon3Three" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingcustomicon3Three"
+                                                    data-bs-parent="#accordionFAQ3">
+                                                    <div class="accordion-body">
+                                                        <strong>Blockchain secure payments.</strong>Because we aim to widen our community of investors, we provide a seamless method to fund your account through your existing Crypto wallet. Simply log into your account, navigate to Fund account, copy the address shown, proceed to your wallet to make payment for any selected plan, come back to your account and tap *I have paid*
+                                                        Follow onscreen instructions to correctly top up your account.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item">
+                                                <h2 class="accordion-header" id="headingcustomicon3Four">
+                                                    <button class="accordion-button collapsed" type="button"
+                                                        data-bs-toggle="collapse" data-bs-target="#collapsecustomicon3Four"
+                                                        aria-expanded="false" aria-controls="collapsecustomicon3Four">
+                                                        How often can I monitor my investment portfolio?
+                                                    </button>
+                                                </h2>
+                                                <div id="collapsecustomicon3Four" class="accordion-collapse collapse"
+                                                    aria-labelledby="headingcustomicon3Four"
+                                                    data-bs-parent="#accordionFAQ3">
+                                                    <div class="accordion-body">
+                                                        <strong> You can monitor your investment portfolio in real-time through our user-friendly platform.</strong> Access your account on the go as our trader do the work for you. At your convenience, check your trade progress, profits earned and so much more. Get started for the real experience!
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                             </div>  
+                             <form action="{% url 'faqs' %}" method="post">
+                                {% csrf_token  %}
+                             <div class="col-xl-12">
+                                 <div class="card custom-card">
+                                     <div class="card-header">
+                                         <div class="card-title">
+                                             Still Have Questions ?
+                                             <span class="subtitle fw-normal text-muted d-block fs-12">
+                                                You can post your questions here,our support team is always active. you will receive a mail notification when a team member responds.
+                                            </span>
+                                         </div>
+                                     </div>
+                                     <div class="card-body">
+                                         <div class="row gy-3">
+                                             <div class="col-xl-6">
+                                               
+                                                <label for="user-name" class="form-label">Your Name</label>
+                                                <input name="fullName" type="text" class="form-control form-control-light" id="user-name" placeholder="Enter Your Name">
+                                             </div>
+                                             <div class="col-xl-6">
+                                                <label for="user-email" class="form-label">Email Id</label>
+                                                <input name="email" type="text" class="form-control form-control-light" id="user-email" placeholder="Enter Email">
+                                             </div>
+                                             <div class="col-xl-12">
+                                                <label for="text-area" class="form-label">Textarea</label>
+                                                <textarea maxlength="999" name="message" class="form-control form-control-light" placeholder="Enter your question here" id="text-area" rows="2"></textarea>
+                                             </div>
+                                         </div>
+                                     </div>
+                                    
+
+                                     <div class="card-footer">
+                                         <button type="submit" class="btn btn-primary btn-wave float-end">Send</button>
+                                     </div>
+                                    </form>
+                                 </div>
+                             </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!--End::row-1 -->
+
+            </div>
+        </div>
+        <!-- End::app-content -->
+
+        
+        <!-- Footer Start -->
+        <footer class="footer mt-auto py-3 bg-white text-center">
+            <div class="container">
+                <span class="text-muted"> Copyright © <span class="year" id="year">0000</span> <a
+                        href="javascript:void(0);" class="text-dark fw-medium">Bitprofit LLC. </a>
+                   <a href="javascript:void(0);">
+                    </a> All
+                    rights
+                    reserved
+                </span>
+            </div>
+        </footer>
+      <!-- Footer -->
+   <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        var alertElement = document.querySelector('.alert');
+        alertElement.style.display = 'block';
+
+        setTimeout(function() {
+        alertElement.style.display = 'none';
+        }, 10000);
+        });
+
+        
+      let yearElement = document.getElementsByClassName('year')[0];
+
+      function NewYear() {
+      let thisYear = new Date().getFullYear();
+      yearElement.textContent = thisYear;
+      }
+      NewYear();
+   </script>
+<!-- Footer End -->
+        <div class="modal fade" id="header-responsive-search" tabindex="-1" aria-labelledby="header-responsive-search" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="input-group">
+                    <input type="text" class="form-control border-end-0" placeholder="Search Anything ..."
+                        aria-label="Search Anything ..." aria-describedby="button-addon2">
+                    <button class="btn btn-primary" type="button"
+                        id="button-addon2"><i class="bi bi-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    
+<!-- Scroll To Top -->
+<div class="scrollToTop">
+    <span class="arrow"><i class="ti ti-arrow-narrow-up fs-20"></i></span>
+</div>
+<div id="responsive-overlay"></div>
+<!-- Scroll To Top -->
+<script src="//code.tidio.co/s7s7pkpgzioqwkyxuqph94yrpdafdwdh.js" async></script>
+<!-- Popper JS -->
+<script src="{% static 'libs/@popperjs/core/umd/popper.min.js' %}"></script>
+
+<!-- Bootstrap JS -->
+<script src="{% static 'libs/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+<!-- Defaultmenu JS -->
+<script src="{% static 'js/defaultmenu.min.js' %}"></script>
+
+<!-- Node Waves JS-->
+<script src="{% static 'libs/node-waves/waves.min.js' %}"></script>
+
+<!-- Sticky JS -->
+<script src="{% static 'js/sticky.js' %}"></script>
+
+<!-- Simplebar JS -->
+<script src="{% static 'libs/simplebar/simplebar.min.js' %}"></script>
+<script src="{% static 'js/simplebar.js' %}"></script>
+
+<!-- Color Picker JS -->
+<script src="{% static 'libs/@simonwep/pickr/pickr.es5.min.js' %}"></script>
+
+
+    
+<!-- Custom-Switcher JS -->
+<script src="{% static 'js/custom-switcher.min.js' %}"></script>
+
+    <!-- Custom JS -->
+    <script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+
+</html>

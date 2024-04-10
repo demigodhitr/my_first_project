@@ -1,0 +1,1037 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en_UK">
+   <head>
+         <script src="https://kit.fontawesome.com/c7bf746142.js" crossorigin="anonymous"></script>
+         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+         
+         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+            <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EPTL39X1H"></script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'G-3EPTL39X1H');
+      </script>
+      <!-- Google tag (gtag.js) -->
+      <title>Invest in a global crypto market with your smartly chosen currency.</title>
+      <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+      <meta name="title" content="Invest in a global crypto market with your smartly chosen currency.">
+      <meta name="description" content="Investment and forex have a larger customer base who have invested successfully in it by choosing the perfect crypto for their better future stock growth.">
+      <meta property="og:type" content="BitProfilt HTML5 Responsive Template">
+      <meta property="og:title" content="Invest in a global crypto market with your smartly chosen currency.">
+      <meta name="keywords" content="exchange rate, currency exchange, future, currency, trade, forex factory, forex trading, forex rates, currency exchange rates, fxcm, iforex, currency rate, metatrader, online trading, instaforex, foreign exchange rate, currency calculator, stock trading">
+      <meta property="og:locale" content="en_US">
+      <meta name="twitter:description" content="Investment and forex have a larger customer base who have invested successfully in it by choosing the perfect crypto for their better future stock growth.">
+      <meta name="twitter:title" content="Invest in a global crypto market with your smartly chosen currency.">
+      <meta name="twitter:site" content="@BitProfit">
+      <meta property="og:description" content="Investment and forex have a larger customer base who have invested successfully in it by choosing the perfect crypto for their better future stock growth.">
+      <meta name="twitter:image" content="">
+      <meta property="og:site_name" content="BitProfit">
+      <meta property="og:image" content="">
+      <meta name="twitter:card" content="summary">
+      <!-- Css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.min.css' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'fonts/fontawesome/css/all.min.css' %}
+      ">
+         <link rel="preload" href="{% static 'js/vendors/uikit.min.js' %}" as="script">
+         <link rel="preload" href="{% static 'js/utilities.min.js' %}" as="script">
+         <script src="{% static 'js/vendors/uikit.min.js' %}"></script>
+      <link rel="stylesheet" href="{% static 'css/newstyle.css' %}">
+
+      <!-- Css -->
+      <!-- Favicon -->
+      <link rel="icon" href="{% static 'img/favicon.ico' %}">
+
+      <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="{% static './img/apple-touch-icon-72x72-precomposed.png' %}" sizes="72x72" />
+      <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="{% static './img/apple-touch-icon-114x114-precomposed.png' %}" sizes="114x114" />
+      <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="{% static './img/apple-touch-icon-144x144-precomposed.png' %}" sizes="144x144" />
+      <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="{% static './img/favicon.png' %}" />
+      <!-- Favicon -->
+
+
+      <style>
+         #slideshow{
+			position: fixed;
+			bottom: 0;
+			z-index: 9999;
+		   }
+         /* COOKIE  CONSENT */
+   .cookie-consent {
+  z-index: 9999;
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background: #022659;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.cookie-consent.active {
+  display: block;
+  opacity: 1;
+  bottom: 0;
+  transform: translateY(0);
+  animation: fadeInUp .6s ease-in-out 3s forwards;
+}
+
+.cookie-consent.interacted {
+  animation: fadeOutDown .6s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+
+
+         /* COOKIE CONSENT */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+.ball {
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    border-radius: 50%;
+    margin: 0 10px;
+    opacity: 0;
+    animation: bounce 1s infinite alternate;
+}
+
+
+@keyframes bounce {
+    to {
+        transform: translateY(-20px);
+        opacity: 1;
+    }
+}
+
+
+.ball:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.ball:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.ball:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.ball:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+
+#main-content {
+    display: none;
+    animation: fadeIn 1s ease forwards;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.alert {
+   display: none;
+   background-color: #f44336; 
+   border-radius: 20px;
+   border-bottom-left-radius: 1px;
+   color: white;
+   padding: 5px; 
+   margin-bottom: 4px; 
+   animation: fadeInOut 5s ease-in-out;
+}
+      
+@keyframes fadeInOut {
+   0%, 100% {
+   opacity: 0;
+   }
+   10%, 90% {
+   opacity: 1;
+      }
+}
+
+      </style>
+   </head>
+   <body>
+      <div id="cookieConsent" class="cookie-consent">
+         <p>By using our website, you consent to the use of cookies primarily for analytical purposes only. You can manage your cookie preferences by adjusting your browser settings! </p>
+         <div class="mx-auto">
+         <button style="margin: 0px 40px;" class="btn btn-success" onclick="acceptCookies()">Accept</button>
+         <button style="margin: 0px 40px;"  class="btn btn-danger"  onclick="rejectCookies()">Reject</button>
+       </div>
+      </div>
+      
+      <div id="preloader">
+         <div class="ball"></div>
+         <div class="ball"></div>
+         <div class="ball"></div>
+         <div class="ball"></div>
+         <div class="ball"></div>
+     </div>
+
+
+
+      <div id="main-content">
+      <!-- Header -->
+      <header class="header-main fixed-header">
+         <div class="header-top">
+            <div class="container">
+               <div class="row">
+
+                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                     <div class="right-topbar">
+                        <ul>
+                           <li><a href="https://facebook.com/bitprofitonline"><i class="fab fa-facebook"></i></a></li>
+                           <li><a href="mailto:info@bitprofitonline.com?Subject=Hello%20Client%20Support">support@bitprofitonline.com</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+                     <div class="left-topbar">
+                        <ul>
+                         
+
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="header-bottom">
+            <div class="header-right clearfix">
+               <div class="header-nav-menu">
+                  <div class="container">
+                     <div class="main-headers">
+                        <div class="logo-header">
+                           <a class="logo-link" href="{% url 'home'%}">
+                              <div class="logo-box">
+                                 <img src="{% static './img/logo.png' %}" alt="logo"  >
+                              </div>
+                           </a>
+                        </div>
+                        <div class="header-navbar-menu clearfix">
+                           <nav class="navbar navbar-expand-lg navbar-light">
+                              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                              <i class="fas fa-bars"></i>
+                              </button>
+                              <div class="collapse navbar-collapse header-links" id="navbarSupportedContent">
+                                 <ul class="navbar-nav mr-auto nav-list">
+                                    <li class="nav-item active">
+                                       <a class="nav-link" href="{% url 'home' %}">Home</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                       <a class="nav-link" href="#">Company <i class="fas fa-caret-down ml-1"></i></a>
+                                       <ul class="dropdown__menu__box">
+                                          <li><a href="{% url 'about' %}">About </a></li>
+                                          <li><a href="{% url 'contact' %}">Contact</a></li>
+                                          <li><a href="{% url 'roadmap' %}">Roadmap</a></li>
+                                          <li><a href="{% url 'myprofile' %}">My profile</a></li>
+                                          <li><a href="{% url 'faqs' %}"> FAQ'S</a></li>
+                                          
+                                       </ul>
+                                    </li>
+                                   
+                                    </li>
+                                    <li class="nav-item ">
+                                       <a class="nav-link" href="{% url 'login' %}">Login</a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </nav>
+                           <div class="right-menu">
+                              <a href="{% url 'broker' %}"><button type="button" class="theme-btn">BROKER</button></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- Header -->
+      <!-- Slider -->
+      <section class="slider-aera">
+         {% if messages %}
+         {% for message in messages %}
+         {% if 'verification' in message.tag and 'error' in message.tag %}
+         <div class="alert alert-danger">
+            {{ message }}
+         </div>
+         {% endif %}
+         {% endfor %}
+         {% endif %}
+         <div class="container">
+            <div class="slider-main-box">
+               <div class="slider-inner">
+                  <div class="contain-box">
+                     <h1 class="theme-title">New Level <span class="text-link">Financial</span> Markets For Forex <span class="text-link">Investments </span></h1>
+                     <p class="theme-description">Invest in Cryptocurrencies, Stock Indices, Commodities and Forex from a single account</p>
+                     <div class="btn-box">
+                        <a href="{% url 'register' %}"><button type="button" class="theme-btn">Discover Platform</button></a>
+                        
+                     </div>
+                  </div>
+               </div>
+              
+               <div class="slider-bottom">
+                  <div class="row">
+                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                        <div class="inner-main">
+                           <div class="img-box">
+                              <img src="{% static './img/enhance-tools.png' %}" alt="slider-img" />
+                           </div>
+                           <div class="content-box">
+                              <h3 class="theme-title">Enhanced Tools</h3>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                        <div class="inner-main">
+                           <div class="img-box">
+                              <img src="{% static './img/open-book.png' %}" alt="slider-img" />
+                           </div>
+                           <div class="content-box">
+                              <h3 class="theme-title">Trading Guides</h3>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                        <div class="inner-main">
+                           <div class="img-box">
+                              <img src="{% static './img/flash-execution.png' %}" alt="slider-img" />
+                           </div>
+                           <div class="content-box">
+                              <h3 class="theme-title">Fast execution</h3>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                        <div class="inner-main">
+                           <div class="img-box">
+                              <img src="{% static './img/flash-execution.png' %}" alt="slider-img" />
+                           </div>
+                           <div class="content-box">
+                              <h3 class="theme-title">All at 30% Commission</h3>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Slider -->
+      <!-- About -->
+      <section class="about-area page-padding-big">
+         <img src="{% static './img/blur-left.png' %}" alt="blur-img" class="blur-left" />
+         <img src="{% static './img/blur-right.png' %}" alt="blur-img" class="blur-right" />
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                  <div class="left-about">
+                     <img src="{% static './img/about-img.jpg' %}" alt="about-img" >
+                     <img src="{% static './img/image-shape.png' %}" alt="shape" class="shape-top">
+                     <img src="{% static './img/image-shape.png' %}" alt="shape" class="shape-bottom">
+                  </div>
+               </div>
+               <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                  <div class="right-about">
+                     <div class="page-title mb-4">
+                        <span>Fast execution, low latency</span>
+                        <h2 class="theme-title">Your premium choice for investing safely in currencies & stocks online</h2>
+                        <p class="theme-description">Harness the power of technology to make a quicker, smarter and more precise decision on CFD currency pairs, stocks, commodities and more</p>
+                     </div>
+                     <div class="data-box">
+                        <div class="row">
+                           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                              <div class="inner-about">
+                                 <div class="img-box">
+                                    <img src="{% static './img/calculator.png' %}" alt="cal">
+                                 </div>
+                                 <p class="theme-description">Trading calculators</p>
+                              </div>
+                           </div>
+                           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                              <div class="inner-about">
+                                 <div class="img-box">
+                                    <img src="{% static './img/market-analysis.png' %}" alt="cal">
+                                 </div>
+                                 <p class="theme-description">Market analysis</p>
+                              </div>
+                           </div>
+                           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                              <div class="inner-about">
+                                 <div class="img-box">
+                                    <img src="{% static './img/market-review.png' %}" alt="cal">
+                                 </div>
+                                 <p class="theme-description">Market reviews</p>
+                              </div>
+                           </div>
+                           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
+                              <div class="inner-about">
+                                 <div class="img-box">
+                                    <img src="{% static './img/trading.png' %}" alt="cal">
+                                 </div>
+                                 <p class="theme-description">Trading academy</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- About -->
+      <!-- Fast Execution -->
+      <section class="fast-execution-area page-padding">
+         <img src="{% static './img/graph-bg.png' %}" alt="graph-img" class="graph-img">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                  <div class="right-about">
+                     <div class="page-title mb-4">
+                        <span>ultra-fast execution</span>
+                        <h2 class="theme-title">Tight spreads and ultra-fast execution</h2>
+                        <p class="theme-description">Best market prices available so you can receive excellent conditions.</p>
+                     </div>
+                     <div class="data-box">
+                        <div class="equity-list">
+                           <ul>
+                              <li><i class="fas fa-chevron-right"></i>Negative balance protection</li>
+                              <li><i class="fas fa-chevron-right"></i>Segregated and supervised client funds</li>
+                              <li><i class="fas fa-chevron-right"></i>Instant deposit & fast withdrawal</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                  <div class="right-execution">
+                     <div class="table-responsive">
+                        <table class="table">
+                           <tbody>
+                              <tr>
+                                 <td class="coin-box">
+                                    <img src="{% static './img/crypto-exchange1.png' %}" alt="coin">
+                                    <div class="coin-name">EURUSD<span>Euro / U.S. Dollar</span></div>
+                                 </td>
+                                 <td>1.04530</td>
+                                 <td class="value-box"><span class="text-success">+0.22%</span><span class="text-success">+0.00225  </span></td>
+                              </tr>
+                              <tr>
+                                 <td class="coin-box">
+                                    <img src="{% static './img/crypto-exchange2.png' %}" alt="coin">
+                                    <div class="coin-name">GBPUSD<span>British Pound / U.S. Dollar</span></div>
+                                 </td>
+                                 <td>1.04530</td>
+                                 <td class="value-box"><span class="text-success">+0.22%</span><span class="text-success">+0.00225  </span></td>
+                              </tr>
+                              <tr>
+                                 <td class="coin-box">
+                                    <img src="{% static './img/crypto-exchange1.png' %}" alt="coin">
+                                    <div class="coin-name">USDJPY<span>U.S. Dollar / Japanese Yen</span></div>
+                                 </td>
+                                 <td>1.04530</td>
+                                 <td class="value-box"><span class="text-danger">−0.22%</span><span class="text-danger">−0.00212</span></td>
+                              </tr>
+                              <tr>
+                                 <td class="coin-box">
+                                    <img src="{% static './img/crypto-exchange2.png' %}" alt="coin">
+                                    <div class="coin-name">USDCHF<span>U.S. Dollar / Swiss Franc</span></div>
+                                 </td>
+                                 <td>1.04530</td>
+                                 <td class="value-box"><span class="text-success">+0.22%</span><span class="text-success">+0.00225  </span></td>
+                              </tr>
+                              <tr>
+                                 <td class="coin-box">
+                                    <img src="{% static './img/crypto-exchange2.png' %}" alt="coin">
+                                    <div class="coin-name">AUDUSD<span>Australian Dollar / U.S. Dollar</span></div>
+                                 </td>
+                                 <td>1.04530</td>
+                                 <td class="value-box"><span class="text-danger">−0.13%</span><span class="text-danger">−0.00161</span></td>
+                              </tr>
+                              <tr>
+                                 <td class="coin-box">
+                                    <img src="{% static './img/crypto-exchange1.png' %}" alt="coin">
+                                    <div class="coin-name">USDCAD<span>U.S. Dollar / Canadian Dollar</span></div>
+                                 </td>
+                                 <td>1.04530</td>
+                                 <td class="value-box"><span class="text-success">+0.22%</span><span class="text-success">+0.00225  </span></td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Fast Execution -->
+      <!-- Popular Products -->
+      <section class="popular-products page-padding ">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-12">
+                  <div class="page-title text-center mb-0 page-center">
+                     <span>popular markets</span>
+                     <h2 class="theme-title">Invest with one of the world’s most secure broker </h2>
+                     <p class="theme-description">Find your suitable plan from a wide range of Investment plans, tailored to meet anyone's financial capabilities</p>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
+                  <div class="popular-box">
+                     <h3 class="theme-title">Micro Plan</h3>
+                     <p class="theme-decsription">Earn up to £5,000 in profits when you invest in our micro plan with just £499 capital. Enjoy amazing services, withdraw seamlessly when your trade is completed.</p>
+                     <div class="popular-bottom clearfix">
+                        <div class="btn btn-success">
+                           <span class="btn btn-success">Available</span>
+                        </div>
+                        <div class="link-box">
+                           <a href="{% url 'deposit' %}" class="text-link">Explore Now<i class="fas fa-angle-double-right ml-2"></i></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
+                  <div class="popular-box">
+                     <h3 class="theme-title">Exclusive Package</h3>
+                     <p class="theme-decsription">Get deposit bonus, unlimited access to live support service. Earn up to £10,000 when you fund your account for this plan, This plan requires at least £1,000 in your account to get started. track earnings frequently in your Dashboard.</p>
+                     <div class="popular-bottom clearfix">
+                        <div class="btn btn-success">
+                           <span class="btn btn-success">Available</span>
+                        </div>
+                        <div class="link-box">
+                           <a href="{% url 'deposit' %}" class="text-link">Explore Now<i class="fas fa-angle-double-right ml-2"></i></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
+                  <div class="popular-box">
+                     <h3 class="theme-title">Premium Plan</h3>
+                     <p class="theme-decsription">How about investing for our Traders to handle your account proffesionally while they also guide you to become your own Trader, at no extra cost ! Get our Premium plan with a minimum deposit of £5,000. Earn and learn at the same time!</p>
+                     <div class="popular-bottom clearfix">
+                        <div class="btn btn-success">
+                           <span class="btn btn-success">Available</span>
+                        </div>
+                        <div class="link-box">
+                           <a href="{% url 'deposit' %}" class="text-link">Explore Now<i class="fas fa-angle-double-right ml-2"></i></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6 col-12">
+                  <div class="popular-box">
+                     <h3 class="theme-title">Elite plan</h3>
+                     <p class="theme-decsription">Most ideal for corporate and contract investments. with just £10,000 deposit, and a 21-days wait, you are guaranteed earnings up to £100,000. Choose this plan if you intend to elevate your financial buoyancy. </p>
+                     <div class="popular-bottom clearfix">
+                        <div class="btn btn-success">
+                           <span class="btn btn-success">Available</span>
+                        </div>
+                        <div class="link-box">
+                           <a href="{% url 'deposit' %}" class="text-link">Explore Now<i class="fas fa-angle-double-right ml-2"></i></a>
+                        </div>
+                     </div>
+                  </div>
+                  <h3 class="text-muted text-primary">See a concise list of our investment plans when you <a href="{% url 'dashboard' %}">Log in</a></h3>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Popular Products -->
+      <!-- Leading -->
+      <section class="leading-area page-padding bg-overlay">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-12">
+                  <div class="get-start-box">
+                     <h3 class="theme-title mb-0">Invest with <span class="text-link">world-leading</span> broker.</h3>
+                     <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
+                           <div class="leading-box">
+                              <div class="img-box">
+                                 <img src="{% static './img/leading1.png' %}" alt="leading-img" />
+                              </div>
+                              <div class="data-box">
+                                 <h4 class="theme-title">Leading</h4>
+                                 <span>Experience</span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
+                           <div class="leading-box">
+                              <div class="img-box">
+                                 <img src="{% static './img/leading2.png' %}" alt="leading-img" />
+                              </div>
+                              <div class="data-box">
+                                 <h4 class="theme-title">5 Years</h4>
+                                 <span>FCA Regulated</span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
+                           <div class="leading-box">
+                              <div class="img-box">
+                                 <img src="{% static './img/leading3.png' %}" alt="leading-img" />
+                              </div>
+                              <div class="data-box">
+                                 <h4 class="theme-title">+400</h4>
+                                 <span>Order per day</span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-12">
+                           <div class="leading-box">
+                              <div class="img-box">
+                                 <img src="{% static './img/leading4.png' %}" alt="leading-img" />
+                              </div>
+                              <div class="data-box">
+                                 <h4 class="theme-title">24/5</h4>
+                                 <span>Customer supports</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Leading -->
+      <!-- Trader Join -->
+      <section class="trader-join-area page-padding ">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-12">
+                  <div class="page-title mb-0 text-center">
+                     <span>What our investors say</span>
+                     <h2 class="theme-title mb-0">More than 10,000 Investors joined already.</h2>
+                  </div>
+                 
+               </div>
+               <br>
+               <h4 style="margin-top: 30px;" class="text-muted mx-auto">What some of them say</h4>
+            </div>
+            <div class="row">
+               <div class="trader-slider">
+                  <div class="Trader-box">
+                     <div class="data-box">
+                        <p class="theme-description">I stumbled upon this forex broker through youtube ads.and thought of giving it a try and it's been all wonderful experience. i got the agreed profits and my withdrawal was quite seamless, 4 withdrawals so far in 6 weeks! that's real progress.Forever BitProfiter! </p>
+                        <div class="bottom-testimonial">
+                           <i class="fas fa-quote-right"></i>
+                           <h4 class="theme-title">Mc Angel Nannenhorn</h4>
+                           <span>From United Kingdom</span>
+                        </div>
+                     </div>
+                     <div class="img-box">
+                        <img src="{% static './img/happyguy.jpg' %}" alt="avtar" />
+                     </div>
+                     <i class="fas fa-quote-right big-icon"></i>
+                  </div>
+                  <div class="Trader-box">
+                     <div class="data-box">
+                        <p class="theme-description">As a season investor, I've tried various brokers, but this one stands out. Impressive execution speed and and a wide range of very benefial plans. Highly recommend..</p>
+                        <div class="bottom-testimonial">
+                           <i class="fas fa-quote-right"></i>
+                           <h4 class="theme-title">Lueg. Jeremy</h4>
+                           <span>From United States</span>
+                        </div>
+                     </div>
+                     <div class="img-box">
+                        <img src="{% static './img/emmanuel.jpg' %}" alt="avtar" />
+                     </div>
+                     <i class="fas fa-quote-right big-icon"></i>
+                  </div>
+                  <div class="Trader-box">
+                     <div class="data-box">
+                        <p class="theme-description">I started my forex investment journey with this broker and i've seen consistent profits. Else, i would've abandoned the company at an instance. finally, an all time reliable broker is here.</p>
+                        <div class="bottom-testimonial">
+                           <i class="fas fa-quote-right"></i>
+                           <h4 class="theme-title">Jane Louise</h4>
+                           <span>From Ireland, United Kingdom</span>
+                        </div>
+                     </div>
+                     <div class="img-box">
+                        <img src="{% static './img/jane-louise.jpg' %}" alt="avtar" />
+                     </div>
+                     <i class="fas fa-quote-right big-icon"></i>
+                  </div>
+                  `
+                  <div class="Trader-box">
+                     <div class="data-box">
+                        <p class="theme-description">In any forex broker, the first thing i look out for is transparency. That is why Bitprofit reliably satisfies my needs. I myself plus everyone i have brought on here have never had a negative experience. surely a broker you can trust.</p>
+                        <div class="bottom-testimonial">
+                           <i class="fas fa-quote-right"></i>
+                           <h4 class="theme-title">Vannessa Darwin</h4>
+                           <span>From Sheffield, London</span>
+                        </div>
+                     </div>
+                     <div class="img-box">
+                        <img src="{% static './img/vanessa.jpg' %}" alt="avtar" />
+                     </div>
+                     <i class="fas fa-quote-right big-icon"></i>
+                  </div>
+
+                  <div class="Trader-box">
+                     <div class="data-box">
+                        <p class="theme-description">I appreciate all the returns i have gained from this platform. I never believed online investments but my little first step to explore things turn out to be my life saver. Things has improved immensely in my household. huge profits while i just sit back and earn. Big thanks to Steph Ravster</p>
+                        <div class="bottom-testimonial">
+                           <i class="fas fa-quote-right"></i>
+                           <h4 class="theme-title">Gabriella San-jones</h4>
+                           <span>From United Kingdom, England</span>
+                        </div>
+                     </div>
+                     <div class="img-box">
+                        <img src="{% static './img/gabriella-sanjones.jpg' %}" alt="avtar" />
+                     </div>
+                     <i class="fas fa-quote-right big-icon"></i>
+                  </div>
+                 
+                  <div class="Trader-box">
+                     <div class="data-box">
+                        <p class="theme-description">The customer services is exceptional. i love when i can communicate with my account manager wherever i put my money and at all times. based on my experience. you can confidently invest with them.</p>
+                        <div class="bottom-testimonial">
+                           <i class="fas fa-quote-right"></i>
+                           <h4 class="theme-title"> Mansoor Ahmad Clarke</h4>
+                           <span>From Delhi, India</span>
+                        </div>
+                     </div>
+                     <div class="img-box">
+                        <img src="{% static './img/ahmad.jpg' %}" alt="avtar" />
+                     </div>
+                     <i class="fas fa-quote-right big-icon"></i>
+                  </div>
+
+                  <div class="Trader-box">
+                     <div class="data-box">
+                        <p class="theme-description">This company is super wonderful yaar! I just click few buttons, wait five days and boom - invest done, profits received. much love to the Traders..</p>
+                        <div class="bottom-testimonial">
+                           <i class="fas fa-quote-right"></i>
+                           <h4 class="theme-title"> Kitchener Masjid</h4>
+                           <span>From Pakistan </span>
+                        </div>
+                     </div>
+                     <div class="img-box">
+                        <img src="{% static './img/kitchener-masjid.jpg' %}" alt="avtar" />
+                     </div>
+                     <i class="fas fa-quote-right big-icon"></i>
+                  </div>
+                 
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Trader Join -->
+      <!-- Mobile App -->
+      <section class="mobile-app-area page-padding">
+         <div class="container">
+            <div class="chalange-main-box">
+               <div class="box-left">
+                  <div class="page-title mb-0">
+                     <span>Native mobile app</span>
+                     <h2 class="theme-title">Enhance your investment experience with our Mobile App</h2>
+                     <p class="theme-description">Currently on beta testing.</p>
+                     <div class="btn-box app-btn">
+                        <ul>
+                           <!-- <li><a href=""><img src="{% static './img/in-app-store.svg' %}" alt="android-btn"></a></li> -->
+                           <li><a href="{% url 'comingsoon' %}"><img src="{% static './img/in-google-play.svg' %}" alt="ios-btn"></a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="box-right">
+                  <div class="app-img-box">
+                     <img src="{% static './img/mobile-app.png' %}" alt="Mobile-app-img" />
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Mobile App -->
+
+      <!-- Get Start -->
+      <section class="Get-start-area page-padding bg-overlay">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-12">
+                  <div class="get-start-box">
+                     <h3 class="theme-title">Ready to get started?</h3>
+                     <p class="theme-description">Global access to financial markets from a single account <a href="{% url 'register' %}">Open Your Account </a></p>
+                     <div class="btn-box">
+                        <!-- <a href=""><img src="{% static './img/in-app-store.svg' %}" alt="app"></a> -->
+                        <a href="{% url 'comingsoon' %}"><img src="{% static './img/in-google-play.svg' %}" alt="app"></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Get Start -->
+      <!-- Footer -->
+      <footer class="footer">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                  <div class="footer-box">
+                     <div class="img-box">
+                        <img src="{% static './img/logo-black.png' %}" alt="logo">
+                     </div>
+                     <p class="theme-description">Connect with us to make your Investment experience top-notch worthy and Get the exact solution to the mark for your crypto exchange.</p>
+                     <div class="social-links">
+                        <ul>
+                           <li><a href="https://facebook.com/bitprofitonline"><i class="fab fa-facebook-f"></i></a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                  <div class="footer-box">
+                     <h4 class="theme-title">Navigations</h4>
+                     <div class="links-box">
+                        <ul>
+                           <li><a href="{% url 'home' %}"><i class="fas fa-angle-right"></i>Home</a></li>
+                           <li><a href="{% url 'about' %}"><i class="fas fa-angle-right"></i>About</a></li>
+                           <li><a href="{% url 'roadmap' %}"><i class="fas fa-angle-right"></i>Roadmap</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               </div>
+               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                  <div class="footer-box">
+                     <h4 class="theme-title">Education</h4>
+                     <div class="links-box">
+                        <ul>
+                           <li><a href="{% url 'policy' %}"><i class="fas fa-angle-right"></i>Privacy policy</a></li>
+                           <li><a href="{% url 'terms' %}"><i class="fas fa-angle-right"></i>Terms & Condition</a></li>
+
+                           <li><a href="{% url 'faqs' %}"><i class="fas fa-angle-right"></i>FAQ'S</a></li>
+                           
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         <footer class="footer mt-auto py-3 bg-white text-center">
+            <div class="container">
+                <span class="text-muted"> Copyright © <span class="year" id="year">0000</span> <a
+                        href="javascript:void(0);" class="text-dark fw-medium">Bitprofit LLC. </a>
+                   <a href="javascript:void(0);">
+                    </a> All
+                    rights
+                    reserved
+                </span>
+            </div>
+
+   </div>
+      <!-- Footer -->
+
+      <!-- Market Data start -->
+      <div style="z-index: 999; background-color: #022659;" class="uk-section uk-section-secondary uk-padding-small in-ticker-prices" id="slideshow">
+         <div class="uk-container uk-container-expand">
+            <div class="uk-grid">
+               <div class="uk-width-1-1">
+                  <div data-uk-slider="autoplay: true; autoplay-interval: 4000">
+                     <ul class="uk-grid-small uk-slider-items uk-child-width-1-2@s uk-child-width-1-6@m" data-uk-grid>
+                        {% if coins_data %}
+                        {% for coin_data in coins_data %}
+                        <img class="rounded-circle" style="width: 55px; height: 40px;" src="{{ coin_data.image }}"
+                           alt="{{coin_data.name}}">
+                        <li>{{ coin_data.name }}
+                           <span>Current price: ${{ coin_data.current_price }}.</span><br>
+                           High (24 hours): <div class="uk-text-success"><i class="fas fa-caret-up"></i>
+                              ${{coin_data.high_24h}} </div>
+                           Low (24 hours): <div class="uk-text-danger"> <i class="fas fa-caret-down"></i>
+                              ${{coin_data.low_24h}} </div>
+                           Change 24h: ${{ coin_data.price_change_24h }} ({{ coin_data.price_change_percentage_24h }}%)
+      
+                        </li>
+                        {% endfor %}
+                        {% else %}
+                        <li>
+                           Alphabet Inc (GOOGLE)
+                           <span class="uk-text-danger">1,134.42 <i class="fas fa-caret-down"></i> (1.41%)<span>
+                        </li>
+                        <li>BitProfit Stake (PBS)
+                           <span class="uk-text-success">94.60 <i class="fas fa-caret-up"></i> (0.45%)</span>
+                        </li>
+                        <li>GOld (GLD)
+                           <span class="uk-text-success">37.94 <i class="fas fa-caret-up"></i> (0.24%)</span>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      {% endif %}
+      <!-- Market data end -->
+
+   <script>
+document.addEventListener("DOMContentLoaded", function() {
+  var cookieConsent = getCookie("cookieConsent");
+
+  // If cookieConsent is not set or rejected, show the consent banner
+  if (!cookieConsent || cookieConsent === "rejected") {
+    setTimeout(showCookieConsent, 3000);
+  }
+});
+
+function showCookieConsent() {
+  console.log("showCookieConsent function called");
+  var consentPopup = document.getElementById("cookieConsent");
+  consentPopup.classList.add("active");
+}
+
+function acceptCookies() {
+  setCookie("cookieConsent", "accepted", 365);
+  hideCookieConsent();
+}
+
+function rejectCookies() {
+  setCookie("cookieConsent", "rejected", 1);
+  hideCookieConsent();
+}
+
+function hideCookieConsent() {
+  var consentPopup = document.getElementById("cookieConsent");
+  consentPopup.classList.remove("active");
+  consentPopup.classList.add("interacted");
+}
+
+function setCookie(name, value, days) {
+  var expires = "";
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    expires = "; expires=" + date.toUTCString();
+  }
+  document.cookie = name + "=" + value + expires + "; path=/";
+}
+
+function getCookie(name) {
+  var cookieName = name + "=";
+  var cookies = document.cookie.split(';');
+  for (var i = 0; i < cookies.length; i++) {
+    var cookie = cookies[i].trim();
+    if (cookie.indexOf(cookieName) === 0) {
+      return cookie.substring(cookieName.length, cookie.length);
+    }
+  }
+  return "";
+}
+
+
+// COOKIE CONSENT
+
+      
+      document.addEventListener('DOMContentLoaded', function() {
+      var alertElement = document.querySelector('.alert');
+
+   
+      alertElement.style.display = 'block';
+
+
+      setTimeout(function() {
+      alertElement.style.display = 'none';
+      }, 7000);
+      });
+
+      let yearElement = document.getElementsByClassName('year')[0];
+
+      function NewYear() {
+      let thisYear = new Date().getFullYear();
+      yearElement.textContent = thisYear;
+      }
+      NewYear();
+
+      document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+        document.getElementById("preloader").style.display = "none";
+        document.getElementById("main-content").style.display = "block";
+    }, 1000);
+});
+
+
+
+   </script>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+         
+         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <!-- Javascript -->
+      <!--TIDIO PLUGIN-->
+      <script src="//code.tidio.co/s7s7pkpgzioqwkyxuqph94yrpdafdwdh.js" async></script>
+      <!---->
+      <script src="{% static './js/jquery.min.js' %}"></script>
+      <script src="{% static './js/popper.min.js' %}"></script>
+      <script src="{% static './js/owl.carousel.min.js' %}"></script>
+      <script src="{% static './js/bootstrap.min.js' %}"></script>
+      <script src="{% static './js/custom.js' %}"></script>
+      
+      <!-- Javascript -->
+   </body>
+</html>

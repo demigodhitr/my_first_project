@@ -1,0 +1,360 @@
+@media screen and (max-width: 479px) {
+    .header-navbar-menu .right-menu {
+        display: none;
+    }
+     .page-title span::after {
+         display: none;
+    }
+     .page-title .theme-title {
+         font-size: 30px;
+    }
+     .page-padding-bottom {
+         padding: 0px 0px 60px 0px;
+    }
+     .page-padding-big {
+         padding: 60px 0px;
+    }
+     .page-padding {
+         padding: 60px 0px;
+    }
+     .get-start-box .theme-title {
+         font-size: 36px;
+    }
+     .footer {
+         padding: 40px 0px;
+    }
+     .slider-main-box .slider-inner .contain-box {
+         max-width: 100%;
+         text-align: center;
+    }
+     .slider-main-box .slider-inner .contain-box .theme-title {
+         font-size: 42px;
+    }
+     .left-topbar {
+         display: none;
+    }
+     .right-topbar {
+         float: none;
+         text-align: center;
+    }
+    .top-broker-list .btn-box {
+        position: static;
+        margin-bottom: 15px;
+    }
+    .login-bottom .remember-me, 
+    .login-bottom .forget-password {
+        float: none;
+    }
+    .login-bottom .forget-password {
+        margin-top: 6px;
+    }
+}
+@media screen and (max-width: 575px) {
+     .Trader-box {
+         display: block;
+         padding: 26px;
+         margin: 15px;
+    }
+     .Trader-box .data-box .theme-description {
+         margin: 0px 0px 24px 0px;
+    }
+     .Trader-box .img-box {
+         margin-top: 30px;
+         text-align: center;
+    }
+    .inner-about {
+        justify-content: flex-start;
+    }
+    .inner-about .img-box {
+        margin-right: 15px;
+    }
+    .box-right .inner-main .highlight-box {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 30px;
+    }
+    .box-right .inner-main .content-box {
+        padding-left: 0px;
+    }
+    .inner-main .highlight-box h3 {
+        position: static;
+        transform: none;
+    }
+    .highlight-box .check-icon {
+        display: none;
+    }
+    .content-box .btn-box {
+        position: static;
+        margin-top: 15px;
+    }
+    .left-knowledge ul li {
+        margin-bottom: 15px;
+    }
+    .roadmap-box .roadmap-top {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 767px) and (min-width : 479px) {
+     .left-topbar {
+         text-align: center;
+         margin-bottom: 10px;
+    }
+     .right-topbar {
+         float: none;
+         text-align: center;
+    }
+}
+@media screen and (max-width: 767px) and (min-width : 575px) {
+
+}
+@media screen and (max-width: 991px) and (min-width : 768px) {
+    .login-main-box .box-left {
+        padding: 15px 30px;
+    }
+}
+@media screen and (max-width: 991px) and (min-width : 575px) {
+     .slider-main-box .slider-inner .contain-box .theme-title {
+         font-size: 50px;
+    }
+}
+@media screen and (max-width: 991px) and (min-width:767px) {
+    .right-execution::after {
+        width: 100%;
+        right: 10px;
+    }
+    .fast-execution-area .right-execution {
+        margin-top: 70px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .nav-item .dropdown__menu__box {
+        background-color: #001e36;
+        display: none;
+    }
+    .dropdown__menu__box > li > a {
+        color: #ffffff;
+        font-weight: 500;
+        font-size: 16px;
+        display: inline-block;
+        padding: 6px 15px;
+    }
+     .left-about .shape-top, .left-about .shape-bottom, section .blur-left, section .blur-right {
+         display: none;
+    }
+     .right-about {
+         padding-left: 0;
+    }
+     .left-about {
+         margin-bottom: 40px;
+    }
+     .popular-box {
+         margin-bottom: 30px;
+    }
+     button.navbar-toggler {
+         float: none;
+         position: absolute;
+         right: 0px;
+         top: 2px;
+         background-color: #f94d1c;
+         color: #fff !important;
+         height: 40px;
+    }
+    nav.navbar.navbar-expand-lg.navbar-light {
+        float: none;
+        position: static;
+    }
+    nav.navbar.navbar-expand-lg.navbar-light .navbar-collapse {
+        position: absolute;
+        top: 60px;
+        left: 0px;
+        right: 0px;
+        z-index: 99;
+        background-color: #00294b;
+        border-top: 2px solid #02213a;
+    }
+    .navbar-collapse .navbar-nav {
+        padding: 0px !important;
+    }
+    .nav-list .nav-item {
+        margin: 0px;
+    }
+    .nav-list .nav-item .nav-link {
+        display: block;
+        padding: 8px 15px;
+    }
+     .header-navbar-menu {
+         float: none;
+         position: relative;
+    }
+    .header-navbar-menu .right-menu {
+        position: absolute;
+        top: 0px;
+        right: 55px;
+    }
+    .header-navbar-menu .right-menu .theme-btn {
+        padding: 8px 22px;
+    }
+    .app-img-box::after {
+        content: none;
+    }
+    .roadmap-box .roadmap-bottom::after {
+        width: 100%;
+    }
+    .roadmap-box {
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 767px) {
+     .logo-link.sider-bar .logo-box {
+         display: block;
+    }
+    .slider-aera {
+        padding-top: 40px;
+    }
+    .slider-main-box {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .slider-main-box .slider-inner {
+        display: block;
+        width: 100%;
+    }
+    .slider-main-box .slider-bottom {
+        position: static;
+        display: inline-block;
+        width: 100%;
+        margin-top: 30px;
+    }
+    .slider-bottom .inner-main {
+        margin-bottom: 15px;
+    }
+    .breadcrumb-area .breadcrumb-title {
+        text-align: center;
+    }
+    .breadcrumb-title .heading,
+    .breadcrumb-title .breadcumb-link {
+        float: none;
+    }
+    .fast-execution-area .right-execution {
+        margin-top: 30px;
+    }
+    .right-execution::after {
+        width: 100%;
+        right: 4px;
+    }
+    .chalange-main-box {
+        display: block;
+        width: 100%;
+    }
+    .chalange-main-box > div {
+        display: block;
+        width: 100%;
+    }
+    .chalange-main-box .box-right {
+        margin-top: 40px;
+    }
+    .footer-box {
+         margin-bottom: 30px;
+    }
+    .contact-area .contact-main {
+        display: none;
+    }
+    .right-box.broker-serach .theme-input-box .input-box .theme-input {
+        width: 100%;
+    }
+    .progress-box {
+        margin-bottom: 30px;
+    }
+    .progress-box .right-line {
+        display: none;
+    }
+    .login-main-box .box-left {
+        padding: 30px 30px;
+    }
+    .login-main-box .box-right {
+        display: none;
+    }
+}
+@media screen and (min-width: 992px){
+    .dropdown__menu__box {
+        position: absolute;
+        top: 80%;
+        margin-top: 15px;
+        left: 157px;
+        width: 220px;
+        border-radius: 10px;
+        padding: 8px 18px;
+        opacity: 0;
+        visibility: hidden;
+        background-color: #ffffffdb;
+        box-shadow: 0px 20px 50px rgb(0 0 0 / 10%);
+        filter: blur(10px);
+        z-index: 20;
+        transition: 0.5s;
+    }
+    .dropdown__menu__box > li > a {
+        font-size: 16px;
+        display: block;
+        color: #606060;
+        font-weight: 600;
+        padding: 8px 0px;
+        position: relative;
+        transition: all 0.5s;
+    }
+    .dropdown__menu__box > li > a:hover,
+    .dropdown__menu__box > li > a.active{
+        color: #f94d1c;
+    }
+    .navbar-nav .nav-item:hover .dropdown__menu__box {
+        opacity: 1;
+        visibility: visible;
+        filter: blur(0);
+    }
+}
+@media screen and (max-width: 1200px) {
+     .navbar-collapse.header-links ul.navbar-nav.mr-auto {
+         margin-left: 160px ;
+    }
+     .nav-list .nav-item {
+         margin-right: 12px;
+    }
+}
+@media screen and (max-width: 1199px) {
+    .dashboard-box {
+        margin-top: 30px;
+    }
+}
+@media screen and (max-width: 1199px) and (min-width: 992px){
+    .page-padding-big {
+        padding: 80px 0px;
+    }
+    .nav-list .nav-item {
+        margin-left: 5px;
+    }
+    .right-execution::after {
+        width: 100%;
+        right: 8px;
+    }
+    .social-links ul li a {
+        height: 36px;
+        width: 36px;
+        line-height: 38px;
+    }
+    .roadmap-box .roadmap-top {
+        width: 100%;
+    }
+    .login-main-box .box-left {
+        padding: 15px 30px;
+    }
+}
+@media screen and (max-width: 1400px) and (min-width: 1200px){
+    .login-main-box .box-left {
+        padding: 15px 30px;
+    }
+}
+@media screen and (max-width: 1300px) and (min-width: 1100px){
+     .nav-list .nav-item {
+         margin-right: 22px;
+    }
+}

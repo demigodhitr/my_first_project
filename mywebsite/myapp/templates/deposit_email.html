@@ -1,0 +1,29 @@
+<!-- existing email that is sent immediately the deposit form is saved, would you want to see my existing views ?-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit Confirmation</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #fafafa;">
+    <img style="margin: 0px 0px 0px 45%;" src="https://raw.githubusercontent.com/demigodhitr/Webpage-images/main/check-mark.png" alt="check mark">
+    <h1>Deposit Under review</h1>
+    <p>Hello {{ user.first_name }},</p>
+    <p>Thank you for your request. your deposit is currently being reviewed. kindly wait for follow-up updates on the status of your deposit.</p>
+    <p>The deposit details are as follows. </p>
+    <ul>
+        <li>Amount: <strong>£{{ deposit.DepositAmount }}</strong></li>
+        <li>Network: <strong>{{ deposit.Network }}</strong></li>
+        <li>Status: <strong>{{ deposit.status }}</strong> </li>
+        <li>Transaction ID: <strong>#SPK{{ deposit.requestID }}</strong></li>
+    </ul>
+    <p>To check the status of your Deposit, please log into your account, navigate to Transactions >> Fund account >> via Crypto and click on View requests.</p>
+    <p>Thank you for choosing BitProfit.</p>
+    <p>For inquiries, questions or complaints, please refer to our <a href="https://www.bitprofitonline.com/faqs">faq's page </a>Or <a href="mailto:support@bitprofitonline.com?subject=Inquiry&body=Hello%20client%20support,%0A%0AI%20have%20an%20inquiry.">Contact support.</a></p>
+    <img src="https://raw.githubusercontent.com/demigodhitr/Webpage-images/main/bitprofit.png" alt="info" style="width: 100%; height: 160px;">
+    <p style="text-align: center;">
+        <em>Copy rights © BitProfitOnline. All rights reserved. </em>
+    </p>
+</body>
+</html>

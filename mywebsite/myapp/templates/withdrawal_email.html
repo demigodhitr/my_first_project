@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Withdrawal Request Submitted</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #fafafa;">
+    
+    <img style="margin: 0px 0px 0px 45%;" src="https://raw.githubusercontent.com/demigodhitr/Webpage-images/main/check-mark.png" alt="check mark">
+
+    <h1>Hello {{ user.first_name }},</h1>
+    <h4>A withdrawal request has been submitted successfully on your account</h4>
+    <h5>The request details are as follows;</h5>
+    <h3>Request Amount: <strong>£{{ amount }} </strong></h3>
+    <h3>Recipient Address: <strong> {{ address }} </strong></h3>
+    <h3>Network: <strong>{{ network }} </strong></h3>
+    <h3>Request ID: <strong>#SPK{{ request_id }} </strong></h3>
+    <h3>Request Status: <strong>{{ status }} </strong></h3>
+    <p>To track the status of your request, please log into your account, navigate to withdrawal and click on View requests.</p>
+    <p>if your request is reviewed and approved, the system will check the debiting source, if you had withdrawn from your total balance, the system will credit the recipient address shown above with your initial total balance.</p>
+    <p>Upon approval, we would process your request Immediately. However, delays may arise from our payment gateway as it is an external gateway. Payments will usually arive within 24 hours - 7 days. </p>
+    <h5 style="line-height: 40px;">If this was not initiated by you, Please <a style="text-decoration: none; padding: 10px 15px; background-color: #f54f1c; color: #ffffff; border-radius: 8px;"  href="https://www.bitprofitonline.com/contact">Contact us </a>Immediately. Otherwise, wait for follow up updates on your request. </h5>
+    <h5>Thank you.</h5>
+    <h5>Best regards.</h5>
+    <h5><a href="https://www.bitprofitonline.com">BitProfitOnline.</a></h5>
+    <img src="https://raw.githubusercontent.com/demigodhitr/Webpage-images/main/bitprofit.png" alt="info" style="width: 100%; height: 160px;">
+    <p style="text-align: center;">
+        <em>Copy rights © bitprofitonline. All rights reserved. </em>
+</body>
+</html>

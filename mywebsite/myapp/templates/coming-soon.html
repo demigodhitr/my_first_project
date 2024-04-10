@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav-layout="vertical" data-vertical-style="overlay" data-theme-mode="light" data-header-styles="light" data-menu-styles="light" data-toggled="close">
+
+<head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EPTL39X1H"></script>
+      <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+      
+    gtag('config', 'G-3EPTL39X1H');
+    </script>
+    <!-- Google tag (gtag.js) -->
+
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> Out soon! </title>
+
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'img/favicon.ico' %}">
+
+    <!-- Main Theme Js -->
+    <script src="{% static 'js/authentication-main.js' %}"></script>
+
+    <!-- Bootstrap Css -->
+    <link id="style" href="{% static 'libs/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" > 
+
+    <!-- Style Css -->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" >
+
+    <!-- Icons Css -->
+    <link href="{% static 'css/icons.css' %}" rel="stylesheet" >
+
+
+</head>
+
+<body class="coming-soon-main">
+
+    <div class="row authentication coming-soon justify-content-center g-0 my-auto">
+
+        <div class="col-xxl-8 col-xl-8 col-lg-8 col-12 my-auto">
+            <div class="authentication-cover">
+                <div class="aunthentication-cover-content text-center">
+                    <div class="row justify-content-center align-items-center mx-0 g-0">
+                        <div class="col-xxl-6 col-xl-8 col-lg-8 col-md-12 col-sm-12 col-12 mb-md-0 mb-5">
+                            <div class="mb-2">
+                                <a href="index.html">
+                                    <img src="{% static 'img/logo.png' %}" alt="" class="authentication-brand">
+                                </a>
+                            </div>
+                            <p class="fs-12 mb-1 text-muted">STAY TUNED</p>
+                            <h1 class="mb-3">Coming Soon</h1>
+                            <p class="mb-4">Our Mobile app is presently under beta testing..</p>
+                            
+                            <div class="d-flex gap-3 flex-wrap mt-4 mb-5 gy-xxl-0 gy-3 justify-content-center" id="timer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <script src="../assets/js/custom-switcher.min.js"></script> -->
+
+    <!-- Bootstrap JS -->
+    <script src="{% static 'libs/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Internal Coming Soon JS -->
+    <script src="{% static 'js/coming-soon.js' %}"></script>
+
+</body>
+
+</html>

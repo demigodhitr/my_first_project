@@ -1,0 +1,1092 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light" data-menu-styles="light" data-toggled="close">
+
+<head>
+
+          <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EPTL39X1H"></script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'G-3EPTL39X1H');
+      </script>
+      <!-- Google tag (gtag.js) -->
+
+
+    <!-- font awesome-->
+    <script src="https://kit.fontawesome.com/c7bf746142.js" crossorigin="anonymous"></script>
+
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Investment plans - User </title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'img/favicon.ico' %}">
+    
+    <!-- Choices JS -->
+    <script src="{% static 'libs/choices.js/public/assets/scripts/choices.min.js' %}"></script>
+
+    <!-- Main Theme Js -->
+    <script src="{% static 'js/main.js' %}"></script>
+    
+    <!-- Bootstrap Css -->
+    <link id="style" href="{% static 'libs/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" >
+
+    <!-- Style Css -->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" >
+
+    <!-- Icons Css -->
+    <link href="{% static 'css/icons.css' %}" rel="stylesheet" >
+
+    <!-- Node Waves Css -->
+    <link href="{% static 'libs/node-waves/waves.min.css' %}" rel="stylesheet" > 
+
+    <!-- Simplebar Css -->
+    <link href="{% static 'libs/simplebar/simplebar.min.css' %}" rel="stylesheet" >
+    
+    <!-- Color Picker Css -->
+    <link rel="stylesheet" href="{% static 'libs/flatpickr/flatpickr.min.css' %}">
+    <link rel="stylesheet" href="{% static 'libs/@simonwep/pickr/themes/nano.min.css' %}">
+
+    <!-- Choices Css -->
+    <link rel="stylesheet" href="{% static 'libs/choices.js/public/assets/styles/choices.min.css' %}">
+
+
+    <style>
+
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        
+        .ball {
+            width: 20px;
+            height: 20px;
+            background-color: green;
+            border-radius: 50%;
+            margin: 0 10px;
+            opacity: 0;
+            animation: bounce 1s infinite alternate;
+        }
+        
+        
+        @keyframes bounce {
+            to {
+                transform: translateY(-20px);
+                opacity: 1;
+            }
+        }
+        
+        
+        .ball:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        
+        .ball:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        
+        .ball:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+        
+        .ball:nth-child(5) {
+            animation-delay: 0.8s;
+        }
+        
+        
+        #main-content {
+            display: none;
+            animation: fadeIn 1s ease forwards;
+        }
+        
+        
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        
+        .modal {
+          display: none;
+          position: fixed;
+          z-index: 1;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        .modal-content {
+          background-color: #fefefe;
+          margin: 10% auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: 80%;
+        }
+        
+        .close {
+          color: #aaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+          color: black;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        
+            .api{
+               background-color: #240000;
+               color: #fff;
+            }
+
+    .alert {
+       display: none;
+       animation: fadeInOut 5s ease-in-out;
+   }
+               
+                   @keyframes fadeInOut {
+                       0%, 100% {
+                           opacity: 0;
+                       }
+                       10%, 90% {
+                           opacity: 1;
+                       }
+                   }
+        
+
+                  </style>
+
+</head>
+
+<body>
+    <div id="preloader">
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+    </div>
+
+    <div id="main-content">
+    <!-- Loader -->
+<div id="loader" >
+    <img src="{% static 'img/media/loader.svg' %}" alt="">
+</div>
+<!-- Loader -->
+
+    <div class="page">
+         <!-- app-header -->
+ <header class="app-header">
+    
+
+    <!-- Start::main-header-container -->
+    <div class="main-header-container container-fluid">
+
+        <!-- Start::header-content-left -->
+        <div class="header-content-left">
+
+            <!-- Start::header-element -->
+            <div class="header-element">
+
+                <div class="horizontal-logo">
+                    <p class="btn btn-success mt-10"><a href="{% url 'dashboard' %}">My account</a></p>
+
+                </div>
+                
+            </div>
+            <!-- End::header-element -->
+
+        </div>
+        <!-- End::header-content-left -->
+    </div>
+    <!-- End::main-header-container -->
+
+</header>
+<!-- /app-header -->
+        <!-- Start::app-sidebar -->
+
+        <!-- End::app-sidebar -->
+
+        <!-- Start::app-content -->
+        <div class="main-content app-content">
+            <div class="container-fluid">
+                
+
+                <!-- Page Header -->
+                <div class="my-4 page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2">
+                    <div>
+                        <h1 class="page-title fw-medium fs-18 mb-2">Investment plans </h1>
+                        <div class="">
+                            <nav>
+                                <ol class="breadcrumb mb-0">
+                                    <li class="breadcrumb-item"><a href="javascript:void(0);">Company</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Investment plans</li>
+                                    
+                                </ol>
+                                
+                            </nav>
+                            <br/><br/>
+
+                        </div>
+                    </div>
+                    {% if messages %}
+                    {% for message in messages %}
+                    {% if 'checks' in message.tags and 'error' in message.tags %}
+                        <div class="alert alert-warning">
+                            {{ message }}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+                {% endif %}
+                </div>
+                <!-- Page Header Close -->
+
+                    <!-- Start:: row-1 -->
+                    <div class="row d-flex align-items-center justify-content-center mb-5">
+                        <div class="col-lg-8 col-xl-3 col-xxl-3 col-md-8 col-sm-12">
+                            <div class="card custom-card pricing-card p-4">
+                                <div class="card-body p-0">
+                                    <div class="pb-4">
+                                        <h5 class="fw-medium mb-1">Micro Plan</h5>
+                                        <span class="fs-12 mb-1 text-muted d-block">Suitable for trial purposes !</span>
+                                        <span class="mb-1 fw-medium d-block"> £499 - £999 </span>
+                                    </div>
+                                    <ul class="list-unstyled pricing-body text-muted mb-0">
+                                        <li>
+                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm" disabled checked>
+                                                </div>
+                                                <span class="ms-2 my-auto">
+                                                    Bonus on deposits<span class="badge bg-light text-default border ms-2"></span>
+                                                </span>
+                                                <span class="ms-auto fw-medium text-default"></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm1" disabled checked>
+                                                </div>
+                                                <span class="ms-2 my-auto">
+                                                    Daily income <span class="badge bg-light text-default border ms-2">ROI in 5 days</span>
+                                                </span>
+                                                <span class="ms-auto fw-medium text-default"></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                 <div class="form-check">
+                                                    <input checked disabled class="form-check-input" type="checkbox" value="" id="checkebox-sm3">
+                                                </div>
+                                                <span class="ms-2 my-auto">
+                                                    Online Support<span class="badge bg-light text-default border ms-2">24/7</span>
+                                                </span>
+                                                <span class="ms-auto fw-medium text-default">24/7</span>
+                                            </div>
+                                        </li>
+                                      
+                                        <li>
+                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm5" disabled checked>
+                                                </div>
+                                                <span class="ms-2 my-auto">
+                                                   Refunds on losses (if applicable.)
+                                                </span>
+                                                <span class="ms-auto fw-medium text-default"></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer border-top-0 text-center p-0 pt-3">
+                                    <div class="d-flex align-items-center justify-content-between mb-2 pt-2">
+                                        <span class="fs-13 fw-medium">VaS Tax</span>
+                                        <span class="fs-16 fw-medium">30%</span>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <span class="fs-13 fw-medium">ROI</span>
+                                        <span class="fs-4 fw-medium text-primary"> +£4,999.</span>
+                                    </div>
+                                    <a href="{% url 'microplan' %}"><button type="button" class="btn btn-lg btn-primary d-grid w-100">
+                                        <span class="ms-4 me-4">Select</span>
+                                    </button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-xl-3 col-md-8 col-sm-12">
+                            <div class="card custom-card pricing-card p-4 border border-primary overflow-hidden">
+                                <div class="card-body p-0">
+                                    <span class="pricing-new shadow">New</span>
+                                    <div class="pb-4 d-fle align-items-start">
+                                        <div>
+                                            <h5 class="fw-medium mb-1">Exclusive package </h5>
+                                            <span class="fs-12 mb-1 text-muted d-block">Suitable for targeted ROI!</span>
+                                            <span class="mb-1 fw-medium d-block"> £1,000 - £4,999</span>
+                                        </div>
+                                    </div>
+                                    <ul class="list-unstyled pricing-body text-muted mb-0">
+                                        <li>
+                                            <div class="d-flex align-items-center p-2 rounded-3 bg-primary-transparent border border-primary">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm6" disabled checked>
+                                                </div>
+                                                <span class="ms-2 d-flex-align-items-center my-auto">
+                                                    Bonus on deposits <span class="badge bg-success-transparent border border-success ms-2"></span>
+                                                </span>
+                                                <span class="ms-auto fw-medium text-default"></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm7" disabled checked>
+                                                </div>
+                                                <span class="ms-2 my-auto">
+                                                    Daily Income <span class="badge bg-light text-default border ms-2">ROI in 5 days</span>
+                                                </span>
+                                                <span class="ms-auto fw-medium text-default"></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center p-2 rounded-3 border bg-primary-transparent border-primary">
+                                                 <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm9"  disabled checked>
+                                                </div>
+                                                <span class="ms-2 d-flex-align-items-center my-auto">
+                                                    Designated support team<span class="badge bg-success-transparent border border-success ms-2">24/7</span>
+                                                </span>
+                                                <span class="ms-auto fw-medium text-default">24/7</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm11" disabled checked>
+                                                </div>
+                                                <span class="ms-2 my-auto">
+                                                   Refunds + compensation on losses.
+                                                   (if applicable) 
+                                                </span>
+                                                <span class="ms-auto fw-medium text-default"></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer border-top-0 text-center p-0 pt-3">
+                                    <div class="d-flex align-items-center justify-content-between mb-2 pt-2">
+                                        <span class="fs-13 fw-medium">VaS Tax</span>
+                                        <span class="fs-16 fw-medium">30%</span>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <span class="fs-13 fw-medium">ROI</span>
+                                        <span class="fs-4 fw-medium text-primary">+£10,000.</span>
+                                    </div>
+                                    <a href="{% url 'exclusiveplan' %}"><button type="button" class="btn btn-lg btn-primary d-grid w-100">
+                                        <span class="ms-4 me-4">Select</span>
+                                    </button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-xl-3 col-md-8 col-sm-12">
+                            <div class="card custom-card pricing-card p-4">
+                                <div class="card-body p-0">
+                                    <div class="pb-4">
+                                        <h5 class="fw-medium mb-1">Premium plan </h5>
+                                        <span class="fs-12 mb-1 text-muted d-block">Ideal  for corporate parties. Individuals are also eligible !</span>
+                                        <span class="mb-1 fw-medium d-block">£5,000 - £9,999.</span>
+                                    </div>
+                                    <ul class="list-unstyled pricing-body text-muted mb-0">
+                                        <li>
+                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm12" disabled checked>
+                                                </div>
+                                                <span class="ms-2 my-auto">
+                                                   Bonus on deposits <span class="badge bg-light text-default border ms-2"></span>
+                                                </span>
+                                                <span class="ms-auto fw-medium text-default"></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm13" disabled checked>
+                                                </div>
+                                                <span class="ms-2 my-auto">
+                                                    Daily Income<span class="badge bg-light text-default border ms-2">ROI in 10 days </span>
+                                                </span>
+                                                <span class="ms-auto fw-medium text-default"></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm14" disabled checked>
+                                                </div>
+                                                <span class="ms-2 my-auto">
+                                                    Access our trading academy, FREE for one year
+                                                </span>
+                                                <span class="ms-auto fw-medium text-default">Free</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                 <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm15" disabled checked>
+                                                </div>
+                                                <span class="ms-2 my-auto">
+                                                    Online Support<span class="badge bg-light text-default border ms-2">24/7</span>
+                                                </span>
+                                                <span class="ms-auto fw-medium text-default"></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm17" disabled checked>
+                                                </div>
+                                                <span class="ms-2 my-auto">
+                                                  Refunds on losses.(if applicable)
+                                                </span>
+                                                <span class="ms-auto fw-medium text-default"></span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer border-top-0 text-center p-0 pt-3">
+                                    <div class="d-flex align-items-center justify-content-between mb-2 pt-2">
+                                        <span class="fs-13 fw-medium">VaS Tax</span>
+                                        <span class="fs-16 fw-medium">30%</span>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <span class="fs-13 fw-medium">ROI</span>
+                                        <span class="fs-4 fw-medium text-primary">+£49, 845 </span>
+                                    </div>
+                                    <a href="{% url 'premiumplan' %}"><button type="button" class="btn btn-lg btn-primary d-grid w-100">
+                                        <span class="ms-4 me-4">Select</span>
+                                    </button></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-xl-3 col-md-8 col-sm-12">
+                            <div class="card custom-card pricing-card p-4">
+                                <div class="card-body p-0">
+                                    <div class="pb-4">
+                                        <h5 class="fw-medium mb-1">Elite Strategic Plan</h5>
+                                        <span class="fs-12 mb-1 text-muted d-block">Elevate your strategy, perfect for businesses and individuals alike!</span>
+                                        <span class="mb-1 fw-medium d-block"> £10,000 - £19,999 </span>
+
+                                    </div>
+                                    <ul class="list-unstyled pricing-body text-muted mb-0">
+                                        <li>
+                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm18" disabled checked>
+                                                </div>
+                                                <span class="ms-2 my-auto">
+                                                   Bonus  on deposits<span class="badge bg-light text-default border ms-2"></span>
+                                                </span>
+                                                <span class="ms-auto fw-medium text-default"></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm19" disabled
+                                                     checked>
+                                                </div>
+                                                <span class="ms-2 my-auto">
+                                                    Daily Income<span class="badge bg-light text-default border ms-2">ROI in 21 days</span>
+                                                </span>
+                                                <span class="ms-auto fw-medium text-default"></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm20" disabled checked>
+                                                </div>
+                                                <span class="ms-2 my-auto">
+                                                    Access our trading academy, FREE for 1 year !
+                                                </span>
+                                                <span class="ms-auto fw-medium text-default">Free</span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                 <div class="form-check">
+                                                    <input checked disabled class="form-check-input" type="checkbox" value="" id="checkebox-sm21">
+                                                </div>
+                                                <span class="ms-2 my-auto">
+                                                    Online Support<span class="badge bg-light text-default border ms-2">24/7</span>
+                                                </span>
+                                                <span class="ms-auto fw-medium text-default"></span>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                 <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" checked disabled  value="" id="checkebox-sm22">
+                                                </div>
+                                                <span class="ms-2 my-auto">
+                                                   Refunds on losses. (if applicable)<span class="badge bg-light text-default border ms-2"></span>
+                                                </span>
+                                                <span class="ms-auto fw-medium text-default"></span>
+                                            </div>
+                                        </li>
+                                       
+                                    </ul>
+                                </div>
+                                <div class="card-footer border-top-0 text-center p-0 pt-3">
+                                    <div class="d-flex align-items-center justify-content-between mb-2 pt-2">
+                                        <span class="fs-13 fw-medium">VaS Tax</span>
+                                        <span class="fs-16 fw-medium">30%</span>
+                                    </div>
+                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                        <span class="fs-13 fw-medium">ROI</span>
+                                        <span class="fs-4 fw-medium text-primary">+£100,000</span>
+                                    </div>
+                                    <a href="{% url 'strategicplan' %}"><button type="button" class="btn btn-lg btn-primary d-grid w-100">
+                                        <span class="ms-4 me-4">Select</span>
+                                    </button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End:: row-1 -->
+
+                    <!-- Start:: row-2 -->
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="d-flex justify-content-center mb-4">
+                                <ul class="nav nav-tabs mb-3 tab-style-6 bg-primary-transparent" id="myTab1" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="pricing-monthly1" data-bs-toggle="tab"
+                                            data-bs-target="#pricing-monthly1-pane" type="button" role="tab"
+                                            aria-controls="pricing-monthly1-pane" aria-selected="true">Monthly</button>
+                                    </li>
+                                   
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-12">
+                            <div class="tab-content" id="myTabContent1">
+                                <div class="tab-pane show active p-0 border-0" id="pricing-monthly1-pane"
+                                    role="tabpanel" aria-labelledby="pricing-monthly1" tabindex="0">
+                                    <div class="row d-flex align-items-center justify-content-center">
+                                        <div class="col-lg-8 col-xl-3 col-xxl-3 col-md-8 col-sm-12">
+                                            <div class="card custom-card pricing-card p-4">
+                                                <div class="card-body p-0">
+                                                    <div class="pb-4">
+                                                        <h5 class="fw-medium mb-1">Elite Premier Plan</h5>
+                                                        <span class="fs-12 mb-1 text-muted d-block">Peak investment with accelerated returns !</span>
+                                                        <span class="mb-1 fw-medium d-block"> 1 BTC - 4 BTC </span>
+                                                    </div>
+                                                    <ul class="list-unstyled pricing-body text-muted mb-0">
+                                                        <li>
+                                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm24" checked disabled>
+                                                                </div>
+                                                                <span class="ms-2 my-auto">
+                                                                    Bonus on deposits<span class="badge bg-light text-default border ms-2"></span>
+                                                                </span>
+                                                                <span class="ms-auto fw-medium text-default"></span>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm25" checked disabled>
+                                                                </div>
+                                                                <span class="ms-2 my-auto">
+                                                                    Daily income<span class="badge bg-light text-default border ms-2"></span>
+                                                                </span>
+                                                                <span class="ms-auto fw-medium text-default"></span>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm26" checked disabled>
+                                                                </div>
+                                                                <span class="ms-2 my-auto">
+                                                                    Lifetime access to our advanced trading academy.
+                                                                </span>
+                                                                <span class="ms-auto fw-medium text-default">Free</span>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                                 <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm27" disabled  checked>
+                                                                </div>
+                                                                <span class="ms-2 my-auto">
+                                                                    Designated online support.<span class="badge bg-light text-default border ms-2">24/7</span>
+                                                                </span>
+                                                                <span class="ms-auto fw-medium text-default">24/7</span>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                                 <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm28" disabled checked>
+                                                                </div>
+                                                                <span class="ms-2 my-auto">
+                                                                   Insured investment.<span class="badge bg-light text-default border ms-2">365 d</span>
+                                                                </span>
+                                                                <span class="ms-auto fw-medium text-default"></span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="card-footer border-top-0 text-center p-0 pt-3">
+                                                    <div class="d-flex align-items-center justify-content-between mb-2 pt-2">
+                                                        <span class="fs-13 fw-medium">VaS Tax</span>
+                                                        <span class="fs-16 fw-medium">35%</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                                        <span class="fs-13 fw-medium">ROI</span>
+                                                        <span class="fs-4 fw-medium text-primary"> +7 BTC </span>
+                                                    </div>
+                                                    <a href="{% url 'premierplan' %}"><button type="button" class="btn btn-lg btn-primary d-grid w-100">
+                                                        <span class="ms-4 me-4">Select</span>
+                                                    </button></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8 col-xl-3 col-md-8 col-sm-12">
+                                            <div class="card custom-card pricing-card p-4 border border-primary overflow-hidden">
+                                                <div class="card-body p-0">
+                                                    <span class="pricing-new shadow">New</span>
+                                                    <div class="pb-4 d-fle align-items-start">
+                                                        <div>
+                                                            <h5 class="fw-medium mb-1"> Elite accelerator plan</h5>
+                                                            <span class="fs-12 mb-1 text-muted d-block">Accelerate your capital growth to eminent levels with our Eminent Capital Accelerator plan !</span>
+                                                            <span class="mb-1 fw-medium d-block"> 5 BTC </span>
+                                                        </div>
+                                                    </div>
+                                                    <ul class="list-unstyled pricing-body text-muted mb-0">
+                                                        <li>
+                                                            <div class="d-flex align-items-center p-2 rounded-3 bg-primary-transparent border border-primary">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm30" checked disabled>
+                                                                </div>
+                                                                <span class="ms-2 d-flex-align-items-center my-auto">
+                                                                    Exclusive VIP priviledges <span class="badge bg-success-transparent border border-success ms-2"></span>
+                                                                </span>
+                                                                <span class="ms-auto fw-medium text-default"></span>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm31" checked disabled>
+                                                                </div>
+                                                                <span class="ms-2 my-auto">
+                                                                    Daily income<span class="badge bg-light text-default border ms-2"></span>
+                                                                </span>
+                                                                <span class="ms-auto fw-medium text-default"></span>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm32" checked disabled>
+                                                                </div>
+                                                                <span class="ms-2 my-auto">
+                                                                   Bonus on deposits
+                                                                </span>
+                                                                <span class="ms-auto fw-medium text-default"></span>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="d-flex align-items-center p-2 rounded-3 border bg-primary-transparent border-primary">
+                                                                 <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm33" checked disabled>
+                                                                </div>
+                                                                <span class="ms-2 d-flex-align-items-center my-auto">
+                                                                   Priority Support<span class="badge bg-success-transparent border border-success ms-2">24/7</span>
+                                                                </span>
+                                                                <span class="ms-auto fw-medium text-default">24/7</span>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                                 <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm34" checked disabled>
+                                                                </div>
+                                                                <span class="ms-2 my-auto">
+                                                                   Insured Investment<span class="badge bg-light text-default border ms-2">365 d</span>
+                                                                </span>
+                                                                <span class="ms-auto fw-medium text-default"></span>
+                                                            </div>
+                                                        </li>
+                                                    
+                                                    </ul>
+                                                </div>
+                                                <div class="card-footer border-top-0 text-center p-0 pt-3">
+                                                    <div class="d-flex align-items-center justify-content-between mb-2 pt-2">
+                                                        <span class="fs-13 fw-medium">VaS Tax</span>
+                                                        <span class="fs-16 fw-medium">35% </span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                                        <span class="fs-13 fw-medium">ROI</span>
+                                                        <span class="fs-4 fw-medium text-primary"> +14 BTC </span>
+                                                    </div>
+                                                    <a href="{% url 'acceleratorplan' %}"><button type="button" class="btn btn-lg btn-primary d-grid w-100">
+                                                        <span class="ms-4 me-4">Select</span>
+                                                    </button></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8 col-xl-3 col-md-8 col-sm-12">
+                                            <div class="card custom-card pricing-card p-4">
+                                                <div class="card-body p-0">
+                                                    <div class="pb-4">
+                                                        <h5 class="fw-medium mb-1">Apex Premium Plan</h5>
+                                                        <span class="fs-12 mb-1 text-muted d-block">Exclusive plan for premium gains. !</span>
+                                                        <span class="mb-1 fw-medium d-block"> 6 - 7 BTC </span>
+                                                    </div>
+                                                    <ul class="list-unstyled pricing-body text-muted mb-0">
+                                                        <li>
+                                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm36" checked disabled>
+                                                                </div>
+                                                                <span class="ms-2 my-auto">
+                                                                    Customized ROI Options<span class="badge bg-light text-default border ms-2"></span>
+                                                                </span>
+                                                                <span class="ms-auto fw-medium text-default"></span>
+                                                            </div>
+                                                        </li>
+
+                                                        <li>
+                                                            <div class="d-flex align-items-center p-2 rounded-3 bg-primary-transparent border border-primary">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm30" checked disabled>
+                                                                </div>
+                                                                <span class="ms-2 d-flex-align-items-center my-auto">
+                                                                    Exclusive VIP priviledges <span class="badge bg-success-transparent border border-success ms-2"></span>
+                                                                </span>
+                                                                <span class="ms-auto fw-medium text-default"></span>
+                                                            </div>
+                                                        </li>
+
+                                                        <li>
+                                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm37" checked disabled>
+                                                                </div>
+                                                                <span class="ms-2 my-auto">
+                                                                    Daily income<span class="badge bg-light text-default border ms-2"></span>
+                                                                </span>
+                                                                <span class="ms-auto fw-medium text-default"></span>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm38" checked disabled>
+                                                                </div>
+                                                                <span class="ms-2 my-auto">
+                                                                   Bonus on deposits
+                                                                </span>
+                                                                <span class="ms-auto fw-medium text-default"></span>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                                 <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm39" checked disabled>
+                                                                </div>
+                                                                <span class="ms-2 my-auto">
+                                                                   Priority Support<span class="badge bg-light text-default border ms-2">24/7</span>
+                                                                </span>
+                                                                <span class="ms-auto fw-medium text-default"></span>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                                 <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm40" checked disabled>
+                                                                </div>
+                                                                <span class="ms-2 my-auto">
+                                                                    Insured investment<span class="badge bg-light text-default border ms-2"></span>
+                                                                </span>
+                                                                <span class="ms-auto fw-medium text-default"></span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="card-footer border-top-0 text-center p-0 pt-3">
+                                                    <div class="d-flex align-items-center justify-content-between mb-2 pt-2">
+                                                        <span class="fs-13 fw-medium">VaS Tax</span>
+                                                        <span class="fs-16 fw-medium">35% </span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                                        <span class="fs-13 fw-medium">ROI</span>
+                                                        <span class="fs-4 fw-medium text-primary">+18 BTC </span>
+                                                    </div>
+                                                    <a href="{% url 'apexpremiumplan' %}"><button type="button" class="btn btn-lg btn-primary d-grid w-100">
+                                                        <span class="ms-4 me-4">Select</span>
+                                                    </button></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8 col-xl-3 col-md-8 col-sm-12">
+                                            <div class="card custom-card pricing-card p-4">
+                                                <div class="card-body p-0">
+                                                    <div class="pb-4">
+                                                        <h5 class="fw-medium mb-1">Elite master plan</h5>
+                                                        <span class="fs-12 mb-1 text-muted d-block">Advanced strategies for significant returns. !</span>
+                                                        <span class="mb-1 fw-medium d-block">8 - 10 BTC </span>
+                                                    </div>
+                                                    <ul class="list-unstyled pricing-body text-muted mb-0">
+                                                        <li>
+                                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm42" checked disabled>
+                                                                </div>
+                                                                <span class="ms-2 my-auto">
+                                                                    Customized ROI options <span class="badge bg-light text-default border ms-2"></span>
+                                                                </span>
+                                                                <span class="ms-auto fw-medium text-default"></span>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm43" checked disabled>
+                                                                </div>
+                                                                <span class="ms-2 my-auto">
+                                                                    Daily income<span class="badge bg-light text-default border ms-2"></span>
+                                                                </span>
+                                                                <span class="ms-auto fw-medium text-default"></span>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm44" checked disabled>
+                                                                </div>
+                                                                <span class="ms-2 my-auto">
+                                                                   Bonus on deposits
+                                                                </span>
+                                                                <span class="ms-auto fw-medium text-default"></span>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="d-flex align-items-center p-2 rounded-3  + +border">
+                                                                 <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm45" checked disabled>
+                                                                </div>
+                                                                <span class="ms-2 my-auto">
+                                                                   Priority Support<span class="badge bg-light text-default border ms-2">24/7</span>
+                                                                </span>
+                                                                <span class="ms-auto fw-medium text-default"></span>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="d-flex align-items-center p-2 rounded-3 border">
+                                                                 <div class="form-check">
+                                                                    <input disabled checked class="form-check-input" type="checkbox" value="" id="checkebox-sm46">
+                                                                </div>
+                                                                <span class="ms-2 my-auto">
+                                                                    Insured investment <span class="badge bg-light text-default border ms-2">365 d</span>
+                                                                </span>
+                                                                <span class="ms-auto fw-medium text-default"></span>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="d-flex align-items-center p-2 rounded-3 bg-primary-transparent border border-primary">
+                                                                <div class="form-check">
+                                                                    <input class="form-check-input" type="checkbox" value="" id="checkebox-sm30" checked disabled>
+                                                                </div>
+                                                                <span class="ms-2 d-flex-align-items-center my-auto">
+                                                                    Exclusive VIP priviledges <span class="badge bg-success-transparent border border-success ms-2"></span>
+                                                                </span>
+                                                                <span class="ms-auto fw-medium text-default"></span>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="card-footer border-top-0 text-center p-0 pt-3">
+                                                    <div class="d-flex align-items-center justify-content-between mb-2 pt-2">
+                                                        <span class="fs-13 fw-medium">VaS Tax</span>
+                                                        <span class="fs-16 fw-medium">35% </span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center justify-content-between mb-3">
+                                                        <span class="fs-13 fw-medium">ROI</span>
+                                                        <span class="fs-4 fw-medium text-primary"> +22 BTC</span>
+                                                    </div>
+                                                    <a href="{% url 'elitemasterplan' %}"><button type="button" class="btn btn-lg btn-primary d-grid w-100">
+                                                        <span class="ms-4 me-4">Select</span>
+                                                    </button></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane p-0 border-0" id="pricing-yearly1-pane"
+                                    role="tabpanel" aria-labelledby="pricing-yearly1" tabindex="0">
+                                    <div class="row d-flex align-items-center justify-content-center">
+                                        <div class="col-lg-8 col-xl-3 col-xxl-3 col-md-8 col-sm-12">
+                                           
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End:: row-2 -->
+
+            </div>
+        </div>
+        <!-- End::app-content -->
+
+        <!-- Footer Start -->
+        <footer class="footer mt-auto py-3 bg-white text-center">
+            <div class="container">
+                <span class="text-muted"> Copyright © <span class="year" id="year">0000</span> <a
+                        href="javascript:void(0);" class="text-dark fw-medium">Bitprofit LLC. </a>
+                   <a href="javascript:void(0);">
+                    </a> All
+                    rights
+                    reserved
+                </span>
+            </div>
+        </footer>
+      <!-- Footer -->
+  
+<!-- Footer End -->
+        <div class="modal fade" id="header-responsive-search" tabindex="-1" aria-labelledby="header-responsive-search" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="input-group">
+                    <input type="text" class="form-control border-end-0" placeholder="Search Anything ..."
+                        aria-label="Search Anything ..." aria-describedby="button-addon2">
+                    <button class="btn btn-primary" type="button"
+                        id="button-addon2"><i class="bi bi-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+    </div>
+    </div>
+
+    
+<!-- Scroll To Top -->
+<div class="scrollToTop">
+    <span class="arrow"><i class="ti ti-arrow-narrow-up fs-20"></i></span>
+</div>
+<div id="responsive-overlay"></div>
+</div>
+<!-- Scroll To Top -->
+
+<!-- Popper JS -->
+<script src="{% static 'libs/@popperjs/core/umd/popper.min.js' %}"></script>
+
+<!-- Bootstrap JS -->
+<script src="{% static 'libs/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+<!-- Defaultmenu JS -->
+<script src="{% static 'js/defaultmenu.min.js' %}"></script>
+
+<!-- Node Waves JS-->
+<script src="{% static 'libs/node-waves/waves.min.js' %}"></script>
+
+<script src="//code.tidio.co/s7s7pkpgzioqwkyxuqph94yrpdafdwdh.js" async></script>
+
+<!-- Sticky JS -->
+<script src="{% static 'js/sticky.js' %}"></script>
+
+<!-- Simplebar JS -->
+<script src="{% static 'libs/simplebar/simplebar.min.js' %}"></script>
+<script src="{% static 'js/simplebar.js' %}"></script>
+
+<!-- Color Picker JS -->
+<script src="{% static 'libs/@simonwep/pickr/pickr.es5.min.js' %}"></script>
+
+
+    
+<!-- Custom-Switcher JS -->
+<script src="{% static 'js/custom-switcher.min.js' %}"></script>
+
+    <!-- Custom JS -->
+    <script src="{% static 'js/custom.js' %}"></script>
+
+    <script>
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var alertElement = document.querySelector('.alert');
+      
+             
+            alertElement.style.display = 'block';
+      
+      
+            setTimeout(function() {
+                alertElement.style.display = 'none';
+            }, 5000);
+        });
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+        document.getElementById("preloader").style.display = "none";
+        document.getElementById("main-content").style.display = "block";
+    }, 1000);
+});
+
+        let yearElement = document.getElementsByClassName('year')[0];
+  
+        function NewYear() {
+        let thisYear = new Date().getFullYear();
+        yearElement.textContent = thisYear;
+        }
+        NewYear();
+
+        document.getElementById('comingsoon').addEventListener('click', function(){
+            alert('Thank you for your interest! We are diligently working to provide a seamless experience for fiat deposits with a highly stable service. Stay tuned for updates.');
+        });
+        
+
+
+
+         </script>
+
+</body>
+
+</html>

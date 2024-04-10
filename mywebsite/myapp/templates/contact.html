@@ -1,0 +1,384 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EPTL39X1H"></script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'G-3EPTL39X1H');
+      </script>
+      <!-- Google tag (gtag.js) -->
+
+
+      <style>
+                 .alert {
+              display: none;
+              background-color: #f44336; 
+              border-radius: 20px;
+              border-bottom-left-radius: 1px;
+              color: white;
+              padding: 5px; 
+              margin-bottom: 4px; 
+              animation: fadeInOut 5s ease-in-out;
+          }
+      
+          @keyframes fadeInOut {
+              0%, 100% {
+                  opacity: 0;
+              }
+              10%, 90% {
+                  opacity: 1;
+              }
+          }
+      </style>
+      <title>Invest in a global crypto market with your smartly chosen currency.</title>
+      <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+      <meta name="title" content="Invest in a global crypto market with your smartly chosen currency.">
+      <meta name="description" content="Investment and forex have a larger customer base who have invested successfully in it by choosing the perfect crypto for their better future stock growth.">
+      <meta property="og:title" content="Invest in a global crypto market with your smartly chosen currency.">
+      <meta name="keywords" content="exchange rate, currency exchange, future, currency, trade, forex factory, forex trading, forex rates, currency exchange rates, fxcm, iforex, currency rate, metatrader, online trading, instaforex, foreign exchange rate, currency calculator, stock trading">
+      <meta property="og:locale" content="en_US">
+      <meta name="twitter:description" content="Investment and forex have a larger customer base who have invested successfully in it by choosing the perfect crypto for their better future stock growth.">
+      <meta name="twitter:title" content="Invest in a global crypto market with your smartly chosen currency.">
+      <meta property="og:description" content="Investment and forex have a larger customer base who have invested successfully in it by choosing the perfect crypto for their better future stock growth.">
+      <!-- Css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.min.css' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'fonts/fontawesome/css/all.min.css' %}">
+      <!-- Css -->
+
+      <!-- favicon-->
+      <link rel="icon" href="{% static 'img/favicon.ico' %}">
+      <!--favicon-->
+
+
+      <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="{% static './img/apple-touch-icon-72x72-precomposed.png' %}" sizes="72x72" />
+      <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="{% static './img/apple-touch-icon-114x114-precomposed.png' %}" sizes="114x114" />
+      <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="{% static './img/apple-touch-icon-144x144-precomposed.png' %}" sizes="144x144" />
+      <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="{% static './img/favicon.png' %}" />
+   </head>
+   <body>
+      <!-- Header -->
+      <header class="header-main fixed-header">
+         <div class="header-top">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+                     <div class="left-topbar">
+                        <ul>
+
+                           <li><i class="fas fa-envelope-open"></i>  support@bitprofitonline.com</li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                     <div class="right-topbar">
+                        <ul>
+                           <li><a href="https://facebook.com/bitprofitonline"><i class="fab fa-facebook"></i></a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="header-bottom">
+            <div class="header-right clearfix">
+               <div class="header-nav-menu">
+                  <div class="container">
+                     <div class="main-headers">
+                        <div class="logo-header">
+                           <a class="logo-link" href="{% url 'home' %}">
+                              <div class="logo-box">
+                                 <img src="{% static './img/logo.png' %}" alt="logo"  >
+                              </div>
+                           </a>
+                        </div>
+                        <div class="header-navbar-menu clearfix">
+                           <nav class="navbar navbar-expand-lg navbar-light">
+                              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                              <i class="fas fa-bars"></i>
+                              </button>
+                              <div class="collapse navbar-collapse header-links" id="navbarSupportedContent">
+                                 <ul class="navbar-nav mr-auto nav-list">
+                                    <li class="nav-item">
+                                       <a class="nav-link" href="{% url 'home' %}">Home</a>
+                                    </li>
+                                    <li class="nav-item active">
+                                       <a class="nav-link" href="#">Company <i class="fas fa-caret-down ml-1"></i></a>
+                                       <ul class="dropdown__menu__box">
+                                          <li><a href="{% url 'about' %}">About </a></li>
+                                          <li><a class="active" href="{% url 'contact' %}">Contact</a></li>
+                                          <li><a href="{% url 'roadmap' %}">Roadmap</a></li>
+                                       </ul>
+                                    </li>
+                                    <li class="nav-item ">
+                                    <li class="nav-item ">
+                                       <a class="nav-link" href="{% url 'login' %}">Login</a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </nav>
+                           <div class="right-menu">
+                              <a href="{% url 'broker' %}"><button type="button" class="theme-btn">BROKER</button></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- Header -->
+      <!-- Breadcrumb -->
+      <div class="breadcrumb-area">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-12">
+                  <div class="breadcrumb-title clearfix">
+                     <div class="heading">
+                        <h2 class="theme-title">Contact Us</h2>
+                     </div>
+                     <div class="breadcumb-link">
+                        <ul>
+                           <li><a href="{% url 'home' %}" class="text-link">Home <span class="slash-breacumb">/</span></a></li>
+                           <li>Contact</li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Breadcrumb -->
+      <!-- Contact -->
+      <section class="contact-top-area page-padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-12">
+
+                  {% for message in messages %}
+                  {% if 'error' in message.tags and 'message' in message.tags %}
+                  <div class="alert alert-danger">
+                      {{ message }}
+                  </div>
+                      {% endif %}
+  
+                      {% if 'success' in message.tags and 'message' in message.tags %}
+                      <div class="alert alert-success">
+                          {{ message }}
+                      </div>
+                      {% endif %}
+                      {% endfor %}
+
+
+                  <div class="page-title text-center page-center">
+                     <span>Contact</span>
+                     <h2 class="theme-title">Contact Us</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                  <div class="contact-top">
+                     <div class="icon-box">
+                        <i class="fa-solid fa-calendar-check"></i>
+                     </div>
+                     <div class="content-box">
+                        <h4 class="theme-title">BOOK APPOINTMENT</h4>
+                        <p class="theme-description">Use the form below to book an appointment.</p>
+                     </div>
+                     <div class="big-icon">
+                        <i class="fa-solid fa-calendar-check"></i>
+                     </div>
+                  </div>
+               </div>
+            
+               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                  <a  href="mailto:support@bitprofitonline.com?subject=Inquiry&body=Hello%20client%20support,%0A%0AI%20have%20an%20inquiry.">
+                  <div class="contact-top">
+                     <div class="icon-box">
+                        <i class="fas fa-envelope"></i>
+                     </div>
+                     <div class="content-box">
+                        <h4 class="theme-title">support@bitprofitonline.com</h4>
+                        <p class="theme-description">For Inquiries</p>
+                     </div>
+                     <div class="big-icon">
+                        <i class="fas fa-envelope"></i>
+                     </div>
+                  </div>
+               </a>
+               </div>
+              
+              
+          
+            </div>
+         </div>
+      </section>
+      <section class="contact-area page-padding border-top">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-12">
+                  <div class="page-title text-center page-center">
+                     <span>Have questions?</span>
+                     <h2 class="theme-title">Let's get in touch</h2>
+                  </div>
+               </div>
+            </div>
+            <form action="{% url 'contact' %}" method="post">
+            {% csrf_token %}
+            <div class="row">  
+               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                  <div class="left-contact">
+                     <div class="theme-input-box">
+                        <label for="text">Full Name</label>
+                        <div class="input-box">
+                           <input name="fullName" type="text" class="form-control theme-input" placeholder="Enter Full Name">
+                           <i class="fas fa-user"></i>
+                        </div>
+                     </div>
+
+                     <div class="theme-input-box">
+                        <label for="text">Email</label>
+                        <div class="input-box">
+                           <input name="email" type="email" class="form-control theme-input" placeholder="Enter Email">
+                           <i class="fas fa-envelope"></i>
+                        </div>
+                     </div>
+
+                     <div class="theme-input-box">
+                        <label for="text">Message</label>
+                        <div class="input-box">
+                           <textarea name="message" cols="8" rows="4" class="form-control theme-input pl-4" placeholder="Enter Message"></textarea>
+                        </div>
+                     </div>
+                     <div class="btn-box mt-3">
+                        <button type="submit" class="theme-btn">Send Message<i class="fas fa-angle-right ml-2"></i></button>
+                    
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                  <div class="contact-main">
+                     <div class="left-about">
+                        <img src="{% static './img/contact.jpg' %}" alt="contact" >
+                        <img src="{% static './img/image-shape.png' %}" alt="shape" class="shape-top">
+                        <img src="{% static './img/image-shape.png' %}" alt="shape" class="shape-bottom">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </form>
+         </div>
+      </section>
+      <!-- Contact -->
+      <!-- Footer -->
+      <footer class="footer">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                  <div class="footer-box">
+                     <div class="img-box">
+                        <a href="{% url 'home' %}"><img src="{% static './img/logo-black.png' %}" alt="logo"></a>
+                     </div>
+                     <p class="theme-description">Connect with us to make your Crypto investment experience worthy and Get the exact solution to the mark for your crypto exchange.</p>
+                  </div>
+               </div>
+               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                  <div class="footer-box">
+                     <h4 class="theme-title">Instruments</h4>
+                     <div class="links-box">
+                        <ul>
+                           <li><a href="{% url 'home' %}"><i class="fas fa-angle-right"></i>Home</a></li>
+                           <li><a href="{% url 'about' %}"><i class="fas fa-angle-right"></i>About</a></li>
+                           <li><a href="{% url 'roadmap' %}"><i class="fas fa-angle-right"></i>Roadmap</a></li>
+                           <li><a href="{% url 'faqs' %}"><i class="fas fa-angle-right"></i>FAQ's</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                  <div class="footer-box">
+                     <h4 class="theme-title">Company</h4>
+                     <div class="links-box">
+                        <ul>
+                           <li><a href="{% url 'about' %}"><i class="fas fa-angle-right"></i>About academy</a></li>
+                           <li><a href="{% url 'policy' %}"><i class="fas fa-angle-right"></i>Privacy policy</a></li>
+                           <li><a href="{% url 'terms' %}"><i class="fas fa-angle-right"></i>Terms & Condition</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <footer class="footer mt-auto py-3 bg-white text-center">
+            <div class="container">
+                <span class="text-muted"> Copyright © <span class="year" id="year">0000</span> <a
+                        href="javascript:void(0);" class="text-dark fw-medium">Bitprofit LLC. </a>
+                   <a href="javascript:void(0);">
+                    </a> All
+                    rights
+                    reserved
+                </span>
+            </div>
+        </footer>
+      </footer>
+      <!-- Footer -->
+   <script>
+      document.addEventListener('DOMContentLoaded', function() {
+         var alertElement = document.querySelector('.alert');
+         alertElement.style.display = 'block';
+
+         setTimeout(function() {
+            alertElement.style.display = 'none';
+         }, 10000);
+      });
+
+      let yearElement = document.getElementsByClassName('year')[0];
+
+      function NewYear() {
+      let thisYear = new Date().getFullYear();
+      yearElement.textContent = thisYear;
+      }
+      NewYear();
+   </script>
+   <script src="//code.tidio.co/s7s7pkpgzioqwkyxuqph94yrpdafdwdh.js" async></script>
+   <!-- <script>
+       (function() {
+      function onTidioChatApiReady() {
+      window.tidioChatApi.hide();
+      window.tidioChatApi.on("close", function() {
+      window.tidioChatApi.hide();
+      });
+      }
+     
+      if (window.tidioChatApi) {
+      window.tidioChatApi.on("ready", onTidioChatApiReady);
+      } else {
+      document.addEventListener("tidioChat-ready", onTidioChatApiReady);
+      }
+     
+      document.querySelector(".chat-button").addEventListener("click", function() {
+      window.tidioChatApi.show();
+      window.tidioChatApi.open();
+      });
+     })();
+   </script> -->
+      <!-- Footer -->
+      <!-- Javascript -->
+      <script src="https://kit.fontawesome.com/f465f589c1.js" crossorigin="anonymous"></script>
+      <script src="{% static './js/jquery.min.js' %}"></script>
+      <script src="{% static './js/popper.min.js' %}"></script>
+      <script src="{% static './js/owl.carousel.min.js' %}"></script>
+      <script src="{% static './js/bootstrap.min.js' %}"></script>
+      <script src="{% static './js/custom.js' %}"></script>
+      <!-- Javascript -->
+   </body>
+</html>

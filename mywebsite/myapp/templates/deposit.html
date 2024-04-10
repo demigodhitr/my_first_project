@@ -1,0 +1,737 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light" data-menu-styles="light" data-toggled="close">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EPTL39X1H"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+      
+    gtag('config', 'G-3EPTL39X1H');
+    </script>
+    <!-- Google tag (gtag.js) -->
+    
+    <style>
+               
+                .is-invalid {
+            border-color: #dc3545 !important;
+        }
+
+       
+        .invalid-feedback {
+            display: block;
+            color: #dc3545;
+            margin-top: 5px;
+            transition: .4s ease-in-out;
+        }
+
+        .alert {
+              display: none;
+              background-color: #f44336; 
+              border-radius: 20px;
+              border-bottom-left-radius: 1px;
+              color: white;
+              padding: 5px; 
+              margin-bottom: 4px; 
+              animation: fadeInOut 5s ease-in-out;
+          }
+      
+          @keyframes fadeInOut {
+              0%, 100% {
+                  opacity: 0;
+              }
+              10%, 90% {
+                  opacity: 1;
+              }
+          }
+          </style>
+    </style>
+
+    <!-- font awesome-->
+    <script src="https://kit.fontawesome.com/c7bf746142.js" crossorigin="anonymous"></script>
+    
+
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, max-scale=1.0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Withdrawal </title>
+    <meta name="Author" content="DevCom">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'img/favicon.ico' %}">
+    
+    <!-- Choices JS -->
+    <script src="{% static 'libs/choices.js/public/assets/scripts/choices.min.js' %}"></script>
+
+    <!-- Main Theme Js -->
+    <script src="{% static 'js/main.js' %}"></script>
+    
+    <!-- Bootstrap Css -->
+    <link id="style" href="{% static 'libs/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" >
+
+    <!-- Style Css -->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" >
+
+    <!-- Icons Css -->
+    <link href="{% static 'css/icons.css' %}" rel="stylesheet" >
+
+    <!-- Node Waves Css -->
+    <link href="{% static 'libs/node-waves/waves.min.css' %}" rel="stylesheet" > 
+
+    <!-- Simplebar Css -->
+    <link href="{% static 'libs/simplebar/simplebar.min.css' %}" rel="stylesheet" >
+    
+    <!-- Color Picker Css -->
+    <link rel="stylesheet" href="{% static 'libs/flatpickr/flatpickr.min.css' %}">
+    <link rel="stylesheet" href="{% static 'libs/@simonwep/pickr/themes/nano.min.css' %}">
+
+    <!-- Choices Css -->
+    <link rel="stylesheet" href="{% static 'libs/choices.js/public/assets/styles/choices.min.css' %}">
+
+
+</head>
+
+<body>
+
+
+    <!-- Loader -->
+<div id="loader" >
+    <img src="{% static 'img/media/loader.svg' %}" alt="">
+</div>
+<!-- Loader -->
+
+    <div class="page">
+         <!-- app-header -->
+ <header class="app-header">
+
+    <!-- Start::main-header-container -->
+    <div class="main-header-container container-fluid">
+
+        <!-- Start::header-content-left -->
+        <div class="header-content-left">
+
+            <!-- Start::header-element -->
+            <div class="header-element">
+                <div class="horizontal-logo">
+                    <a href="{% url 'dashboard' %}" class="header-logo">
+                        <img src="{% static 'img/personal-wealth.png' %}" alt="logo" class="desktop-logo">
+                        <img src="{% static 'img/personal-wealth.png' %}" alt="logo" class="toggle-logo">
+                        <img src="{% static 'img/personal-wealth.png' %}" alt="logo" class="desktop-dark">
+                        <img src="{% static 'img/personal-wealth.png' %}" alt="logo" class="toggle-dark">
+                    </a>
+                </div>
+            </div>
+            <!-- End::header-element -->
+
+            <!-- Start::header-element -->
+            <div class="header-element mx-lg-0 mx-2">
+                <a aria-label="Hide Sidebar" class="sidemenu-toggle header-link animated-arrow hor-toggle horizontal-navtoggle" data-bs-toggle="sidebar" href="javascript:void(0);"><span></span></a>
+            </div>
+            <!-- End::header-element -->
+
+        </div>
+        <!-- End::header-content-left -->
+
+        <!-- Start::header-content-right -->
+        <ul class="header-content-right">
+
+            <!-- Start::header-element -->
+            <li class="header-element d-md-none d-block">
+                <a href="javascript:void(0);" class="header-link" data-bs-toggle="modal" data-bs-target="#header-responsive-search">
+                    <!-- Start::header-link-icon -->
+                    <i class="bi bi-search header-link-icon"></i>
+                    <!-- End::header-link-icon -->
+                </a>  
+            </li>
+        </ul>
+        <!-- End::header-content-right -->
+
+    </div>
+    <!-- End::main-header-container -->
+
+</header>
+<!-- /app-header -->
+        <!-- Start::app-sidebar -->
+        <aside class="app-sidebar sticky" id="sidebar">
+
+            <!-- WILL ADD LOGO-->
+            <div class="main-sidebar-header">
+                
+            <a href="{% url 'dashboard' %}" class="header-logo"><img src="{% static 'img/logo-black.png' %}" alt="">
+                </a>
+            </div>
+            <!-- End::main-sidebar-header -->
+        
+            <!-- Start::main-sidebar -->
+            <div class="main-sidebar" id="sidebar-scroll">
+        
+                <!-- Start::nav -->
+                <nav class="main-menu-container nav nav-pills flex-column sub-open">
+                    <div class="slide-left" id="slide-left">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24"> <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path> </svg>
+                    </div>
+        
+                    <ul class="main-menu">
+        
+                        <!-- Start::slide -->
+                       
+                        {# Display login success messages #}
+                        {% for message in messages %}
+                            {% if 'login' in message.tags and 'success' in message.tags %}
+                                <div class="alert alert-success">
+                                    {{ message }}
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                        
+                        
+        
+                        <li class="slide has-sub">
+                            <a href="javascript:void(0);" class="side-menu__item">
+                                <i class="bi bi-house side-menu__icon"></i>
+                                <span class="side-menu__label">Dashboard</span>
+                                <i class="fe fe-chevron-right side-menu__angle"></i>
+                            </a>
+                            <ul class="slide-menu child1">
+                               
+                                <li class="slide">
+                                    <a href="{% url 'dashboard' %}" class="side-menu__item">Home</a>
+                                </li>
+                               
+                            </ul>
+                        </li>
+                        <!-- End::slide -->
+        
+                        <!-- Start::slide -->
+                        <li class="slide has-sub">
+                            <a href="javascript:void(0);" class="side-menu__item">
+                                <i class="fa-2xs fa-solid fa-building mt-3 side-menu__icon"></i>
+                                <span class="side-menu__label">Company</span>
+                                <i class="fe fe-chevron-right side-menu__angle"></i>
+                            </a>
+                            <ul class="slide-menu child1 pages-ul">
+        
+                                <li class="slide">
+                                    <a href="{% url 'contact' %}" class="side-menu__item">Contact Us</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="{% url 'faqs' %}" class="side-menu__item">FAQ's</a>
+                                </li>
+        
+                                <li class="slide">
+                                    <a href="{% url 'plans' %}" class="side-menu__item">Investment plans</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="{% url 'terms' %}" class="side-menu__item">Terms & Conditions</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- End::slide -->
+        
+                        <!-- Start::slide -->
+                        <li class="slide has-sub">
+                            <a href="javascript:void(0);" class="side-menu__item">
+                                <i class="bi bi-key side-menu__icon"></i>
+                                <span class="side-menu__label">Authentication</span>
+                                <i class="fe fe-chevron-right side-menu__angle"></i>
+                            </a>
+                            <ul class="slide-menu child1">
+                                <li class="slide side-menu__label1">
+                                    <a href="javascript:void(0)">Authentication</a>
+                                </li>      
+                                   
+                                <li class="slide has-sub">
+                                    <a href="javascript:void(0);" class="side-menu__item">Password
+                                        <i class="fe fe-chevron-right side-menu__angle"></i></a>
+                                    <ul class="slide-menu child2">
+                                        <li class="slide">
+                                            <a href="{% url 'password_reset' %}" class="side-menu__item">Reset Password</a>
+                                        </li>
+                                    </ul>
+                                </li>       
+         
+                            </ul>
+                        </li>
+                        <!-- End::slide -->
+        
+                        <!-- Start::slide -->
+                        <li class="slide has-sub">
+                            <a href="javascript:void(0);" class="side-menu__item">
+                                <i class="bi bi-layers side-menu__icon"></i>
+                                <span class="side-menu__label">Investments</span>
+                                <i class="fe fe-chevron-right side-menu__angle"></i>
+                            </a>
+                            <ul class="slide-menu child1">
+                                <li class="slide side-menu__label1">
+                                    <a href="javascript:void(0)">Investments</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="{% url 'plans' %}" class="side-menu__item">Investment plans</a>
+                                </li>
+                                <li class="slide has-sub">
+                                    <a href="javascript:void(0);" class="side-menu__item">Transactions
+                                        <i class="fe fe-chevron-right side-menu__angle"></i></a>
+                                    <ul class="slide-menu child2">
+                                        <li class="slide">
+                                            <a href="{% url 'withdrawal' %}" class="side-menu__item">Make withrawal</a>
+                                        </li>
+                                        <li class="slide has-sub">
+                                            <a href="javascript:void(0);" class="side-menu__item">Fund account
+                                            <i class="fe fe-chevron-right side-menu__angle"></i></a>
+                                            <ul class="slide-menu child3">
+                                                <li class="slide">
+                                                <a href="javascript:void(0);" class="side-menu__item" onclick="openModal()">with fiat</a>
+                                                </li>
+                                                <li class="slide">
+                                                    <a href="{% url 'deposit' %}" class="side-menu__item">with Crypto</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- End::slide -->
+        
+                        <!-- Start::slide -->
+                        <li class="slide has-sub">
+                            <a href="javascript:void(0);" class="side-menu__item">
+                                <i class="bi bi-archive side-menu__icon"></i>
+                                <span class="side-menu__label">General</span>
+                                <i class="fe fe-chevron-right side-menu__angle"></i>
+                            </a>
+                            <ul class="slide-menu child1 mega-menu">
+                                <li class="slide side-menu__label1">
+                                    <a href="javascript:void(0)">General</a>
+                                </li>
+        
+                                <li class="slide">
+                                    <a href="{% url 'myprofile' %}" class="side-menu__item">My profile</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="{% url 'logout' %}" class="side-menu__item">Log out</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- End::slide -->
+        
+        
+                    </ul>
+                    <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24"> <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path> </svg></div>
+                </nav>
+                <!-- End::nav -->
+        
+            </div>
+            <!-- End::main-sidebar -->
+        
+        </aside>
+        <!-- End::app-sidebar -->
+
+            <!--APP-CONTENT START-->
+            <div class="main-content app-content">
+                <div class="container-fluid">
+
+                    <!-- Page Header -->
+                    <div class="my-4 page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2">
+                        <div>
+                            <h1 class="page-title fw-medium fs-18 mb-2">Deposit</h1>
+                            <div class="">
+                                <nav>
+                                    <ol class="breadcrumb mb-0">
+                                        <li class="breadcrumb-item"><a href="javascript:void(0);">Transactions</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Depost</li>
+                                    </ol>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="btn-list">
+                            <label for="bal">Available Balance</label>
+                            <div id="bal" class="btn btn-success-light btn-wave me-2">
+                               
+                                £{{ account_info.total_balance }}
+                            </div>
+                            {% if card_plan and amount %}
+                            <label for="bal">Plan selected: <strong class="btn btn-success-light btn-wave me-2">{{card_plan}}</strong></label>
+
+                            <label for="bal">Amount to pay: <strong class="btn btn-success-light btn-wave me-2">{{amount}}</strong></label>
+                            {% endif %}
+
+                            <a href="{% url 'plans' %}"><button class="btn btn-primary-light btn-wave me-2">
+                                <i class="bx bx-crown align-middle"></i> Plan Upgrade
+                            </button></a>
+                        </div>
+                    </div>
+                    <!-- Page Header Close -->
+
+                    {% for message in messages %}
+                    {% if 'deposit' in message.tags and 'success' in message.tags %}
+                    <div class="alert alert-success"> {{ message }} </div>
+                    {% endif %}
+
+                    {% if 'deposit' in message.tags and 'error' in message.tags %}
+                    <div class="alert alert-danger"> {{ message }} </div>
+                    {% endif %}
+
+                    {% endfor %}
+
+
+                    <!-- Start:: row-1 -->
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="card custom-card">
+                                <div class="card-header justify-content-between">
+                                    <div class="card-title">
+                                        Fund account
+                                        <p class="text-muted" style="font-size: small;"> Take note of the crypto network, copy the corresponding wallet address and proceed to your Wallet to make deposit. you can only deposit a minimum amount of £499. With exceptions for special waivers. </p>
+                                    </div>
+                                    <p class="text-muted" style="font-size: smaller;"><em><strong>Tap on any of the addresses to copy</strong></em></p>
+                                </div>
+                            <div class="card-body">
+                                    <div class="col-md-4">
+                                    <label for="validationCustom01" class="form-label"><strong>Bitcoin address</strong>.</label>
+                                    {% for address in address %}
+                                    <input id="cryptoAddress" style="width: 110%;" readonly type="text" value="{{ address.bitcoin}}" class="form-control crypto-address" id="validationCustom01" required>
+                                    <br>
+                                        </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-check">
+                                                <label class="form-check-label" for="invalid_check">
+                                                <input id="invalid_check" class="form-check-input" type="checkbox" value=""
+                                                     required>
+                                                  Check this ONLY when you've made payment to the Bitcoin ( BTC ) address shown above.
+                                                </label>
+                                               
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="col-12">
+                                            <button class="btn btn-primary" data-toggle="modal" data-target="#paymentModal" id="showFormBtn">I have made payment.</button>
+                                        </div>
+
+
+        <div class="modal fade" id="paymentModal" tabindex="-1" role="dialog" aria-labelledby="paymentModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="paymentModalLabel">Deposit form</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"  id="closeModalButton">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="paymentForm" enctype="multipart/form-data" novalidate method="post" action="{% url 'deposit' %}">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="amountPaid">Amount Paid:</label>
+                                <input type="number" class="form-control" id="amountPaid" name="amountPaid">
+                            </div>
+                            <div class="form-group">
+                                <label for="networkUsed">Network Used:</label>
+                                <select class="form-control" id="networkUsed" name="networkUsed">
+                                    <option value="Bitcoin">Bitcoin BTC</option>
+                                    <option value="Ethereum">Ethereum ETH</option>
+                                    <option value="USDT TRC20">USDT TRC20</option>
+                                    <option value="USDT ERC20">USDT ERC20</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="amountPaid">Proof of payment:</label>
+                                <input type="file" accept="Image/*" class="form-control" id="amountPaid" name="slip">
+                            </div>
+
+                            <div class="form-group">
+                                <label class="text-warning" for="amountPaid">I have made this payment and the details about to be submitted reflects exactly the payment made.</label>
+                                <input required type="checkbox" name="slip">
+                            </div>
+                                                           
+                                        
+                            <button type="submit" class="btn btn-primary">Submit Payment</button>
+                        </form>
+                        <br>
+                        <p class="btn btn-secondary-light"><a href="{% url 'deposit_invoice' %}">Track Payments</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                                    <br>
+                                </div>
+                                <br><br>
+                                <div class="card-body">
+                                        <div class="col-md-4">
+                                        <label for="validationCustom01" class="form-label"><strong>Ethereum address.</strong></label>
+                                        <input readonly type="text" value="{{ address.ethereum }}" class="form-control crypto-address" id="validationCustom01" required>
+                                        <br>
+                                            <div class="col-12">
+                                                <div class="form-check">
+                                                    <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value=""
+                                                     required>
+                                                    
+                                                      Check this ONLY when you've made payment to the Ethereum ( ETH ) address shown above.
+                                                    </label>
+                                                   
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="col-12">
+                                                <button class="btn btn-primary" id="showFormBtn1">I have made payment.</button>
+                                            </div>
+                                        <br>
+                                    </div>
+                                <br><br><br>
+
+                                <div class="card-body">
+                                    <div class="col-md-4">
+                                    <label for="validationCustom01" class="form-label"><strong>Tether USDT TRC20 address.</strong></label>
+                                    <input readonly type="text" value="{{address.tether_USDT}}" class="form-control crypto-address"  required>
+                                        </div>
+                                        <br>
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <label class="form-check-label">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    required>
+
+                                                  Check this ONLY when you've made payment to the Tether USDT (TRC20) address shown above.
+                                            </label>
+                                               
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="col-12">
+                                            <button class="btn btn-primary" id="showFormBtn2">I have made this payment.</button>
+                                        </div>
+                                    
+                                </div>
+
+                                <br><br><br>
+                                    <div class="card-body">
+                                        <form novalidate class="row g-3 needs-validation">
+                                            {% csrf_token %}
+                                            <div class="col-md-4">
+                                            <label for="validationCustom01" class="form-label"><strong>USDT ERC20 address.</strong></label>
+                                            <input readonly type="text" value="{{address.ERC20_address}}" class="form-control crypto-address" id="validationCustom01" required>
+                                                </div>
+                                                <br>
+                                                <div class="col-12">
+                                                    <div class="form-check">
+                                                        <label class="form-check-label">
+                                                        <input class="form-check-input" type="checkbox" value=""
+                                                            id="invalidCheck" required>
+                                                         
+                                                          Check this ONLY when you've made payment to the Ethereum ( ERC20 ) address shown above.
+                                                        </label>
+                                                       
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="col-12">
+                                                    <button class="btn btn-primary" id="showFormBtn3">I have made this payment.</button>
+                                                </div>
+                                            {% endfor %}
+                                        </div>
+                                    <br><br>
+
+                                    <!-- footer -->
+                                <div class="card-footer d-none border-top-0">
+                                    <footer class="footer mt-auto py-3 bg-white text-center">
+                                        <div class="container">
+                                            <span class="text-muted"> Copyright © <span class="year" id="year">0000</span> <a
+                                                    href="javascript:void(0);" class="text-dark fw-medium">Bitprofit LLC. </a>
+                                               <a href="javascript:void(0);">
+                                                </a> All
+                                                rights
+                                                reserved
+                                            </span>
+                                        </div>
+                                    </footer>
+            <!--APP-CONTENT CLOSE-->
+
+        
+        <!-- Footer Start -->
+        <footer class="footer mt-auto py-3 bg-white text-center">
+            <div class="container">
+                <span class="text-muted"> Copyright © <span class="year" id="year">0000</span> <a
+                        href="javascript:void(0);" class="text-dark fw-medium">Bitprofit LLC. </a>
+                   <a href="javascript:void(0);">
+                    </a> All
+                    rights
+                    reserved
+                </span>
+            </div>
+        </footer>
+      <!-- Footer -->
+   
+
+
+    </div>
+
+    
+<!-- Scroll To Top -->
+<div class="scrollToTop">
+    <span class="arrow"><i class="ti ti-arrow-narrow-up fs-20"></i></span>
+</div>
+<div id="responsive-overlay"></div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.6.0/js/bootstrap.min.js"></script>
+
+<script>
+
+
+    
+
+    $(document).ready(function () {
+        ('#paymentForm').submit(function (event) {
+            event.preventDefault();
+
+            resetValidationStyles();
+
+            if (this.checkValidity()) {
+
+                $('#paymentModal').modal('hide');
+
+            } else {
+
+                handleValidationErrors();
+            }
+        });
+    });
+
+    document.getElementById('showFormBtn').addEventListener('click', function () {
+        $('#paymentModal').modal('show');
+    });
+    // button two
+    document.getElementById('showFormBtn1').addEventListener('click', function () {
+        $('#paymentModal').modal('show');
+    });
+    // button three
+    document.getElementById('showFormBtn2').addEventListener('click', function () {
+        $('#paymentModal').modal('show');
+    });
+    // button four
+    document.getElementById('showFormBtn3').addEventListener('click', function () {
+        $('#paymentModal').modal('show');
+    });
+
+
+    $('#paymentModal').on('hidden.bs.modal', function () {
+        
+        $(this).find('form')[0].reset();
+    });
+
+    $(document).ready(function () {
+        
+        $('#closeModalButton').click(function () {
+           
+            $('#paymentModal').modal('hide');
+        });
+    });
+
+
+
+
+    let yearElement = document.getElementsByClassName('year')[0];
+
+    function NewYear() {
+    let thisYear = new Date().getFullYear();
+    yearElement.textContent = thisYear;
+    }
+    NewYear();
+
+    document.addEventListener('DOMContentLoaded', function() {
+    var alertElement = document.querySelector('.alert');
+
+   
+    alertElement.style.display = 'block';
+
+
+    setTimeout(function() {
+        alertElement.style.display = 'none';
+    }, 10000);
+    });
+
+
+    $(document).ready(function () {
+        
+        $(document).ready(function () {
+
+    $('.crypto-address').click(function () {
+       
+        var inputValue = $(this).val();
+
+       
+        var tempInput = document.createElement('input');
+        tempInput.value = inputValue;
+        document.body.appendChild(tempInput);
+
+       
+        tempInput.select();
+        tempInput.setSelectionRange(0, 99999);
+
+       
+        document.execCommand('copy');
+
+       
+        document.body.removeChild(tempInput);
+
+        
+        $(this).addClass('bg-success text-white');
+        setTimeout(function () {
+            $('.crypto-address').removeClass('bg-success text-white');
+            }, 1000);
+        });
+    });
+});
+</script>
+
+<!-- Popper JS -->
+<script src="{% static 'libs/@popperjs/core/umd/popper.min.js' %}"></script>
+
+<!-- Bootstrap JS -->
+<script src="{% static 'libs/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+<!-- Defaultmenu JS -->
+<script src="{% static 'js/defaultmenu.min.js' %}"></script>
+
+<!-- Node Waves JS-->
+<script src="{% static 'libs/node-waves/waves.min.js' %}"></script>
+
+<!-- Sticky JS -->
+<script src="{% static 'js/sticky.js' %}"></script>
+
+<!-- Simplebar JS -->
+<script src="{% static 'libs/simplebar/simplebar.min.js' %}"></script>
+<script src="{% static 'js/simplebar.js' %}"></script>
+
+<!-- Color Picker JS -->
+<script src="{% static 'libs/@simonwep/pickr/pickr.es5.min.js' %}"></script>
+
+
+    
+<!-- Custom-Switcher JS -->
+<script src="{% static 'js/custom-switcher.min.js' %}"></script>
+<script src="https://kit.fontawesome.com/f465f589c1.js" crossorigin="anonymous"></script>
+
+    <!-- Prism JS -->
+    <script src="{% static 'libs/prismjs/prism.js' %}"></script>
+    <script src="{% static 'js/prism-custom.js' %}"></script>
+
+    <!-- Form Validation JS -->
+    <script src="{% static 'js/validation.js' %}"></script>
+
+    <!-- Custom JS -->
+    <script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+
+</html>

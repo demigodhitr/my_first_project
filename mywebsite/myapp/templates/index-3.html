@@ -1,0 +1,1081 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light" data-menu-styles="light" data-toggled="close">
+<head>
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EPTL39X1H"></script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'G-3EPTL39X1H');
+      </script>
+      <!-- Google tag (gtag.js) -->
+    <style>
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+.ball {
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    border-radius: 50%;
+    margin: 0 10px;
+    opacity: 0;
+    animation: bounce 1s infinite alternate;
+}
+
+
+@keyframes bounce {
+    to {
+        transform: translateY(-20px);
+        opacity: 1;
+    }
+}
+
+
+.ball:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.ball:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.ball:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.ball:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+
+#main-content {
+    display: none;
+    animation: fadeIn 1s ease forwards;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#exm{
+    animation: flippingMe 3.7s infinite;
+}
+
+@keyframes flippingMe {
+    0% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(-1);;
+    }
+    100% {
+        transform: scaleY(1);
+    }
+    
+}
+#exmp{
+    animation: flipMe 1.6s infinite;
+}
+
+@keyframes flipMe {
+    0% {
+        transform: scaleY(1);
+    }
+    80% {
+        transform: scaleY(-1);;
+    }
+    100% {
+        transform: scaleY(1);
+    } 
+}
+    /* START API STYLES */
+    .api{
+       background-color: #f4ec9b;
+       color: #fff;
+       box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+       width: 400px;
+       max-height: 510px;
+       overflow-y: scroll!important;
+       padding: 20px;
+       border-radius: 25px !important;
+       margin-bottom: 50px !important;
+    }
+    /* END API STYLES */
+        .alert {
+              display: none;
+              background-color: #f44336; 
+              border-radius: 20px;
+              border-bottom-left-radius: 1px;
+              color: white;
+              padding: 5px; 
+              margin-bottom: 4px; 
+              animation: fadeInOut 5s ease-in-out;
+          }
+      
+          @keyframes fadeInOut {
+              0%, 100% {
+                  opacity: 0;
+              }
+              10%, 90% {
+                  opacity: 1;
+              }
+          }
+          </style>
+         
+    <!-- font awesome-->
+    <script src="https://kit.fontawesome.com/c7bf746142.js" crossorigin="anonymous"></script>
+
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> User Dashboard </title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'img/favicon.ico' %}">
+    
+    <!-- Choices JS -->
+    <script src="{% static 'libs/choices.js/public/assets/scripts/choices.min.js' %}"></script>
+
+    <!-- Main Theme Js -->
+    <script src="{% static 'js/main.js' %}"></script>
+    
+    <!-- Bootstrap Css -->
+    <link id="style" href="{% static '/libs/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" >
+
+    <!-- Style Css -->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" >
+
+    <!-- Icons Css -->
+    <link href="{% static 'css/icons.css' %}" rel="stylesheet" >
+
+    <!-- Node Waves Css -->
+    <link href="{% static 'libs/node-waves/waves.min.css' %}" rel="stylesheet" > 
+
+    <!-- Simplebar Css -->
+    <link href="{% static 'libs/simplebar/simplebar.min.css' %}" rel="stylesheet" >
+    
+    <!-- Color Picker Css -->
+    <link rel="stylesheet" href="{% static 'libs/flatpickr/flatpickr.min.css' %}">
+    <link rel="stylesheet" href="{% static 'libs/@simonwep/pickr/themes/nano.min.css' %}">
+
+    <!-- Choices Css -->
+    <link rel="stylesheet" href="{% static 'libs/choices.js/public/assets/styles/choices.min.css' %}">
+
+
+<link rel="stylesheet" href="{% static 'libs/jsvectormap/css/jsvectormap.min.css' %}">
+
+<link rel="stylesheet" href="{% static 'libs/swiper/swiper-bundle.min.css' %}">
+
+</head>
+
+<body>
+    <div id="preloader">
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+    </div>
+
+
+<div id="main-content"> 
+    <!-- Loader -->
+<div id="loader" >
+    <img src="{% static 'img/media/loader.svg' %}" alt="">
+</div>
+<!-- Loader -->
+
+    <div class="page">
+         <!-- app-header -->
+ <header class="app-header">
+
+    <!-- Start::main-header-container -->
+    <div class="main-header-container container-fluid">
+
+        <!-- Start::header-content-left -->
+        <div class="header-content-left">
+
+            <!-- Start::header-element -->
+            <div class="header-element mx-lg-0 mx-2">
+                <a aria-label="Hide Sidebar" class="sidemenu-toggle header-link animated-arrow hor-toggle horizontal-navtoggle" data-bs-toggle="sidebar" href="javascript:void(0);"><span></span></a>
+            </div>
+            <!-- End::header-element -->
+
+            <!-- Start::header-element --> 
+            <div class="header-element ms-3 d-lg-block d-none my-auto">
+            </div>
+            <!-- End::header-element -->
+
+        </div>
+        <!-- End::header-content-left -->
+
+        <!-- Start::header-content-right -->
+        <ul class="header-content-right">
+            <!-- Start::header-element -->
+            <li class="header-element notifications-dropdown d-xl-block d-none">
+                <!-- Start::header-link|dropdown-toggle -->
+                <a href="javascript:void(0);" class="header-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside" id="messageDropdown" aria-expanded="false">
+                    <i class="bi bi-bell header-link-icon"></i>
+                    <span class="header-icon-pulse bg-secondary rounded pulse pulse-secondary"></span>
+                </a>
+                <!-- End::header-link|dropdown-toggle -->
+                <!-- Start::main-header-dropdown -->
+                <div class="main-header-dropdown dropdown-menu dropdown-menu-end" data-popper-placement="none">
+                    <div class="p-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <p class="mb-0 fs-16">Notifications</p>
+                            <span class="badge bg-secondary-transparent" id="notifiation-data">You've got some</span>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <ul class="list-unstyled mb-0" id="header-notification-scroll">
+                        <li class="dropdown-item">
+                            <div class="d-flex align-items-center">
+                                 <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                                    <div>
+                                        {% for notification in notifications %}
+                                        <p class="mb-0 fw-medium"><a href="#">{{ notification.title }}<br>{{notification.created_at}}</a></p>
+                                        <span class="text-muted fw-normal fs-12 header-notification-text">{{ notification.message }}</span>
+                                        {% endfor %}
+                                    </div>
+                                 </div>
+                            </div>
+                        </li>
+    
+                    </ul>
+
+                    <div class="p-5 empty-item1 d-none">
+                        <div class="text-center">
+                            <span class="avatar avatar-xl avatar-rounded bg-secondary-transparent">
+                                <i class="ri-notification-off-line fs-2"></i>
+                            </span>
+                            <h6 class="fw-medium mt-3">No New Notifications</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- End::main-header-dropdown -->
+            </li>
+
+
+            <!-- Start::header-element -->
+            <li class="header-element">
+                <!-- Start::header-link|dropdown-toggle -->
+                <a href="javascript:void(0);" class="header-link dropdown-toggle" id="mainHeaderProfile" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                    <div class="d-flex align-items-center">
+                        <div class="me-sm-2 me-0">
+                            {% if profile_image %}
+                            <img src="{{ profile_image.url }}" alt="Profile Image" class="avatar avatar-sm avatar-rounded">
+                            {% else %}
+                            <img src="{% static 'img/defaultavatar.png' %}" alt="img" class="avatar avatar-sm avatar-rounded">
+                            {% endif %}
+                        </div>
+                        <div class="d-xl-block d-none lh-1">
+                            {% if user.is_authenticated %}
+                            <span class="fw-medium lh-1">{{ user_info.first_name }} </span>
+                        </div>
+                    </div>
+                </a>
+                <!-- End::header-link|dropdown-toggle -->
+                <ul class="main-header-dropdown dropdown-menu pt-0 overflow-hidden header-profile-dropdown dropdown-menu-end" aria-labelledby="mainHeaderProfile">
+                    <li><a class="dropdown-item d-flex align-items-center" href="{% url 'myprofile' %}"><i class="bi bi-person fs-18 me-2 op-7"></i>My Profile</a></li>
+                    <li><a class="dropdown-item d-flex align-items-center" href="javascript:;" onclick="tidioChatApi.display(true);tidioChatApi.open()" ><i class="bi bi-headset fs-18 me-2 op-7"></i>Support</a></li>
+                    <li><a class="dropdown-item d-flex align-items-center" href="{% url 'logout' %}"><i class="bi bi-box-arrow-right fs-18 me-2 op-7"></i>Log Out</a></li>
+                   
+                </ul>
+            </li>  
+            <!-- End::header-element -->
+        </ul>
+        <!-- End::header-content-right -->
+
+    </div>
+    <!-- End::main-header-container -->
+
+</header>
+<!-- /app-header -->
+        <!-- Start::app-sidebar -->
+<aside class="app-sidebar sticky" id="sidebar">
+
+    <!-- WILL ADD LOGO-->
+    <div class="main-sidebar-header">
+        
+    <a href="{% url 'dashboard' %}" class="header-logo"><img src="{% static 'img/logo-black.png' %}" alt="">
+        </a>
+    </div>
+    <!-- End::main-sidebar-header -->
+
+    <!-- Start::main-sidebar -->
+    <div class="main-sidebar" id="sidebar-scroll">
+
+        <!-- Start::nav -->
+        <nav class="main-menu-container nav nav-pills flex-column sub-open">
+            <div class="slide-left" id="slide-left">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24"> <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path> </svg>
+            </div>
+
+            <ul class="main-menu">
+
+                <!-- Start::slide -->
+               
+                {# Display login success messages #}
+                {% for message in messages %}
+                    {% if 'login' in message.tags and 'success' in message.tags %}
+                        <div class="alert alert-success">
+                            {{ message }}
+                        </div>
+                    {% endif %}
+                    
+                {% endfor %}
+                
+                
+
+                <li class="slide has-sub">
+                    <a href="javascript:void(0);" class="side-menu__item">
+                        <i class="bi bi-house side-menu__icon"></i>
+                        <span class="side-menu__label">Dashboard</span>
+                        <i class="fe fe-chevron-right side-menu__angle"></i>
+                    </a>
+                    <ul class="slide-menu child1">
+                       
+                        <li class="slide">
+                            <a href="{% url 'dashboard' %}" class="side-menu__item">Home</a>
+                        </li>
+                       
+                    </ul>
+                </li>
+                <!-- End::slide -->
+
+                <!-- Start::slide -->
+                <li class="slide has-sub">
+                    <a href="javascript:void(0);" class="side-menu__item">
+                        <i class="fa-2xs fa-solid fa-building mt-3 side-menu__icon"></i>
+                        <span class="side-menu__label">Company</span>
+                        <i class="fe fe-chevron-right side-menu__angle"></i>
+                    </a>
+                    <ul class="slide-menu child1 pages-ul">
+
+                        <li class="slide">
+                            <a href="{% url 'contact' %}" class="side-menu__item">Contact Us</a>
+                        </li>
+                        <li class="slide">
+                            <a href="{% url 'faqs' %}" class="side-menu__item">FAQ's</a>
+                        </li>
+
+                        <li class="slide">
+                            <a href="{% url 'plans' %}" class="side-menu__item">Investment plans</a>
+                        </li>
+                        <li class="slide">
+                            <a href="{% url 'terms' %}" class="side-menu__item">Terms & Conditions</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- End::slide -->
+
+                <!-- Start::slide -->
+                <li class="slide has-sub">
+                    <a href="javascript:void(0);" class="side-menu__item">
+                        <i class="bi bi-key side-menu__icon"></i>
+                        <span class="side-menu__label">Authentication</span>
+                        <i class="fe fe-chevron-right side-menu__angle"></i>
+                    </a>
+                    <ul class="slide-menu child1">
+                        <li class="slide side-menu__label1">
+                            <a href="javascript:void(0)">Authentication</a>
+                        </li>      
+                           
+                        <li class="slide has-sub">
+                            <a href="javascript:void(0);" class="side-menu__item">Password
+                                <i class="fe fe-chevron-right side-menu__angle"></i></a>
+                            <ul class="slide-menu child2">
+                                <li class="slide">
+                                    <a href="{% url 'password_reset' %}" class="side-menu__item">Reset Password</a>
+                                </li>
+                            </ul>
+                        </li>       
+ 
+                    </ul>
+                </li>
+                <!-- End::slide -->
+
+                <!-- Start::slide -->
+                <li class="slide has-sub">
+                    <a href="javascript:void(0);" class="side-menu__item">
+                        <i class="bi bi-layers side-menu__icon"></i>
+                        <span class="side-menu__label">Investments</span>
+                        <i class="fe fe-chevron-right side-menu__angle"></i>
+                    </a>
+                    <ul class="slide-menu child1">
+                        <li class="slide side-menu__label1">
+                            <a href="javascript:void(0)">Investments</a>
+                        </li>
+                        <li class="slide">
+                            <a href="{% url 'plans' %}" class="side-menu__item">Investment plans</a>
+                        </li>
+                        <li class="slide has-sub">
+                            <a href="javascript:void(0);" class="side-menu__item">Transactions
+                                <i class="fe fe-chevron-right side-menu__angle"></i></a>
+                            <ul class="slide-menu child2">
+                                <li class="slide">
+                                    <a href="{% url 'withdrawal' %}" class="side-menu__item">Make withrawal</a>
+                                </li>
+                                <li class="slide has-sub">
+                                    <a href="javascript:void(0);" class="side-menu__item">Fund account
+                                    <i class="fe fe-chevron-right side-menu__angle"></i></a>
+                                    <ul class="slide-menu child3">
+                                        <li class="slide">
+                                        <a href="javascript:void(0);" class="side-menu__item" onclick="openModal()">with fiat</a>
+                                        </li>
+                                        <li class="slide">
+                                            <a href="{% url 'deposit' %}" class="side-menu__item">with Crypto</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <!-- End::slide -->
+
+                <!-- Start::slide -->
+                <li class="slide has-sub">
+                    <a href="javascript:void(0);" class="side-menu__item">
+                        <i class="bi bi-archive side-menu__icon"></i>
+                        <span class="side-menu__label">General</span>
+                        <i class="fe fe-chevron-right side-menu__angle"></i>
+                    </a>
+                    <ul class="slide-menu child1 mega-menu">
+                        <li class="slide side-menu__label1">
+                            <a href="javascript:void(0)">General</a>
+                        </li>
+
+                        <li class="slide">
+                            <a href="{% url 'myprofile' %}" class="side-menu__item">My profile</a>
+                        </li>
+                        <li class="slide">
+                            <a href="{% url 'logout' %}" class="side-menu__item">Log out</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- End::slide -->
+
+
+            </ul>
+            <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24"> <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path> </svg></div>
+        </nav>
+        <!-- End::nav -->
+
+    </div>
+    <!-- End::main-sidebar -->
+
+</aside>
+<!-- End::app-sidebar -->
+
+        <!-- Start::app-content -->
+        <div class="main-content app-content">
+            <div class="container-fluid">
+
+                <!-- Start::page-header -->
+                <div class="my-4 page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2">
+                    <div>
+                        
+                    {% for message in messages %}
+                        {% if 'withdrawal' in message.tags and 'error' in message.tags %}
+                            <div class="alert alert-danger">
+                                {{ message }}
+                            </div>
+                        {% endif %}
+
+                        {% if 'withdrawal' in message.tags and 'success' in message.tags %}
+                        <div class="alert alert-success"> {{ message }} </div>
+                        {% endif %}
+
+                        {% if 'verification' in message.tags and 'success' in message.tags %}
+                        <div class="alert alert-success">
+                            {{ message }}
+                        </div>
+                    {% endif %}
+
+                    {% if 'verification' in message.tags and 'error' in message.tags %}
+                    <div class="alert alert-warning">
+                        {{ message }}
+                    </div>
+                {% endif %}
+
+                    {% endfor %}
+                        
+                        <h1 class="page-title fw-medium fs-18 mb-2" id="greeting">Good morning <h3>{{user.username}}, </h3>Welcome to your Dashboard</h1>
+                      
+                        <div class="">
+                            <nav>
+                                <ol class="breadcrumb mb-0">
+                                    <li class="breadcrumb-item"><a href="javascript:void(0);">Dashboards</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Home</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <div class="btn-list">
+                       <a href="{% url 'plans' %}"><button class="btn btn-primary-light btn-wave me-2">
+                            <i class="bx bx-crown align-middle"></i>Fund account
+                        </button></a>
+                   
+                        <a href="{% url 'withdrawal' %}"><button class="btn btn-primary-light btn-wave me-2">
+                            <i class="fa-solid  fa-download"></i>Withdrawal
+                         </button></a>
+                        </div>
+                </div>
+                <!-- End::page-header -->
+
+                <!-- Start::row-1 -->
+                <div class="row">
+                    <div class="col-xl-3">
+                        <div class="card custom-card overflow-hidden">
+                            <div class="card-body">
+                                <div class="d-flex align-items-top justify-content-between">
+                                    <div>
+                                        <span class="avatar bg-primary-transparent svg-primary">
+                                            <i class="fa-solid fa-2xl fa-download"></i>
+                                        </span>
+                                    </div>
+                                    <div class="flex-fill ms-3 d-flex align-items-start justify-content-between">
+                                        <div class="d-flex align-items-center justify-content-between flex-wrap">
+                                            <div>
+                                               
+                                                <p class="text-muted mb-3">Deposit</p>
+                                                <h4 class="mt-1">£{{account_info.Deposit}}</h4>
+                                            </div>
+                                        </div>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3">
+                        <div class="card custom-card overflow-hidden">
+                            <div class="card-body">
+                                <div class="d-flex align-items-top justify-content-between">
+                                    <div>
+                                        <span class="avatar bg-secondary-transparent svg-secondary">
+                                            <i class="fa-solid fa-2xl fa-gift"></i>
+                                        </span>
+                                    </div>
+                                    <div class="flex-fill ms-3 d-flex align-items-start justify-content-between">
+                                        <div class="d-flex align-items-center justify-content-between flex-wrap">
+                                            <div>
+                                                
+                                                <p class="text-muted mb-3">Bonuses</p>
+                                                <h4 class="mt-1"> £{{ account_info.Bonus }}</h4>
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3">
+                        <div class="card custom-card overflow-hidden">
+                            <div class="card-body">
+                                <div class="d-flex align-items-top justify-content-between">
+                                    <div>
+                                        <span class="avatar bg-info-transparent svg-danger">
+                                            <i class="fa-solid fa-2xl fa-money-bill-trend-up"></i>
+                                        </span>
+                                    </div>
+                                    <div class="flex-fill ms-3 d-flex align-items-start justify-content-between">
+                                        <div class="d-flex align-items-center justify-content-between flex-wrap">
+                                            <div>
+                                                <p class="text-muted mb-3">Accrued Profits</p>
+                                                <h4 class="mt-1">£{{ account_info.Profits }}</h4>
+
+                                                {% if 'Active' in account_info.TradeStatus %}
+                                                <p class="text-muted mt-3" style="font-size: small;">Trade status: <strong style="font-weight: bolder;" class="btn btn-success">{{account_info.TradeStatus}}</strong></p>
+                                                {% elif 'Inactive' in account_info.TradeStatus %}
+                                                <p class="text-muted mt-3" style="font-size: small;">Trade status: <strong style="font-weight: bolder;" class="btn btn-warning">{{account_info.TradeStatus}}</strong></p>
+                                                {% elif 'Suspended' in account_info.TradeStatus %}
+                                                <p class="text-muted mt-3" style="font-size: small;">Trade status: <strong style="font-weight: bolder;" class="btn btn-danger">{{account_info.TradeStatus}}</strong></p>
+                                                {% elif 'Completed' in account_info.TradeStatus %}
+                                                <p class="text-muted mt-3" style="font-size: small;">Trade status: <strong style="font-weight: bolder;" class="btn btn-success-light">{{account_info.TradeStatus}}</strong></p>
+                                                {% elif 'Canceled' in account_info.TradeStatus %}
+                                                <p class="text-muted mt-3" style="font-size: small;">Trade status: <strong style="font-weight: bolder;" class="btn btn-warning-light">{{account_info.TradeStatus}}</strong></p>
+                                                {% elif 'Paused' in account_info.TradeStatus %}
+                                                <p class="text-muted mt-3" style="font-size: small;">Trade status: <strong style="font-weight: bolder;" class="btn btn-warning-light">{{account_info.TradeStatus}}</strong></p>
+                                                {% elif 'No Trade' in account_info.TradeStatus %}
+                                                <p class="text-muted mt-3" style="font-size: small;">Trade status: <strong style="font-weight: bolder;" class="btn btn-danger-light">{{account_info.TradeStatus}}</strong></p>
+                                                {% endif %}
+                                            </div>
+                                            
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3">
+                        <div class="card custom-card overflow-hidden">
+                            <div class="card-body">
+                                <div class="d-flex align-items-top justify-content-between">
+                                    <div>
+                                        <span class="avatar bg-warning-transparent svg-warning">
+                                            <i class="fa-solid fa-2xl fa-wallet"></i>
+                                        </span>
+                                    </div>
+                                    <div class="flex-fill ms-3 d-flex align-items-start justify-content-between">
+                                        <div class="d-flex align-items-center justify-content-between flex-wrap">
+                                            <div>
+                                                <p class="text-muted mb-3">Total Available Balance</p>
+                                                <h4 class="mt-1">£{{ account_info.total_balance }}</h4>
+                                            </div>
+                                            {% else %}
+                                            <h1>You're not logged in.</h1>
+                                            {% endif %}
+                                        </div>
+                            
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End::row-1 -->
+
+                <!-- Start::row-2 -->
+                <div class="row">
+                    <div class="col-xxl-9 col-xl-8">
+                        <div class="card custom-card">
+                            <div class="card-header justify-content-between">
+                                <div class="card-title">
+                                   Profits Analysis
+                                </div>
+                               
+                            </div>
+                            <div class="card-body">
+                                <div class="content-wrapper">
+                                    <div id="crm-revenue-analytics"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <br><br>
+
+                       
+
+                <!-- Start:: row-3 -->
+                <div class="row">
+                    <div class="col-xxl-3">
+                        <div class="card custom-card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    Investors By Countries
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div id="customers-countries" class="text-center"></div>
+                                <div class="row row-cols-12">
+                                    <div class="col-6 p-0">
+                                        <div class="ps-4 py-3 pe-3 d-flex align-items-center justify-content-center gap-3">
+                                            <div class="d-flex align-items-center">
+                                                <span class="avatar avatar-xs me-2">
+                                                    <img src="{% static 'img/flags/india_flag.jpg' %}" alt="" class="rounded-1">
+                                                </span>India - 2,134
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 p-0">
+                                        <div class="p-3 d-flex align-items-center justify-content-center gap-3">
+                                            <div class="d-flex align-items-center">
+                                                <span class="avatar avatar-xs me-2">
+                                                    <img src="{% static 'img/flags/canada_flag.jpg' %}" alt="" class="rounded-1">
+                                                </span>Canada - 1,382
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 p-0">
+                                        <div class="p-3 d-flex align-items-center justify-content-center gap-3">
+                                            <div class="d-flex align-items-center">
+                                                <span class="avatar avatar-xs me-2">
+                                                    <img src="{% static 'img/flags/us_flag.jpg' %}" alt="" class="rounded-1">
+                                                </span>Usa - 3,293
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 p-0">
+                                        <div class="p-3 d-flex align-items-center justify-content-center gap-3">
+                                            <div class="d-flex align-items-center">
+                                                <span class="avatar avatar-xs me-2">
+                                                    <img src="{% static 'img/Flag_of_the_United_Kingdom_Square.svg.png' %}" alt="" class="rounded-1">
+                                                </span>United kingdom - 6,635
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            </div>
+        </div>
+        <!-- START API DATA DISPLAY -->
+        {% if coins_data and account_info.TradeIsActive %}
+        <h3>Live Market Broadcast.</h3>
+        <p class="text-muted">Watch closely for changes and fluctuations in the market. market conditions greatly impact your trade outcome. talk to your account manager if you have any concern!</p>
+
+        <div class="api card custom-card">
+
+            {% for coin_data in coins_data %}
+              <div>
+                <img src="{{ coin_data.image }}" alt="{{coin_data.name}}" height="50" width="50">
+                <h2>{{ coin_data.name }}</h2>
+                <h5>Symbol: ${{ coin_data.symbol }}</h5>
+
+                <canvas id="{{ coin.id }}-sparkline" width="300" height="50"></canvas>
+                
+
+                <p style="
+                padding: 5px 5px ;
+                font-weight: bold;
+                background-color: #0a0c0a;
+                color: greenyellow;
+                border-radius: 20px;
+                height: 30px;
+                align-items: center;
+                text-align: center;
+                justify-content: center;">
+                <i style="padding: 4px;
+                margin: 4x;" class="fa-solid fa-sm fa-bounce fa-money-bill-trend-up"></i>   Price (current): ${{ coin_data.current_price }}</p>
+                
+                <p style="
+                padding: 5px 5px ;
+                font-weight: bold;
+                background-color: #2b38ee;
+                color: #ffffff;
+                border-radius: 20px;
+                height: 30px;
+                align-items: center;
+                text-align: center;
+                justify-content: center;">
+                <i style="padding: 4px;
+                margin: 4x;" class="fa-solid fa-chart-line fa-flip"></i>  Market Cap: ${{ coin_data.market_cap }}</p>
+
+                <p style="
+                padding: 5px 5px ;
+                font-weight: bold;
+                background-color: #00ab31;
+                color: #ffffff;
+                border-radius: 20px;
+                height: 30px;
+                align-items: center;
+                text-align: center;
+                justify-content: center;">
+                <i id="exmp" style="padding: 4px;
+                margin: 4x;" class="fas fa-beat-fade fa-caret-up fa-xl"></i> 24 hours change(high):  ${{coin_data.high_24h}} <i style="padding: 4px;
+                margin: 4x;" id="exmp" class="fas fa-caret-up fa-beat-fade fa-xl"></i> </p>
+
+                <p style="
+                padding: 5px 5px ;
+                font-weight: bold;
+                background-color: #ff0000;
+                color: #ffffff;
+                border-radius: 20px;
+                height: 30px;
+                align-items: center;
+                text-align: center;
+                justify-content: center;">
+                <i id="exm" style="padding: 4px;
+                margin: 4x;" class="fas  fa-beat-fade fa-caret-down fa-xl"></i> 24 hours change(low):  ${{coin_data.low_24h}} <i style="padding: 4px;
+                margin: 4x;" id="exm" class="fas fa-beat-fade fa-caret-down fa-xl"></i></p>
+
+                <p style="
+                padding: 5px 5px ;
+                font-weight: bold;
+                background-color: #fde429;
+                color: #0d0101;
+                border-radius: 20px;
+                min-height: 30px;
+                align-items: center;
+                text-align: center;
+                justify-content: center;">
+                <i style="padding: 4px;
+                margin: 4x;" class="fa-solid fa-circle-exclamation fa-xl fa-fade"></i>Change, 24 hours: $ {{coin_data.price_change_24h }}</p>
+                
+                <p style="
+                padding: 5px 5px ;
+                font-weight: bold;
+                background-color: #e4610a;
+                color: #ffffff;
+                border-radius: 20px;
+                height: 30px;
+                align-items: center;
+                text-align: center;
+                justify-content: center;">
+                <i style="padding: 4px;
+                margin: 4x;" class="fa-solid fa-arrow-right-arrow-left fa-spin"></i> Change In Price: {{coin_data.price_change_percentage_24h}}</p>
+                <p style="
+                padding: 5px 5px ;
+                font-weight: bold;
+                background-color: #474749;
+                color: #ffffff;
+                border-radius: 20px;
+                height: 30px;
+                align-items: center;
+                text-align: center;
+                justify-content: center;">
+                <i style="padding: 4px;
+                margin: 4x;" class="fa-solid fa-chart-simple fa-flip"></i>Total Volume: ${{coin_data.total_volume }} </p>
+                <br>
+              </div>
+            {% endfor %}
+            {% else %}
+            <h4 class="text-muted">No market data available for you at the moment. Fund your account for a trade and you will be able to track price changes here.</h4>
+         
+        </div>
+        {% endif %} 
+        <!-- END API DATA DISPLAY -->
+
+
+
+        <!-- Footer Start -->
+
+
+
+    </div>
+    <div id="customModal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <p id="modalMessage">Thank you for your interest! We are diligently working to provide a seamless experience for fiat deposits with a highly stable service. Stay tuned for updates.</p>
+        </div>
+      </div>
+
+ 
+    <footer class="footer mt-auto py-3 bg-white text-center">
+    <div class="container">
+        <span class="text-muted"> Copyright © <span class="year" id="year">0000</span><a href="javascript:void(0);" class="text-dark fw-medium">Bitprofit LLC. </a>
+           <a href="javascript:void(0);"></a> All rights reserved</span>
+    </div>
+</footer>
+<!-- Scroll To Top -->
+<div class="scrollToTop">
+    <span class="arrow"><i class="ti ti-arrow-narrow-up fs-20"></i></span>
+</div>
+<div id="responsive-overlay"></div>
+<!-- Scroll To Top -->
+</div>
+    </div>
+</div>
+    </div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- Popper JS -->
+<script src="{% static 'libs/@popperjs/core/umd/popper.min.js' %}"></script>
+
+<!-- Bootstrap JS -->
+<script src="{% static 'libs/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+<!-- Defaultmenu JS -->
+<script src="{% static 'js/defaultmenu.min.js' %}"></script>
+
+<!-- Node Waves JS-->
+<script src="{% static 'libs/node-waves/waves.min.js' %}"></script>
+
+<!-- Sticky JS -->
+<script src="{% static 'js/sticky.js' %}"></script>
+
+<!-- Simplebar JS -->
+<script src="{% static 'libs/simplebar/simplebar.min.js' %}"></script>
+<script src="{% static 'js/simplebar.js' %}"></script>
+
+<!-- Color Picker JS -->
+<script src="{% static 'libs/@simonwep/pickr/pickr.es5.min.js' %}"></script>
+
+    
+
+    <!-- JSVector Maps JS -->
+    <script src="{% static 'libs/jsvectormap/js/jsvectormap.min.js' %}"></script>
+
+    <!-- JSVector Maps MapsJS -->
+    <script src="{% static 'libs/jsvectormap/maps/world-merc.js' %}"></script>
+
+    <!-- Apex Charts JS -->
+    <script src="{% static 'libs/apexcharts/apexcharts.min.js' %}"></script>
+
+    <!-- CRM-Dashboard -->
+    <script src="{% static 'js/crm-dashboard.js' %}"></script>
+
+    <!-- Custom JS -->
+    <script src="{% static 'js/custom.js' %}"></script>
+
+    
+<!-- Custom-Switcher JS -->
+<script src="{% static 'js/custom-switcher.min.js' %}"></script>
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function () {
+                document.getElementById("preloader").style.display = "none";
+                document.getElementById("main-content").style.display = "block";
+            }, 1000);
+        });
+
+    
+    var greetingElement = document.getElementById("greeting");
+    var currentTime = new Date().getHours();
+
+    if (currentTime >= 5 && currentTime < 12){
+        greetingElement.innerHTML = 'Good morning';
+    }
+    else if(currentTime >= 12 && currentTime < 18){
+            greetingElement.innerHTML = 'Good afternoon';
+        }
+        else greetingElement.innerHTML = 'Good evening';
+
+    
+let yearElement = document.getElementsByClassName('year')[0];
+
+function NewYear() {
+    let thisYear = new Date().getFullYear();
+    yearElement.textContent = thisYear;
+}
+NewYear();
+document.addEventListener('DOMContentLoaded', function() {
+    var alertElement = document.querySelector('.alert');
+    alertElement.style.display = 'block';
+    setTimeout(function() {
+    alertElement.style.display = 'none';
+    }, 5000);
+ });
+
+
+
+
+   document.addEventListener('DOMContentLoaded', function() {
+    var alertElement = document.querySelector('.alert');
+
+   
+    alertElement.style.display = 'block';
+
+
+    setTimeout(function() {
+        alertElement.style.display = 'none';
+    }, 7000);
+});
+
+   
+var sessionTimeout = 900; 
+   var timeoutID;
+
+   function resetSessionTimeout() {
+       clearTimeout(timeoutID);
+       timeoutID = setTimeout(logout, sessionTimeout * 1000);
+   }
+
+   function logout() {
+       window.location.href = '/';
+   }
+
+   document.addEventListener('mousemove', resetSessionTimeout);
+   document.addEventListener('keypress', resetSessionTimeout);
+
+   resetSessionTimeout();
+
+
+document.getElementById('comingsoon').addEventListener('click', function(){
+    alert('Thank you for your interest! We are currently working on this feature. Stay tuned for updates.');
+});
+
+
+
+ function openModal() {
+  document.getElementById('customModal').style.display = 'block';
+}
+
+function closeModal() {
+  document.getElementById('customModal').style.display = 'none';
+}
+
+
+</script>
+<script src="//code.tidio.co/s7s7pkpgzioqwkyxuqph94yrpdafdwdh.js" async></script>
+<script>
+    (function() {
+   function onTidioChatApiReady() {
+   window.tidioChatApi.hide();
+   window.tidioChatApi.on("close", function() {
+   window.tidioChatApi.hide();
+   });
+   }
+  
+   if (window.tidioChatApi) {
+   window.tidioChatApi.on("ready", onTidioChatApiReady);
+   } else {
+   document.addEventListener("tidioChat-ready", onTidioChatApiReady);
+   }
+  
+   document.querySelector(".chat-button").addEventListener("click", function() {
+   window.tidioChatApi.show();
+   window.tidioChatApi.open();
+   });
+  })();
+</script>
+</body>
+
+</html>

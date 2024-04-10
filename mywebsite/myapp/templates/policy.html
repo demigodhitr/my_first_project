@@ -1,0 +1,322 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en_US">
+   <head>
+            <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EPTL39X1H"></script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'G-3EPTL39X1H');
+      </script>
+      <!-- Google tag (gtag.js) -->
+      <style>
+         #preloader {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: #fff;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         z-index: 1000;
+         }
+
+
+         .ball {
+            width: 20px;
+            height: 20px;
+            background-color: green;
+            border-radius: 50%;
+            margin: 0 10px;
+            opacity: 0;
+            animation: bounce 1s infinite alternate;
+         }
+
+
+         @keyframes bounce {
+            to {
+               transform: translateY(-20px);
+               opacity: 1;
+            }
+         }
+
+
+         .ball:nth-child(2) {
+            animation-delay: 0.2s;
+         }
+
+         .ball:nth-child(3) {
+            animation-delay: 0.4s;
+         }
+
+         .ball:nth-child(4) {
+            animation-delay: 0.6s;
+         }
+
+         .ball:nth-child(5) {
+            animation-delay: 0.8s;
+         }
+
+
+         #main-content {
+            display: none;
+            animation: fadeIn 1s ease forwards;
+         }  
+
+
+
+         @keyframes fadeIn {
+            from {
+               opacity: 0;
+            }
+            to {
+               opacity: 1;
+            }
+         }
+      </style>
+      <title>Invest in a global crypto market with your smartly chosen currency.</title>
+      <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+      <meta name="title" content="Invest in a global crypto market with your smartly chosen currency.">
+      <meta name="description" content="Investment and forex have a larger customer base who have invested successfully in it by choosing the perfect crypto for their better future stock growth.">
+      <meta property="og:title" content="Invest in a global crypto market with your smartly chosen currency.">
+      <meta name="keywords" content="exchange rate, currency exchange, future, currency, trade, forex factory, forex trading, forex rates, currency exchange rates, fxcm, iforex, currency rate, metatrader, online trading, instaforex, foreign exchange rate, currency calculator, stock trading">
+      <meta property="og:locale" content="en_US">
+      <meta name="twitter:description" content="Investment and forex have a larger customer base who have invested successfully in it by choosing the perfect crypto for their better future stock growth.">
+      <meta name="twitter:title" content="Invest in a global crypto market with your smartly chosen currency.">
+      <meta property="og:description" content="Investment and forex have a larger customer base who have invested successfully in it by choosing the perfect crypto for their better future stock growth.">
+      <!-- Css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.min.css' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'fonts/fontawesome/css/all.min.css' %}">
+      <!-- Css -->
+
+      <!-- favicon-->
+      <link rel="icon" href="{% static 'img/favicon.ico' %}">
+      <!--favicon-->
+
+
+      <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="{% static './img/apple-touch-icon-72x72-precomposed.png' %}" sizes="72x72" />
+      <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="{% static './img/apple-touch-icon-114x114-precomposed.png' %}" sizes="114x114" />
+      <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="{% static './img/apple-touch-icon-144x144-precomposed.png' %}" sizes="144x144" />
+      <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="{% static './img/favicon.png' %}" />
+   </head>
+   <body>
+      <div id="preloader">
+         <div class="ball"></div>
+         <div class="ball"></div>
+         <div class="ball"></div>
+         <div class="ball"></div>
+         <div class="ball"></div>
+     </div>
+
+     <div class="main-content">
+      <!-- Header -->
+      <header class="header-main fixed-header">
+         <div class="header-top">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+                     <div class="left-topbar">
+                        <ul>
+                           <li><i class="fas fa-envelope-open"></i> support@bitprofitonline.com</li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                     <div class="right-topbar">
+                        <ul>
+                           <li><a href="https://facebook.com/bitprofitonline"><i class="fab fa-facebook"></i></a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="header-bottom">
+            <div class="header-right clearfix">
+               <div class="header-nav-menu">
+                  <div class="container">
+                     <div class="main-headers">
+                        <div class="logo-header">
+                           <a class="logo-link" href="{% url 'home' %}">
+                              <div class="logo-box">
+                                 <img src="{% static './img/logo.png' %}" alt="logo"  >
+                              </div>
+                           </a>
+                        </div>
+                        <div class="header-navbar-menu clearfix">
+                           <nav class="navbar navbar-expand-lg navbar-light">
+                              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                              <i class="fas fa-bars"></i>
+                              </button>
+                              <div class="collapse navbar-collapse header-links" id="navbarSupportedContent">
+                                 <ul class="navbar-nav mr-auto nav-list">
+                                    <li class="nav-item active">
+                                       <a class="nav-link" href="{% url 'home' %}">Home</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                       <a class="nav-link" href="#">Company <i class="fas fa-caret-down ml-1"></i></a>
+                                       <ul class="dropdown__menu__box">
+                                          <li><a href="{% url 'about' %}">About </a></li>
+                                          <li><a href="{% url 'contact' %}">Contact</a></li>
+                                          <li><a href="{% url 'roadmap' %}">Roadmap</a></li>
+                                       </ul>
+                                    </li>
+                                    <li class="nav-item ">
+                                    <li class="nav-item ">
+                                       <a class="nav-link" href="{% url 'login' %}">Login</a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </nav>
+                           <div class="right-menu">
+                              <a href="{% url 'broker' %}"><button type="button" class="theme-btn">BROKER</button></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- Header -->
+      <!-- Breadcrumb -->
+      <div class="breadcrumb-area">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-12">
+                  <div class="breadcrumb-title clearfix">
+                     <div class="heading">
+                        <h2 class="theme-title">Privacy policy</h2>
+                     </div>
+                     <div class="breadcumb-link">
+                        <ul>
+                           <li><a href="{% url 'home' %}" class="text-link">Home <span class="slash-breacumb">/</span></a></li>
+                           <a href="{% url 'policy' %}"><li>Privacy policy</li></a>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <section class="trader-join-area page-padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-12">
+                  <div class="page-title text-center">
+                     <span>Privacy Policy</span>
+                     <h2 class="theme-title">Our Privacy Policy</h2>
+                  </div>
+                  <p class="text-sm text-muted">Last updated: 02 Jan, 2024.</p>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-xl-12">
+                  <div class="privacy-box">
+                     <h4 class="theme-title"><i class="fas fa-dot-circle mr-1"></i> Information Collection and Use</h4>
+                     <p class="theme-description">While using our site, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you. Personally identifiable information may include but is not limited to your name, contact information, and financial details!</p>
+                  </div>
+                  <div class="privacy-box">
+                     <h4 class="theme-title"><i class="fas fa-dot-circle mr-1"></i>User Verification</h4>
+                     <p class="theme-description">As a forex investment broker, we are committed to adhering to regulatory requirements. Users from the United States are subject to additional verification processes in line with laws and regulations set forth by the relevant regulatory bodies. This may include the submission of additional documentation to ensure compliance with legal obligations!</p>
+                  </div>
+                  <div class="privacy-box">
+                     <h4 class="theme-title"><i class="fas fa-dot-circle mr-1"></i>Log Data</h4>
+                     <p class="theme-description">Like many site operators, we collect information that your browser sends whenever you visit our site ("Log Data"). This Log Data may include information such as your computer's Internet Protocol ("IP") address, browser type, browser version, the pages of our site that you visit, the time and date of your visit, the time spent on those pages, and other statistics!</p>
+                  </div>
+                  <div class="privacy-box">
+                     <h4 class="theme-title"><i class="fas fa-dot-circle mr-1"></i>Security</h4>
+                     <p class="theme-description">We employ cutting-edge encryption       technology to protect data transmission between your device and our servers. This ensures that your personal and financial details are secure during any online interaction with our platform.
+                        Also, our payment processing systems adhere to industry-leading security standards. This guarantees the confidentiality of your financial transactions, providing a secure environment for depositing and withdrawing funds!. <strong> DATA INTEGRITY: </strong> Your personal information is treated with the utmost confidentiality. We implement strict access controls to ensure that only authorized personnel have access to your data, maintaining its integrity and privacy. <strong> Compliance with Regulations: </strong> Our security protocols align with industry regulations and standards. By adhering to these guidelines, we demonstrate our commitment to maintaining a secure and compliant platform for your forex investment activities. <br>
+                        By entrusting your forex investments to us, you can be confident in our unwavering dedication to providing a secure and reliable platform. We continually invest in the latest security technologies to adapt to emerging threats and ensure a safe trading environment for our valued users.
+                     </p>
+                  </div>
+                  <div class="privacy-box">
+                     <h4 class="theme-title"><i class="fas fa-dot-circle mr-1"></i>Changes to This Privacy Policy:</h4>
+                     <p class="theme-description">This Updated Privacy Policy is effective as of 02 Jan, 2024. and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page.! <br>
+                     <strong>
+                        We reserve the right to update or change our Privacy Policy at any time, and you should check this Privacy Policy periodically. Your continued use of the Service after we post any modifications to the Privacy Policy on this page will constitute your acknowledgment of the modifications and your consent to abide and be bound by the modified Privacy Policy.
+                     </strong> </p>
+                  </div>
+                  <div class="privacy-box">
+                     <h4 class="theme-title"><i class="fas fa-dot-circle mr-1"></i>Contact Us:</h4>
+                     <p class="theme-description">If you have any questions about this Privacy Policy or the verification process for users from the United States, please contact us using <a href="mailto:support@bitprofitonline.com">Our support mail </a> or quickly use the chat button to open a chat with a live support agent. </p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Trader -->
+      <!-- Footer -->
+      <footer class="footer">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                  <div class="footer-box">
+                     <div class="img-box">
+                        <img src="{% static './img/logo-black.png' %}" alt="logo">
+                     </div>
+                     <p class="theme-description">Connect with us to make your Crypto investment experience worthy and Get the exact solution to the mark for your crypto exchange.</p>
+                     <div class="social-links">
+                        <ul>
+                           <li><a href="https://facebook.com/bitprofitonline"><i class="fab fa-facebook"></i></a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                  <div class="footer-box">
+                     <h4 class="theme-title">Instruments</h4>
+                     <div class="links-box">
+                        <ul>
+                           <li><a href="{% url 'home' %}"><i class="fas fa-angle-right"></i>Home</a></li>
+                           <li><a href="{% url 'about' %}"><i class="fas fa-angle-right"></i>About</a></li>
+                           <li><a href="{% url 'roadmap' %}"><i class="fas fa-angle-right"></i>Roadmap</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                  <div class="footer-box">
+                     <h4 class="theme-title">Company</h4>
+                     <div class="links-box">
+                        <ul>
+                           <li><a href="{% url 'policy' %}"><i class="fas fa-angle-right"></i>Privacy policy</a></li>
+                           <li><a href="{% url 'terms' %}"><i class="fas fa-angle-right"></i>Terms & Condition</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+      </div>
+      <!-- Footer -->
+      <!-- Javascript -->
+      <script>
+         document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function () {
+               document.getElementById("preloader").style.display = "none";
+               document.getElementById("main-content").style.display = "block";
+            }, 1000);
+         });
+      </script>
+      <script src="//code.tidio.co/s7s7pkpgzioqwkyxuqph94yrpdafdwdh.js" async></script>
+      <script src="{% static './js/jquery.min.js' %}"></script>
+      <script src="{% static './js/popper.min.js' %}"></script>
+      <script src="{% static './js/owl.carousel.min.js' %}"></script>
+      <script src="{% static './js/bootstrap.min.js' %}"></script>
+      <script src="{% static './js/custom.js' %}"></script>
+      <!-- Javascript -->
+   </body>
+</html>

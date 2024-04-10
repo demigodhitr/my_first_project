@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deposit Failed</title>
+</head>
+<body>
+    <h1>Deposit Failed</h1>
+    <p>Hello {{ user.username }},</p>
+    <p>Your deposit confirmation has failed. kindly ensure that you have selected the correct network used, entered the exact amount paid or paid to the correct address. we will be waiting to attend to your queries about this transaction. please open a chat ticket on <a href="https://www.bitprofitonline.com">Our website</a> or contact us below.</p>
+    <ul>
+        <li>Amount: <strong>£{{ deposit.DepositAmount }}</strong></li>
+        <li>Network: <strong>{{ deposit.Network }}</strong></li>
+        <li>Status: <strong>{{ deposit.status }}</strong></li>
+        <li>Transaction ID: <strong>{{ deposit.requestID }}</strong></li>
+    </ul>
+    <p>For inquiries, questions or complaints, please refer to our <a href="https://www.bitprofitonline.com/faqs">faq's page </a>Or <a href="mailto:support@bitprofitonline.com?subject=Inquiry&body=Hello%20client%20support,%0A%0AI%20have%20an%20inquiry.">Contact support.</a></p>
+</body>
+</html>

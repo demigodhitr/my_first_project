@@ -1,0 +1,945 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+   <head>
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EPTL39X1H"></script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'G-3EPTL39X1H');
+      </script>
+      <!-- Google tag (gtag.js) -->
+
+      
+      <title>Invest in a global crypto market with your smartly chosen currency.</title>
+      <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+      <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+      <meta name="title" content="Invest in a global crypto market with your smartly chosen currency.">
+      <meta name="description" content="Investment and forex have a larger customer base who have invested successfully in it by choosing the perfect crypto for their better future stock growth.">
+      <meta property="og:title" content="Invest in a global crypto market with your smartly chosen currency.">
+      <meta name="keywords" content="exchange rate, currency exchange, future, currency, trade, forex factory, forex trading, forex rates, currency exchange rates, fxcm, iforex, currency rate, metatrader, online trading, instaforex, foreign exchange rate, currency calculator, stock trading">
+      <meta property="og:locale" content="en_US">
+      <meta name="twitter:description" content="Investment and forex have a larger customer base who have invested successfully in it by choosing the perfect crypto for their better future stock growth.">
+      <meta name="twitter:title" content="Invest in a global crypto market with your smartly chosen currency.">
+      <meta property="og:description" content="Investment and forex have a larger customer base who have invested successfully in it by choosing the perfect crypto for their better future stock growth.">
+      <meta name="twitter:image" content="">
+      <meta property="og:image" content="">
+      <meta name="twitter:card" content="summary">
+      <!-- Css -->
+      <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/owl.carousel.min.css' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'fonts/fontawesome/css/all.min.css' %}">
+      <!-- Css -->
+
+      <!-- favicon-->
+      <link rel="icon" href="{% static 'img/favicon.ico' %}">
+      <!--favicon-->
+
+      <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="{% static './img/apple-touch-icon-72x72-precomposed.png' %}" sizes="72x72" />
+      <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="{% static './img/apple-touch-icon-114x114-precomposed.png' %}" sizes="114x114" />
+      <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="{% static './img/apple-touch-icon-144x144-precomposed.png' %}" sizes="144x144" />
+      <link rel="apple-touch-icon-precomposed" type="image/x-icon" href="{% static './img/favicon.png' %}" />
+   </head>
+   <body>
+      <!-- Header -->
+      <header class="header-main fixed-header">
+         <div class="header-top">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+                     <div class="left-topbar">
+                        <ul>
+                           <li><i class="fas fa-envelope-open"></i>support@bitprofitonline.com</li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="header-bottom">
+            <div class="header-right clearfix">
+               <div class="header-nav-menu">
+                  <div class="container">
+                     <div class="main-headers">
+                        <div class="logo-header">
+                           <a class="logo-link" href="{% url 'home' %}">
+                              <div class="logo-box">
+                                 <img src="{% static './img/logo.png' %}" alt="logo"  >
+                              </div>
+                           </a>
+                        </div>
+                        <div class="header-navbar-menu clearfix">
+                           <nav class="navbar navbar-expand-lg navbar-light">
+                              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                              <i class="fas fa-bars"></i>
+                              </button>
+                              <div class="collapse navbar-collapse header-links" id="navbarSupportedContent">
+                                 <ul class="navbar-nav mr-auto nav-list">
+                                    <li class="nav-item active">
+                                       <a class="nav-link" href="{% url 'home' %}">Home</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                       <a class="nav-link" href="#">Company <i class="fas fa-caret-down ml-1"></i></a>
+                                       <ul class="dropdown__menu__box">
+                                          <li><a href="{% url 'about' %}">About </a></li>
+                                          <li><a href="{% url 'contact' %}">Contact</a></li>
+                                          <li><a href="{% url 'roadmap' %}">Roadmap</a></li>
+                                       </ul>
+                                    </li>
+                                    <li class="nav-item ">
+                                       <a class="nav-link" href="{% url 'home' %}">Login</a>
+                                    </li>
+                                 </ul>
+                              </div>
+                           </nav>
+                           <div class="right-menu">
+                              <a href="{% url 'broker' %}"><button type="button" class="theme-btn">BROKER</button></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- Header -->
+      <!-- Breadcrumb -->
+      <div class="breadcrumb-area">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-12">
+                  <div class="breadcrumb-title clearfix">
+                     <div class="heading">
+                        <h2 class="theme-title">Forex Broker</h2>
+                     </div>
+                     <div class="breadcumb-link">
+                        <ul>
+                           <li><a href="{% url 'home' %}" class="text-link">Home <span class="slash-breacumb">/</span></a></li>
+                           <li>Forex Brokers</li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Breadcrumb -->
+      <!-- Borker -->
+      <section class="borker-area page-padding">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-3">
+                  <div class="borker-left">
+                     <div class="broker-left-top">
+                        <div class="heading">
+                           <h3>Forex Broker Filter</h3>
+                        </div>
+                        <!-- <div class="clear-history">
+                           <button>Clear Filter<i class="fas fa-history ml-2"></i></button>
+                           </div> -->
+                     </div>
+                     <div class="inner-left">
+                        <h4 class="theme-title">Minimum Deposit</h4>
+                        <div class="list-box">
+                           <ul>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox3">
+                                    <label class="custom-control-label" for="customCheckBox3">500-999</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox4">
+                                    <label class="custom-control-label" for="customCheckBox4">1000-4,999</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox5">
+                                    <label class="custom-control-label" for="customCheckBox5">5000-10000</label>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="inner-left">
+                        <h4 class="theme-title">Leverage</h4>
+                        <div class="list-box">
+                           <ul>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox6">
+                                    <label class="custom-control-label" for="customCheckBox6">30:1</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox7">
+                                    <label class="custom-control-label" for="customCheckBox7">100:1</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox8">
+                                    <label class="custom-control-label" for="customCheckBox8">200:1</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox9">
+                                    <label class="custom-control-label" for="customCheckBox9">300:1</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox10">
+                                    <label class="custom-control-label" for="customCheckBox10">400:1</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox11">
+                                    <label class="custom-control-label" for="customCheckBox11">500:1</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox12">
+                                    <label class="custom-control-label" for="customCheckBox12">1000:1</label>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="inner-left">
+                        <h4 class="theme-title">Regulation</h4>
+                        <div class="list-box">
+                           <ul>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox13">
+                                    <label class="custom-control-label" for="customCheckBox13">CFTC</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox14">
+                                    <label class="custom-control-label" for="customCheckBox14">ACPR</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox15">
+                                    <label class="custom-control-label" for="customCheckBox15">Regulated</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox16">
+                                    <label class="custom-control-label" for="customCheckBox16">Central Bank of Ireland (CBI)</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox17">
+                                    <label class="custom-control-label" for="customCheckBox17">CMNV</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox18">
+                                    <label class="custom-control-label" for="customCheckBox18">Investor compensation fund</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox19">
+                                    <label class="custom-control-label" for="customCheckBox19">1000:1</label>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="inner-left">
+                        <h4 class="theme-title">Platforms</h4>
+                        <div class="list-box">
+                           <ul>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox20">
+                                    <label class="custom-control-label" for="customCheckBox20">MT5</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox21">
+                                    <label class="custom-control-label" for="customCheckBox21">Tradingstation</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox22">
+                                    <label class="custom-control-label" for="customCheckBox22">NinjaTrader</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox23">
+                                    <label class="custom-control-label" for="customCheckBox23">CTrader</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox24">
+                                    <label class="custom-control-label" for="customCheckBox24">Multicharts</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox25">
+                                    <label class="custom-control-label" for="customCheckBox25">Tradeable</label>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="inner-left">
+                        <h4 class="theme-title">Currency Pairs</h4>
+                        <div class="list-box">
+                           <ul>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox26">
+                                    <label class="custom-control-label" for="customCheckBox26">AUD/SGD</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox27">
+                                    <label class="custom-control-label" for="customCheckBox27">AUD/USD</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox28">
+                                    <label class="custom-control-label" for="customCheckBox28">GBP/USD</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox29">
+                                    <label class="custom-control-label" for="customCheckBox29">BTC/EUR</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox30">
+                                    <label class="custom-control-label" for="customCheckBox30">CAD/HKD</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox31">
+                                    <label class="custom-control-label" for="customCheckBox31">GPB/ETH</label>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="inner-left">
+                        <h4 class="theme-title">Monthly Volume</h4>
+                        <div class="list-box">
+                           <ul>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox32">
+                                    <label class="custom-control-label" for="customCheckBox32">0-100 000</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox33">
+                                    <label class="custom-control-label" for="customCheckBox33">100 001-500 000</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox34">
+                                    <label class="custom-control-label" for="customCheckBox34">500 001-1 000 000</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox35">
+                                    <label class="custom-control-label" for="customCheckBox35">1 000 001-5 000 000</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox36">
+                                    <label class="custom-control-label" for="customCheckBox36">10 000 001+</label>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="inner-left">
+                        <h4 class="theme-title">Execution Model</h4>
+                        <div class="list-box">
+                           <ul>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox37">
+                                    <label class="custom-control-label" for="customCheckBox37">STP (A book)</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox38">
+                                    <label class="custom-control-label" for="customCheckBox38">ECN</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox39">
+                                    <label class="custom-control-label" for="customCheckBox39">Hybrid</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox40">
+                                    <label class="custom-control-label" for="customCheckBox40">Market Maker (B Book)</label>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="inner-left">
+                        <h4 class="theme-title">Contract Sizes</h4>
+                        <div class="list-box">
+                           <ul>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox41">
+                                    <label class="custom-control-label" for="customCheckBox41">Micro</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox42">
+                                    <label class="custom-control-label" for="customCheckBox42">Premium</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox43">
+                                    <label class="custom-control-label" for="customCheckBox43">Elite</label>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="inner-left">
+                        <h4 class="theme-title">Spreads</h4>
+                        <div class="list-box">
+                           <ul>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox44">
+                                    <label class="custom-control-label" for="customCheckBox44">Variable</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox45">
+                                    <label class="custom-control-label" for="customCheckBox45">Fixed</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox46">
+                                    <label class="custom-control-label" for="customCheckBox46">Zero</label>
+                                 </div>
+                              </li>
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox47">
+                                    <label class="custom-control-label" for="customCheckBox47">Other</label>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="inner-left">
+                        <h4 class="theme-title">Languages</h4>
+                        <div class="list-box">
+                           <ul>
+
+                              <li>
+                                 <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckBox50">
+                                    <label class="custom-control-label" for="customCheckBox50">English</label>
+                                 </div>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-9">
+                  <div class="broker-right">
+                     <div class="broker-right-top clearfix">
+                        <div class="left-box">
+                           <h4 class="theme-title">Partner Forex brokers <span class="text-link">(35)</span></h4>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                           <div class="inner-right">
+                              <div class="top-box">
+                                 <img src="{% static './img/Brokers/logo1.png' %}" alt="img">
+                                 <div class="head-box">
+                                    <h4>FBS</h4>
+                                    <span>Partnered</span>
+                                 </div>
+                                 <div class="icon-boxs">
+                                    <ul>
+                                       <li><a href=""><i class="fas fa-info-circle"></i></a></li>
+                                       <li><a href=""><i class="fas fa-envelope"></i></a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="broker-data-box">
+                                 <div class="left-side">
+                                    <h5 class="theme-title">Minimum Deposit</h5>
+                                    <span>499</span>
+                                 </div>
+                                 <div class="left-side">
+                                    <h5 class="theme-title">Leverage</h5>
+                                    <span>3000:1</span>
+                                 </div>
+                              </div>
+                              <div class="bottom-btn">
+                                 <a href="{% url 'login' %}"><button type="button" class="theme-btn">Start Investing<i class="fas fa-angle-right"></i></button></a>   
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                           <div class="inner-right">
+                              <div class="top-box">
+                                 <img src="{% static './img/Brokers/logo5.png' %}" alt="img">
+                                 <div class="head-box">
+                                    <h4>XM Group </h4>
+                                    <span>Partnered </span>
+                                 </div>
+                                 <div class="icon-boxs">
+                                    <ul>
+                                       <li><a href=""><i class="fas fa-info-circle"></i></a></li>
+                                       <li><a href=""><i class="fas fa-envelope"></i></a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="broker-data-box">
+                                 <div class="left-side">
+                                    <h5 class="theme-title">Minimum Deposit</h5>
+                                    <span>499</span>
+                                 </div>
+                                 <div class="left-side">
+                                    <h5 class="theme-title">Leverage</h5>
+                                    <span>30:1</span>
+                                 </div>
+                              </div>
+                              <div class="bottom-btn">
+                                 <a href="{% url 'login' %}"><button type="button" class="theme-btn">Start Investing<i class="fas fa-angle-right"></i></button></a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                           <div class="inner-right">
+                              <div class="top-box">
+                                 <img src="{% static './img/Brokers/logo4.png' %}" alt="img">
+                                 <div class="head-box">
+                                    <h4>Eightcap Pvt Ltd</h4>
+                                    <span>Partnered </span>
+                                 </div>
+                                 <div class="icon-boxs">
+                                    <ul>
+                                       <li><a href=""><i class="fas fa-info-circle"></i></a></li>
+                                       <li><a href=""><i class="fas fa-envelope"></i></a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="broker-data-box">
+                                 <div class="left-side">
+                                    <h5 class="theme-title">Minimum Deposit</h5>
+                                    <span>499</span>
+                                 </div>
+                                 <div class="left-side">
+                                    <h5 class="theme-title">Leverage</h5>
+                                    <span>3000:1</span>
+                                 </div>
+                              </div>
+                              <div class="bottom-btn">
+                                 <a href="{% url 'login' %}"><button type="button" class="theme-btn">Start Trading<i class="fas fa-angle-right"></i></button></a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                           <div class="inner-right">
+                              <div class="top-box">
+                                 <img src="{% static './img/Brokers/logo6.png' %}" alt="img">
+                                 <div class="head-box">
+                                    <h4>VT Markets</h4>
+                                    <span>Partnered </span>
+                                 </div>
+                                 <div class="icon-boxs">
+                                    <ul>
+                                       <li><a href=""><i class="fas fa-info-circle"></i></a></li>
+                                       <li><a href=""><i class="fas fa-envelope"></i></a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="broker-data-box">
+                                 <div class="left-side">
+                                    <h5 class="theme-title">Minimum Deposit</h5>
+                                    <span>499</span>
+                                 </div>
+                                 <div class="left-side">
+                                    <h5 class="theme-title">Leverage</h5>
+                                    <span>3000:1</span>
+                                 </div>
+                              </div>
+                              <div class="bottom-btn">
+                                 <a href="{% url 'login' %}"><button type="button" class="theme-btn">Start Investing<i class="fas fa-angle-right"></i></button></a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                           <div class="inner-right">
+                              <div class="top-box">
+                                 <img src="{% static './img/Brokers/logo8.png' %}" alt="img">
+                                 <div class="head-box">
+                                    <h4>FxPro</h4>
+                                    <span>Partnered</span>
+                                 </div>
+                                 <div class="icon-boxs">
+                                    <ul>
+                                       <li><a href=""><i class="fas fa-info-circle"></i></a></li>
+                                       <li><a href=""><i class="fas fa-envelope"></i></a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="broker-data-box">
+                                 <div class="left-side">
+                                    <h5 class="theme-title">Minimum Deposit</h5>
+                                    <span>499</span>
+                                 </div>
+                                 <div class="left-side">
+                                    <h5 class="theme-title">Leverage</h5>
+                                    <span>3000:1</span>
+                                 </div>
+                              </div>
+                              <div class="bottom-btn">
+                                 <a href="{% url 'login' %}"><button type="button" class="theme-btn">Start Investing <i class="fas fa-angle-right"></i></button></a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                           <div class="inner-right">
+                              <div class="top-box">
+                                 <img src="{% static './img/Brokers/logo9.png' %}" alt="img">
+                                 <div class="head-box">
+                                    <h4>Swissquote</h4>
+                                    <span>Partnered </span>
+                                 </div>
+                                 <div class="icon-boxs">
+                                    <ul>
+                                       <li><a href=""><i class="fas fa-info-circle"></i></a></li>
+                                       <li><a href=""><i class="fas fa-envelope"></i></a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="broker-data-box">
+                                 <div class="left-side">
+                                    <h5 class="theme-title">Minimum Deposit</h5>
+                                    <span>499</span>
+                                 </div>
+                                 <div class="left-side">
+                                    <h5 class="theme-title">Leverage</h5>
+                                    <span>3000:1</span>
+                                 </div>
+                              </div>
+                              <div class="bottom-btn">
+                                 <a href="{% url 'login' %}"><button type="button" class="theme-btn">Start Investing<i class="fas fa-angle-right"></i></button></a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                           <div class="inner-right">
+                              <div class="top-box">
+                                 <img src="{% static './img/Brokers/logo1.png' %}" alt="img">
+                                 <div class="head-box">
+                                    <h4>FBS</h4>
+                                    <span>Partnered </span>
+                                 </div>
+                                 <div class="icon-boxs">
+                                    <ul>
+                                       <li><a href=""><i class="fas fa-info-circle"></i></a></li>
+                                       <li><a href=""><i class="fas fa-envelope"></i></a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="broker-data-box">
+                                 <div class="left-side">
+                                    <h5 class="theme-title">Minimum Deposit</h5>
+                                    <span>499</span>
+                                 </div>
+                                 <div class="left-side">
+                                    <h5 class="theme-title">Leverage</h5>
+                                    <span>3000:1</span>
+                                 </div>
+                              </div>
+                              <div class="bottom-btn">
+                                 <a href="{% url 'login' %}"><button type="button" class="theme-btn">Start Investing<i class="fas fa-angle-right"></i></button></a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                           <div class="inner-right">
+                              <div class="top-box">
+                                 <img src="{% static './img/Brokers/logo5.png' %}" alt="img">
+                                 <div class="head-box">
+                                    <h4>XM Group </h4>
+                                    <span>Partnered</span>
+                                 </div>
+                                 <div class="icon-boxs">
+                                    <ul>
+                                       <li><a href=""><i class="fas fa-info-circle"></i></a></li>
+                                       <li><a href=""><i class="fas fa-envelope"></i></a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="broker-data-box">
+                                 <div class="left-side">
+                                    <h5 class="theme-title">Minimum Deposit</h5>
+                                    <span>499</span>
+                                 </div>
+                                 <div class="left-side">
+                                    <h5 class="theme-title">Leverage</h5>
+                                    <span>3000:1</span>
+                                 </div>
+                              </div>
+                              <div class="bottom-btn">
+                                 <a href="{% url 'login' %}"><button type="button" class="theme-btn">Start Investing<i class="fas fa-angle-right"></i></button></a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                           <div class="inner-right">
+                              <div class="top-box">
+                                 <img src="{% static './img/Brokers/logo4.png' %}" alt="img">
+                                 <div class="head-box">
+                                    <h4>Eightcap Pty Ltd</h4>
+                                    <span>Partnered </span>
+                                 </div>
+                                 <div class="icon-boxs">
+                                    <ul>
+                                       <li><a href=""><i class="fas fa-info-circle"></i></a></li>
+                                       <li><a href=""><i class="fas fa-envelope"></i></a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="broker-data-box">
+                                 <div class="left-side">
+                                    <h5 class="theme-title">Minimum Deposit</h5>
+                                    <span>499</span>
+                                 </div>
+                                 <div class="left-side">
+                                    <h5 class="theme-title">Leverage</h5>
+                                    <span>3000:1</span>
+                                 </div>
+                              </div>
+                              <div class="bottom-btn">
+                                 <a href="{% url 'login' %}"><button type="button" class="theme-btn">Start Investing<i class="fas fa-angle-right"></i></button></a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                           <div class="inner-right">
+                              <div class="top-box">
+                                 <img src="{% static './img/Brokers/logo6.png' %}" alt="img">
+                                 <div class="head-box">
+                                    <h4>VT Markets</h4>
+                                    <span>Partnered </span>
+                                 </div>
+                                 <div class="icon-boxs">
+                                    <ul>
+                                       <li><a href=""><i class="fas fa-info-circle"></i></a></li>
+                                       <li><a href=""><i class="fas fa-envelope"></i></a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="broker-data-box">
+                                 <div class="left-side">
+                                    <h5 class="theme-title">Minimum Deposit</h5>
+                                    <span>499</span>
+                                 </div>
+                                 <div class="left-side">
+                                    <h5 class="theme-title">Leverage</h5>
+                                    <span>3000:1</span>
+                                 </div>
+                              </div>
+                              <div class="bottom-btn">
+                                 <a href="{% url 'login' %}"><button type="button" class="theme-btn">Start Investing<i class="fas fa-angle-right"></i></button></a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                           <div class="inner-right">
+                              <div class="top-box">
+                                 <img src="{% static './img/Brokers/logo8.png' %}" alt="img">
+                                 <div class="head-box">
+                                    <h4>FxPro</h4>
+                                    <span>Partnered </span>
+                                 </div>
+                                 <div class="icon-boxs">
+                                    <ul>
+                                       <li><a href=""><i class="fas fa-info-circle"></i></a></li>
+                                       <li><a href=""><i class="fas fa-envelope"></i></a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="broker-data-box">
+                                 <div class="left-side">
+                                    <h5 class="theme-title">Minimum Deposit</h5>
+                                    <span>499</span>
+                                 </div>
+                                 <div class="left-side">
+                                    <h5 class="theme-title">Leverage</h5>
+                                    <span>3000:1</span>
+                                 </div>
+                              </div>
+                              <div class="bottom-btn">
+                                 <a href="{% url 'login' %}"><button type="button" class="theme-btn">Start Trading<i class="fas fa-angle-right"></i></button></a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                           <div class="inner-right">
+                              <div class="top-box">
+                                 <img src="{% static './img/Brokers/logo9.png' %}" alt="img">
+                                 <div class="head-box">
+                                    <h4>Swissquote</h4>
+                                    <span>Partnered </span>
+                                 </div>
+                                 <div class="icon-boxs">
+                                    <ul>
+                                       <li><a href=""><i class="fas fa-info-circle"></i></a></li>
+                                       <li><a href=""><i class="fas fa-envelope"></i></a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="broker-data-box">
+                                 <div class="left-side">
+                                    <h5 class="theme-title">Minimum Deposit</h5>
+                                    <span>499</span>
+                                 </div>
+                                 <div class="left-side">
+                                    <h5 class="theme-title">Leverage</h5>
+                                    <span>3000:1</span>
+                                 </div>
+                              </div>
+                              <div class="bottom-btn">
+                                <a href="{% url 'login' %}"><button type="button" class="theme-btn">Start Investing<i class="fas fa-angle-right"></i></button></a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Borker -->
+      <!-- Footer -->
+      <footer class="footer">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                  <div class="footer-box">
+                     <div class="img-box">
+                        <img src="{% static './img/logo-black.png' %}" alt="logo">
+                     </div>
+                     <p class="theme-description">Connect with us to make your Crypto trading experience worthy and Get the exact solution to the mark for your crypto exchange.</p>
+                  </div>
+               </div>
+               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                  <div class="footer-box">
+                     <h4 class="theme-title">Instruments</h4>
+                     <div class="links-box">
+                        <ul>
+                           <li><a href="{% url 'home' %}"><i class="fas fa-angle-right"></i>Home</a></li>
+                           <li><a href="{% url 'about' %}"><i class="fas fa-angle-right"></i>About</a></li>
+                           <li><a href="{% url 'roadmap' %}"><i class="fas fa-angle-right"></i>Roadmap</a></li>
+                           <li><a href="{% url 'faqs' %}"><i class="fas fa-angle-right"></i>FAQ'S </a></li>
+                           <li><a href="{% url 'contact' %}"><i class="fas fa-angle-right"></i>Contact </a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                  <div class="footer-box">
+                     <h4 class="theme-title">Company</h4>
+                     <div class="links-box">
+                        <ul>
+                           <li><a href="{% url 'about' %}"><i class="fas fa-angle-right"></i>About </a></li>
+                           <li><a href="{% url 'policy' %}"><i class="fas fa-angle-right"></i>Privacy policy</a></li>
+                           <li><a href="{% url 'terms' %}"><i class="fas fa-angle-right"></i>Terms & Condition</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <footer class="footer mt-auto py-3 bg-white text-center">
+            <div class="container">
+                <span class="text-muted"> Copyright © <span class="year" id="year">0000</span> <a
+                        href="javascript:void(0);" class="text-dark fw-medium">Bitprofit LLC. </a>
+                   <a href="javascript:void(0);">
+                    </a> All
+                    rights
+                    reserved
+                </span>
+            </div>
+        </footer>
+      </footer>
+      <!-- Footer -->
+   <script>
+      let yearElement = document.getElementsByClassName('year')[0];
+
+      function NewYear() {
+      let thisYear = new Date().getFullYear();
+      yearElement.textContent = thisYear;
+      }
+      NewYear();
+   </script>
+      </footer>
+      <!-- Footer -->
+      <!-- Javascript -->
+      <script src="{% static './js/jquery.min.js' %}"></script>
+      <script src="{% static './js/popper.min.js' %}"></script>
+      <script src="{% static './js/owl.carousel.min.js' %}"></script>
+      <script src="{% static './js/bootstrap.min.js' %}"></script>
+      <script src="{% static './js/index.js' %}"></script>
+      <script src="{% static './js/xy.js' %}"></script>
+      <script src="{% static './js/Animated.js' %}"></script>
+      <script src="{% static './js/custom.js' %}"></script>
+      <!-- Javascript -->
+   </body>
+</html>

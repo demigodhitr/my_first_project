@@ -1,0 +1,755 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav-layout="vertical" data-theme-mode="light" data-header-styles="light" data-menu-styles="light" data-toggled="close">
+
+<head>
+
+          <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EPTL39X1H"></script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      
+      gtag('config', 'G-3EPTL39X1H');
+      </script>
+      <!-- Google tag (gtag.js) -->
+      
+    <style>
+
+        .alert {
+            display: none;
+            background-color: #f44336; 
+            border-radius: 13px;
+            border-bottom-left-radius: 1px;
+            color: white;
+            padding: 5px; 
+            margin-bottom: 4px; 
+            animation: fadeInOut 5s ease-in-out;
+        }
+        
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0;
+            }
+            10%, 90% {
+                opacity: 1;
+            }
+        }
+        </style>
+
+    <!-- Meta Data -->
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title> User profile </title>
+	<meta name="keywords" content="admin dashboard,admin template,admin panel,bootstrap admin dashboard,html template,sales dashboard,dashboard,template dashboard,admin,html and css template,admin dashboard bootstrap,personal dashboard,crypto dashboard,stocks dashboard,admin panel template">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'img/favicon.ico' %}">
+    
+    <!-- Choices JS -->
+    <script src="{% static 'libs/choices.js/public/assets/scripts/choices.min.js' %}"></script>
+
+    <!-- Main Theme Js -->
+    <script src="{% static 'js/main.js' %}"></script>
+    
+    <!-- Bootstrap Css -->
+    <link id="style" href="{% static 'libs/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" >
+
+    <!-- Style Css -->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" >
+
+    <!-- Icons Css -->
+    <link href="{% static 'css/icons.css' %}" rel="stylesheet" >
+
+    <!-- Node Waves Css -->
+    <link href="{% static 'libs/node-waves/waves.min.css' %}" rel="stylesheet" > 
+
+    <!-- Simplebar Css -->
+    <link href="{% static 'libs/simplebar/simplebar.min.css' %}" rel="stylesheet" >
+    
+    <!-- Color Picker Css -->
+    <link rel="stylesheet" href="{% static 'libs/flatpickr/flatpickr.min.css' %}">
+    <link rel="stylesheet" href="{% static 'libs/@simonwep/pickr/themes/nano.min.css' %}">
+
+    <!-- Choices Css -->
+    <link rel="stylesheet" href="{% static 'libs/choices.js/public/assets/styles/choices.min.css' %}">
+
+
+</head>
+
+<body>
+
+    <!-- Loader -->
+<div id="loader" >
+    <img src="{% static 'img/media/loader.svg' %}" alt="">
+</div>
+<!-- Loader -->
+
+    <div class="page">
+         <!-- app-header -->
+ <header class="app-header">
+
+    <!-- Start::main-header-container -->
+    <div class="main-header-container container-fluid">
+
+        <!-- Start::header-content-left -->
+        <div class="header-content-left">
+
+            <!-- Start::header-element -->
+            <div class="header-element">
+                <div class="horizontal-logo">
+                    <a href="{% url 'dashboard' %}" class="header-logo">
+                        <img src="{% static 'img/portfolio.png' %}" alt="logo" class="desktop-logo">
+                        <img src="{% static 'img/portfolio.png' %}" alt="logo" class="toggle-logo">
+                        <img src="{% static 'img/portfolio.png' %}" alt="logo" class="desktop-dark">
+                        <img src="{% static 'img/portfolio.png' %}" alt="logo" class="toggle-dark">
+                    </a>
+                </div>
+            </div>
+            <!-- End::header-element -->
+
+            <!-- Start::header-element -->
+            <div class="header-element mx-lg-0 mx-2">
+                <a aria-label="Hide Sidebar" class="sidemenu-toggle header-link animated-arrow hor-toggle horizontal-navtoggle" data-bs-toggle="sidebar" href="javascript:void(0);"><span></span></a>
+            </div>
+            <!-- End::header-element -->
+
+
+        </div>
+        <!-- End::header-content-left -->
+
+
+        <!-- Start::header-content-right -->
+        <ul class="header-content-right">
+
+            <!-- Start::header-element -->
+            <li class="header-element notifications-dropdown d-xl-block d-none">
+                <!-- Start::header-link|dropdown-toggle -->
+                <a href="javascript:void(0);" class="header-link dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside" id="messageDropdown" aria-expanded="false">
+                    <i class="bi bi-bell header-link-icon"></i>
+                    <span class="header-icon-pulse bg-secondary rounded pulse pulse-secondary"></span>
+                </a>
+                <!-- End::header-link|dropdown-toggle -->
+                <!-- Start::main-header-dropdown -->
+                <div class="main-header-dropdown dropdown-menu dropdown-menu-end" data-popper-placement="none">
+                    <div class="p-3">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <p class="mb-0 fs-16">Notifications</p>
+                            <span class="badge bg-secondary-transparent" id="notifiation-data">You've got some </span>
+                        </div>
+                    </div>
+                    <div class="dropdown-divider"></div>
+                    <ul class="list-unstyled mb-0" id="header-notification-scroll">
+                        <li class="dropdown-item">
+                            <div class="d-flex align-items-center">
+                
+                                 <div class="flex-grow-1 d-flex align-items-center justify-content-between">
+                                    <div>
+                                        {% for notification in notifications %}
+                                        <p class="mb-0 fw-medium"><a href="#">{{ notification.title }}</a></p>
+                                        <span class="text-muted fw-normal fs-12 header-notification-text">{{ notification.message }}</span>
+                                        {% endfor %}
+                                    </div>
+                                    <div>
+                                        <a href="javascript:void(0);" class="min-w-fit-content text-muted me-1 dropdown-item-close1"><i class="ti ti-x fs-16"></i></a>
+                                    </div>
+                                 </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="p-3 empty-header-item1 border-top">
+                    </div>
+                    <div class="p-5 empty-item1 d-none">
+                        <div class="text-center">
+                            <span class="avatar avatar-xl avatar-rounded bg-secondary-transparent">
+                                <i class="ri-notification-off-line fs-2"></i>
+                            </span>
+                            <h6 class="fw-medium mt-3">No New Notifications</h6>
+                        </div>
+                    </div>
+                </div>
+                <!-- End::main-header-dropdown -->
+            </li>
+            <!-- End::header-element -->
+            <!-- Start::header-element -->
+            <li class="header-element">
+                <!-- Start::header-link|dropdown-toggle -->
+                <a href="javascript:void(0);" class="header-link dropdown-toggle" id="mainHeaderProfile" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                    <div class="d-flex align-items-center">
+                        <div class="me-sm-2 me-0">
+                           
+                            {% if profile_image %}
+                            <img src="{{ profile_image.url }}" alt="Profile Image" class="avatar avatar-sm avatar-rounded">
+                            {% else %}
+                            <img src="{% static 'img/defaultavatar.png' %}" alt="img" class="avatar avatar-sm avatar-rounded">
+                            {% endif %}
+                        </div>
+                        <div class="d-xl-block d-none lh-1">
+                            <span class="fw-medium lh-1">{{ info.first_name }} </span>
+                        </div>
+                    </div>
+                </a>
+                <!-- End::header-link|dropdown-toggle -->
+                <ul class="main-header-dropdown dropdown-menu pt-0 overflow-hidden header-profile-dropdown dropdown-menu-end" aria-labelledby="mainHeaderProfile">
+                    <li><a class="dropdown-item d-flex align-items-center" href="{% url 'dashboard' %}"><i class="fa-solid fa-house fs-18 me-2 op-7"></i>Dashboard </a></li>
+                    <li><a class="dropdown-item d-flex align-items-center" href="javascript:;" onclick="tidioChatApi.display(true);tidioChatApi.open()" ><i class="bi bi-headset fs-18 me-2 op-7"></i>Support</a></li>
+                    <li><a class="dropdown-item d-flex align-items-center" href="{% url 'logout' %}"><i class="bi bi-box-arrow-right fs-18 me-2 op-7"></i>Log Out</a></li>
+                </ul>
+            </li>  
+            <!-- End::header-element -->
+        </ul>
+        <!-- End::header-content-right -->
+
+    </div>
+    <!-- End::main-header-container -->
+
+</header>
+<!-- /app-header -->
+        <!-- Start::app-sidebar -->
+        <aside class="app-sidebar sticky" id="sidebar">
+
+            <!-- WILL ADD LOGO-->
+            <div class="main-sidebar-header">
+                
+            <a href="{% url 'dashboard' %}" class="header-logo"><img src="{% static 'img/logo-black.png' %}" alt="">
+                </a>
+            </div>
+            <!-- End::main-sidebar-header -->
+        
+            <!-- Start::main-sidebar -->
+            <div class="main-sidebar" id="sidebar-scroll">
+        
+                <!-- Start::nav -->
+                <nav class="main-menu-container nav nav-pills flex-column sub-open">
+                    <div class="slide-left" id="slide-left">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24"> <path d="M13.293 6.293 7.586 12l5.707 5.707 1.414-1.414L10.414 12l4.293-4.293z"></path> </svg>
+                    </div>
+        
+                    <ul class="main-menu">
+        
+                        <!-- Start::slide -->
+                       
+                        {# Display login success messages #}
+                        {% for message in messages %}
+                            {% if 'login' in message.tags and 'success' in message.tags %}
+                                <div class="alert alert-success">
+                                    {{ message }}
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                        
+                        
+        
+                        <li class="slide has-sub">
+                            <a href="javascript:void(0);" class="side-menu__item">
+                                <i class="bi bi-house side-menu__icon"></i>
+                                <span class="side-menu__label">Dashboard</span>
+                                <i class="fe fe-chevron-right side-menu__angle"></i>
+                            </a>
+                            <ul class="slide-menu child1">
+                               
+                                <li class="slide">
+                                    <a href="{% url 'dashboard' %}" class="side-menu__item">Home</a>
+                                </li>
+                               
+                            </ul>
+                        </li>
+                        <!-- End::slide -->
+        
+                        <!-- Start::slide -->
+                        <li class="slide has-sub">
+                            <a href="javascript:void(0);" class="side-menu__item">
+                                <i class="fa-2xs fa-solid fa-building mt-3 side-menu__icon"></i>
+                                <span class="side-menu__label">Company</span>
+                                <i class="fe fe-chevron-right side-menu__angle"></i>
+                            </a>
+                            <ul class="slide-menu child1 pages-ul">
+        
+                                <li class="slide">
+                                    <a href="{% url 'contact' %}" class="side-menu__item">Contact Us</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="{% url 'faqs' %}" class="side-menu__item">FAQ's</a>
+                                </li>
+        
+                                <li class="slide">
+                                    <a href="{% url 'plans' %}" class="side-menu__item">Investment plans</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="{% url 'terms' %}" class="side-menu__item">Terms & Conditions</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- End::slide -->
+        
+                        <!-- Start::slide -->
+                        <li class="slide has-sub">
+                            <a href="javascript:void(0);" class="side-menu__item">
+                                <i class="bi bi-key side-menu__icon"></i>
+                                <span class="side-menu__label">Authentication</span>
+                                <i class="fe fe-chevron-right side-menu__angle"></i>
+                            </a>
+                            <ul class="slide-menu child1">
+                                <li class="slide side-menu__label1">
+                                    <a href="javascript:void(0)">Authentication</a>
+                                </li>      
+                                   
+                                <li class="slide has-sub">
+                                    <a href="javascript:void(0);" class="side-menu__item">Password
+                                        <i class="fe fe-chevron-right side-menu__angle"></i></a>
+                                    <ul class="slide-menu child2">
+                                        <li class="slide">
+                                            <a href="{% url 'password_reset' %}" class="side-menu__item">Reset Password</a>
+                                        </li>
+                                    </ul>
+                                </li>       
+         
+                            </ul>
+                        </li>
+                        <!-- End::slide -->
+        
+                        <!-- Start::slide -->
+                        <li class="slide has-sub">
+                            <a href="javascript:void(0);" class="side-menu__item">
+                                <i class="bi bi-layers side-menu__icon"></i>
+                                <span class="side-menu__label">Investments</span>
+                                <i class="fe fe-chevron-right side-menu__angle"></i>
+                            </a>
+                            <ul class="slide-menu child1">
+                                <li class="slide side-menu__label1">
+                                    <a href="javascript:void(0)">Investments</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="{% url 'plans' %}" class="side-menu__item">Investment plans</a>
+                                </li>
+                                <li class="slide has-sub">
+                                    <a href="javascript:void(0);" class="side-menu__item">Transactions
+                                        <i class="fe fe-chevron-right side-menu__angle"></i></a>
+                                    <ul class="slide-menu child2">
+                                        <li class="slide">
+                                            <a href="{% url 'withdrawal' %}" class="side-menu__item">Make withrawal</a>
+                                        </li>
+                                        <li class="slide has-sub">
+                                            <a href="javascript:void(0);" class="side-menu__item">Fund account
+                                            <i class="fe fe-chevron-right side-menu__angle"></i></a>
+                                            <ul class="slide-menu child3">
+                                                <li class="slide">
+                                                <a href="javascript:void(0);" class="side-menu__item" onclick="openModal()">with fiat</a>
+                                                </li>
+                                                <li class="slide">
+                                                    <a href="{% url 'deposit' %}" class="side-menu__item">with Crypto</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- End::slide -->
+        
+                        <!-- Start::slide -->
+                        <li class="slide has-sub">
+                            <a href="javascript:void(0);" class="side-menu__item">
+                                <i class="bi bi-archive side-menu__icon"></i>
+                                <span class="side-menu__label">General</span>
+                                <i class="fe fe-chevron-right side-menu__angle"></i>
+                            </a>
+                            <ul class="slide-menu child1 mega-menu">
+                                <li class="slide side-menu__label1">
+                                    <a href="javascript:void(0)">General</a>
+                                </li>
+        
+                                <li class="slide">
+                                    <a href="{% url 'myprofile' %}" class="side-menu__item">My profile</a>
+                                </li>
+                                <li class="slide">
+                                    <a href="{% url 'logout' %}" class="side-menu__item">Log out</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- End::slide -->
+        
+        
+                    </ul>
+                    <div class="slide-right" id="slide-right"><svg xmlns="http://www.w3.org/2000/svg" fill="#7b8191" width="24" height="24" viewBox="0 0 24 24"> <path d="M10.707 17.707 16.414 12l-5.707-5.707-1.414 1.414L13.586 12l-4.293 4.293z"></path> </svg></div>
+                </nav>
+                <!-- End::nav -->
+        
+            </div>
+            <!-- End::main-sidebar -->
+        
+        </aside>
+        <!-- End::app-sidebar -->
+        
+        <!-- Start::app-content -->
+        <div class="main-content app-content">
+            <div class="container-fluid">
+
+                <!-- Page Header -->
+                <div class="my-4 page-header-breadcrumb d-flex align-items-center justify-content-between flex-wrap gap-2">
+                    <div>
+                        <h1 class="page-title fw-medium fs-18 mb-2">Profile</h1>
+                        <div class="">
+                            <nav>
+                                <ol class="breadcrumb mb-0">
+                                    <li class="breadcrumb-item"><a href="javascript:void(0);">General</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">My profile</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="btn-list">
+                        <a href="{% url 'plans' %}"><button class="btn btn-primary-light btn-wave me-2">
+                            <i class="bx bx-crown align-middle"></i> Plan Upgrade
+                        </button></a>
+                    </div>
+                </div>
+                <!-- Page Header Close -->
+
+                <!-- Start::row-1 -->
+                <form action="{% url 'myprofile' %}" method="post" enctype="multipart/form-data">
+                <div class="row mb-5">
+                    <div class="col-xl-12">
+                        <div class="card custom-card">
+                            <div class="card-header d-sm-flex d-block">
+                                <ul class="nav nav-tabs nav-tabs-header mb-0 d-sm-flex d-block" role="tablist">
+                                    <li class="nav-item m-1">
+                                        <a class="nav-link active" data-bs-toggle="tab" role="tab" aria-current="page"
+                                        href="#" aria-selected="true">Personal Informations</a>
+                                    </li>
+                                </ul>
+
+                                {% if messages %}
+                               
+                                {% for message in messages %}
+                                <div class="alert alert-success"><em>{{ message }}</em>
+                                </div>
+                                {% endfor %}
+                                
+                                {% endif %}
+
+                            </div>
+                            <div class="card-body">
+                                <div class="tab-content">
+                                    <div class="tab-pane show active" id="personal-info"
+                                        role="tabpanel">
+                                        <div class="p-sm-3 p-0">
+                                            <h6 class="fw-medium mb-3">
+                                                Photo :
+                                            </h6>
+                                           
+                                            <div class="mb-4 d-sm-flex align-items-center">
+                                                <div class="mb-0 me-5">
+                                                    <span class="avatar avatar-xxl avatar-rounded">
+                               
+                                                            {% csrf_token %}
+
+                                                        {% if profile_image %}
+                                                        <img src="{{ profile_image.url }}" alt="Profile Image" id="profile-img">
+                                                        {% else %}
+                                                        <img src="{% static 'img/defaultavatar.png' %}" alt="img" id="profile-img" height="100%" width="100%" style="width: 80px; height: 80px;">
+                                                        {% endif %}
+                                                        <a href="javascript:void(0);" class="badge rounded-pill bg-primary avatar-badge">
+                                                            <input type="file" name="photo" class="position-absolute w-100 h-100 op-0" id="profile-change">
+                                                            <i class="fe fe-camera"></i>
+                                                        </a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <h6 class="fw-medium mb-3">
+                                                Profile :
+                                            </h6>
+                                            <div class="row gy-4 mb-4">
+                                                <div class="col-xl-6">
+                                                    <label for="first-name" class="form-label">First Name</label>
+                                                    <input name="firstname" type="text" value="{{info.first_name}}" class="form-control" id="first-name" placeholder="Firt Name">
+                                                </div>
+                                                <div class="col-xl-6">
+                                                    <label for="last-name" class="form-label">Last Name</label>
+                                                    <input name="lastname" type="text" value="{{info.last_name }}" class="form-control" id="last-name" placeholder="Last Name">
+                                                </div>
+                                                <div class="col-xl-12">
+                                                    <label class="form-label">User Name</label>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon3">Read-only</span>
+                                                        <input value="{{info.username}}" readonly type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                                                    </div>
+                                                </div>  
+
+                                                {% if 'united-states' in account_info.nationality and 'Verified' in account_info.verificationStatus %}
+                                                <div class="col-xl-12">
+                                                    <div style="border-radius: 10px; align-items: center; justify-content: center; background-color: #ebecf5;;" class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon3">Verification status:</span>
+                                                        <input style="background-color: #ebecf5; width: 100px; margin-left: 40px; border: none; font-weight: bolder;" class="text-success" value="{{ account_info.verificationStatus }}" readonly type="text" class="form-control" id="basic-url"  aria-describedby="basic-addon3">
+                                                        <i class="fa-solid fa-xl fa-check" style="color: #11a711;"></i>
+                                                    </div>
+                                                </div> 
+                                                {% elif 'united-states' in account_info.nationality and 'Failed' in account_info.verificationStatus %}
+                                                <div class="col-xl-12">
+                                                    <div style="border-radius: 10px; align-items: center; justify-content: center; background-color: #ebecf5;;"
+                                                        class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon3">Verification status:</span>
+                                                        <input style=" background-color: #ebecf5; width: 100px; margin-left: 40px; border: none; font-weight: bolder;"
+                                                            class="text-danger" value="{{ account_info.verificationStatus }}" readonly type="text" class="form-control"
+                                                            id="basic-url" aria-describedby="basic-addon3">
+                                                        <i class="fa-solid fa-xl fa-circle-exclamation" style="color: #ff2617;"></i>
+                                                    </div>
+                                                </div>
+
+                                                {% elif 'united-states' in account_info.nationality and 'Awaiting' in account_info.verificationStatus %}
+                                                <div class="col-xl-12">
+                                                    <div style="border-radius: 10px; align-items: center; justify-content: center; background-color: #29292c;;"
+                                                        class="input-group mb-3">
+                                                        <span style="background-color: #29292c; border: none; color: #fff;" class="input-group-text" id="basic-addon3">Verification status:</span>
+                                                        <input style=" background-color: #29292c; width: 100px; margin-left: 40px; border: none; font-weight: bolder;"
+                                                            class="text-warning" value="{{ account_info.verificationStatus }}" readonly type="text" class="form-control"
+                                                            id="basic-url" aria-describedby="basic-addon3">
+                                                        <i class="fa-solid fa-xl fa-triangle-exclamation" style="color: #feab11;"></i>
+                                                    </div>
+                                                </div>
+                                                {% elif 'united-states' in account_info.nationality and 'Under review' in account_info.verificationStatus %}
+                                                <div class="col-xl-12">
+                                                    <div style="border-radius: 10px; align-items: center; justify-content: center; background-color: #ffa200;;"
+                                                        class="input-group mb-3">
+                                                        <span style="background-color: #ffa200; border: none; color: #000000;" class="input-group-text"
+                                                            id="basic-addon3">Verification status:</span>
+                                                        <input style=" color: #000; background-color: #ffa200; width: 70px; border: none; font-weight: bolder;"
+                                                            value="{{ account_info.verificationStatus }}" readonly type="text" class="form-control"
+                                                            id="basic-url" aria-describedby="basic-addon3">
+                                                        <i style="margin-right: 10px; color: #000000;" class="fa-xl fa-solid fa-spinner fa-spin"></i>
+                                                    </div>
+                                                </div>
+                                                {% endif %}
+                                                
+
+
+                                            </div>
+                                            <h6 class="fw-medium mb-3">
+                                                Personal information :
+                                            </h6>
+                                            <div class="col-xl-12">
+                                                <label class="form-label">Email address</label>
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text" id="basic-addon3">Read-only</span>
+                                                    <input value="{{info.email}}" readonly type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                                                </div>
+                                            </div>  
+                                                </div>
+
+                                                <div class="col-xl-12">
+                                                    <label for="bio" class="form-label">Bio :</label>
+                                                    <textarea name="bio" class="form-control" id="bio" rows="5">{{account_info.bio}}</textarea>
+                                                </div>
+                                                <br>
+
+                                                <div class="col-xl-12">
+                                                    <label class="form-label"><h3>Residence</h3></label>
+                                                    <div class="input-group mb-3">
+                                                        <span class="input-group-text" id="basic-addon3">Resident of </span>
+                                                        <input value="{{account_info.nationality}}" readonly type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                                                    </div>
+                                                </div> 
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane" id="account-settings"
+                                        role="tabpanel">
+                                        <div class="row gap-3 justify-content-between">
+                                            <div class="col-xl-7">
+                                                <div class="card custom-card shadow-none mb-0 border">
+                                                    <div class="card-body">
+                                                        <div class="d-sm-flex d-block align-items-top mb-4 justify-content-between">
+
+                                                        </div>
+                                                        <div class="d-sm-flex d-block align-items-top mb-4 justify-content-between">
+                                                        </div>
+                                                        <div class="d-sm-flex d-block align-items-top mb-4 justify-content-between">
+                                                            <div>
+                                                                <p class="fs-14 mb-1 fw-medium">Recovery Mail</p>
+                                                                <p class="fs-12 text-muted mb-0">Incase you lost your password, recovery mail will be sent to  {{info.email}}</p>
+
+                                                                <a style="font-weight: bold;" class="fs-12 text-muted text-danger" href="{% url 'password_reset' %}">Forgot Password?</a>
+
+                                                            </div>
+                                                            <div class="custom-toggle-switch ms-sm-2 ms-0"> 
+                                                                <input id="recovery-mail" name="toggleswitchsize" type="checkbox" checked=""> 
+                                                                <label for="recovery-mail" class="label-primary mb-1"></label>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="d-flex align-items-top justify-content-between">
+                                                            <div>
+                                                                <p class="fs-14 mb-1 fw-medium">Change Password</p>
+                                                                <p class="fs-12 text-muted">Password must contain at least <b class="text-success">one lowercase letter, one CAPITAL letter,<sup>*</sup></b>, <b class="text-success">One number<sup>*</sup></b> and <b class="text-success">One special character<sup>*</sup></b></p>
+                                                                <div class="mb-2">
+                                                                    <label for="current-password" class="form-label">Current Password</label>
+                                                                    <input name="oldpassword" type="text" class="form-control" id="current-password" placeholder="Current Password" >
+                                                                </div>
+                                                                <div class="mb-2">
+                                                                    <label for="new-password" class="form-label">New Password</label>
+                                                                    <input name="password1" type="text" class="form-control" id="new-password" placeholder="New Password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" title="Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.">
+                                                                </div>
+                                                                <div class="mb-0">
+                                                                    <label for="confirm-password" class="form-label">Confirm Password</label>
+                                                                    <input name="password2" type="text" class="form-control" id="confirm-password" placeholder="Confirm PAssword" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" title="Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <div class="card custom-card shadow-none mb-0 border">
+                                                    <div class="card-header justify-content-between d-sm-flex d-block">
+                                                      
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                     </div>
+                                    </div>
+                                    <div class="card-footer">
+                                    <div class="float-end">
+                                    <input style="font-weight: bolder;" type="submit" value="Save Changes" class="btn btn-primary m-1">
+                                </form>
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End::row-1 -->
+
+            </div>
+        </div>
+        <!-- End::app-content -->
+
+        
+        <!-- Footer Start -->
+        <footer class="footer mt-auto py-3 bg-white text-center">
+            <div class="container">
+                <span class="text-muted"> Copyright © <span class="year" id="year">0000</span> <a
+                        href="javascript:void(0);" class="text-dark fw-medium">Bitprofit LLC. </a>
+                   <a href="javascript:void(0);">
+                    </a> All
+                    rights
+                    reserved
+                </span>
+            </div>
+        </footer>
+      </footer>
+      <!-- Footer -->
+   <script>
+      let yearElement = document.getElementsByClassName('year')[0];
+
+      function NewYear() {
+      let thisYear = new Date().getFullYear();
+      yearElement.textContent = thisYear;
+      }
+      NewYear();
+   </script>
+<!-- Footer End -->
+        <div class="modal fade" id="header-responsive-search" tabindex="-1" aria-labelledby="header-responsive-search" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="input-group">
+                    <input type="text" class="form-control border-end-0" placeholder="Search Anything ..."
+                        aria-label="Search Anything ..." aria-describedby="button-addon2">
+                    <button class="btn btn-primary" type="button"
+                        id="button-addon2"><i class="bi bi-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+
+    
+<!-- Scroll To Top -->
+<div class="scrollToTop">
+    <span class="arrow"><i class="ti ti-arrow-narrow-up fs-20"></i></span>
+</div>
+<div id="responsive-overlay"></div>
+<!-- Scroll To Top -->
+
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+    var alertElement = document.querySelector('.alert');
+
+   
+    alertElement.style.display = 'block';
+
+
+    setTimeout(function() {
+        alertElement.style.display = 'none';
+    }, 5000);
+});
+</script>
+
+<!-- Popper JS -->
+<script src="{% static 'libs/@popperjs/core/umd/popper.min.js' %}"></script>
+
+<!-- Bootstrap JS -->
+<script src="{% static 'libs/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+<!-- Defaultmenu JS -->
+<script src="{% static 'js/defaultmenu.min.js' %}"></script>
+
+<!-- Node Waves JS-->
+<script src="{% static 'libs/node-waves/waves.min.js' %}"></script>
+
+<!-- Sticky JS -->
+<script src="{% static 'js/sticky.js' %}"></script>
+
+<!-- Simplebar JS -->
+<script src="{% static 'libs/simplebar/simplebar.min.js' %}"></script>
+<script src="{% static 'js/simplebar.js' %}"></script>
+
+<!-- Color Picker JS -->
+<script src="{% static 'libs/@simonwep/pickr/pickr.es5.min.js' %}"></script>
+
+<script src="https://kit.fontawesome.com/f465f589c1.js" crossorigin="anonymous"></script>
+
+
+    
+<!-- Custom-Switcher JS -->
+<script src="{% static 'js/custom-switcher.min.js' %}"></script>
+
+    <!-- Mail Settings -->
+    <script src="{% static 'js/mail-settings.js' %}"></script>
+
+    <!-- Custom JS -->
+    <script src="{% static 'js/custom.js' %}"></script>  
+    <script src="//code.tidio.co/s7s7pkpgzioqwkyxuqph94yrpdafdwdh.js" async></script>
+<script>
+    (function() {
+   function onTidioChatApiReady() {
+   window.tidioChatApi.hide();
+   window.tidioChatApi.on("close", function() {
+   window.tidioChatApi.hide();
+   });
+   }
+  
+   if (window.tidioChatApi) {
+   window.tidioChatApi.on("ready", onTidioChatApiReady);
+   } else {
+   document.addEventListener("tidioChat-ready", onTidioChatApiReady);
+   }
+  
+   document.querySelector(".chat-button").addEventListener("click", function() {
+   window.tidioChatApi.show();
+   window.tidioChatApi.open();
+   });
+  })();
+</script>
+
+</body>
+
+</html>
