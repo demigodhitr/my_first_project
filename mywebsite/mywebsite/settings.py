@@ -70,12 +70,8 @@ WSGI_APPLICATION = 'mywebsite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mydatabase',
-        'USER': 'demigod',
-        'PASSWORD': '160220',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -136,23 +132,23 @@ MEDIA_URL = '/media/'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
 
-EMAIL_HOST = 'mail.bitprofitonline.com'
+EMAIL_HOST = 'mail.yourdomain.com'
 EMAIL_PORT = 465
 EMAIL_USE_SSL = True
 
 
-EMAIL_HOST_USER = '_mainaccount@bitprofitonline.com'
-EMAIL_HOST_PASSWORD = '6Xo8H+1(C3lvQk'
+EMAIL_HOST_USER = 'addresss@yourdoamin.com'
+EMAIL_HOST_PASSWORD = 'your_password'
 
 
-DEFAULT_FROM_EMAIL = 'alerts@bitprofitonline.com'
-SERVER_EMAIL = 'alerts@bitprofitonline.com'
+DEFAULT_FROM_EMAIL = 'address@yourdomain.com'
+SERVER_EMAIL = 'address@yourdomain.com'
 
-# OTHER EMAILS.
+# THE CONFIGURATIONS BELOW ARE ALTERNATIVE EMAIL CONFIGURATIONS. WILL BE USED FOR CERTAIN TYPES OF EMAILS TO USERS AS SPECIFIED IN VIEWS
 
-EMAIL_HOST_INFO = 'mail.bitprofitonline.com'
+EMAIL_HOST_INFO = 'mail.yourdomain.com'
 EMAIL_PORT_INFO = 465  # Use SMTP Port: 465
-EMAIL_HOST_USER_INFO = 'info@bitprofitonline.com'
-EMAIL_HOST_PASSWORD_INFO = 'Paypallogin@1'
+EMAIL_HOST_USER_INFO = 'info@yourdomain.com'
+EMAIL_HOST_PASSWORD_INFO = 'your_password'
 EMAIL_USE_TLS_INFO = False 
 EMAIL_USE_SSL_INFO = True  
